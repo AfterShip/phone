@@ -14,10 +14,13 @@ What we want is always: `+18175698900`
 Ans: Yes or no
 
 
-## Example
+## Install
 ```
 npm install phone
+```
 
+## Usage
+```
 var phone = require('phone`);
 
 phone('(817) 569-8900'); // return +18175698900
