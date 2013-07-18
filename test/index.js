@@ -10,6 +10,13 @@ describe('Testing USA Phone', function() {
 		});
 	});
 
+	describe("phone('+1 (817) 569-8900', null)", function() {
+		it('returns +18175698900', function() {
+			var result = phone('+1 (817) 569-8900', null);
+			result.should.eql('+18175698900');
+		});
+	});
+
 	describe("phone('212345678', '')", function() {
 		it('returns null', function() {
 			var result = (phone('212345678', '') === null);
@@ -61,6 +68,13 @@ describe('Testing HK Phone', function() {
 	describe("phone('6569-8900', '')", function() {
 		it('returns null', function() {
 			var result = (phone('6569-8900', '') === null);
+			result.should.eql(true);
+		});
+	});
+
+	describe("phone('6569-8900', null)", function() {
+		it('returns null', function() {
+			var result = (phone('6569-8900', null) === null);
 			result.should.eql(true);
 		});
 	});
