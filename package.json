@@ -2,7 +2,7 @@
 	"name": "phone",
 	"version": "0.0.1",
 	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
-	"main": "./lib/index.js",
+	"main": "./lib/index",
 	"engines": {
 		"node": ">=0.8"
 	},
