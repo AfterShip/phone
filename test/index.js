@@ -12,7 +12,7 @@ describe('Testing USA Phone', function() {
 
 	describe("phone('212345678', '')", function() {
 		it('returns null', function() {
-			var result = (phone('212345678', '') === null) ? true : false;
+			var result = (phone('212345678', '') === null);
 			result.should.eql(true);
 		});
 	});
@@ -56,12 +56,11 @@ describe('Testing USA Phone', function() {
 });
 
 
-
 describe('Testing HK Phone', function() {
 
 	describe("phone('6569-8900', '')", function() {
 		it('returns null', function() {
-			var result = (phone('6569-8900', '') === null) ? true : false;
+			var result = (phone('6569-8900', '') === null);
 			result.should.eql(true);
 		});
 	});
@@ -89,7 +88,7 @@ describe('Testing HK Phone', function() {
 
 	describe("phone('212345678', 'HKG')", function() {
 		it('returns null', function() {
-			var result = (phone('212345678', 'HKG') === null) ? true : false;
+			var result = (phone('212345678', 'HKG') === null);
 			result.should.eql(true);
 		});
 	});
