@@ -110,9 +110,6 @@ describe('Testing HK Phone', function() {
 });
 
 
-
-
-
 describe('Testing UK Phone', function() {
 
 	// treat it as USA first
@@ -128,7 +125,7 @@ describe('Testing UK Phone', function() {
 
 	describe("phone('01902687632', null)", function() {
 		it('returns +11902687632', function() {
-			var result = phone('01902687632', null) ;
+			var result = phone('01902687632', null);
 			result.should.eql('+11902687632');
 		});
 	});
@@ -147,6 +144,7 @@ describe('Testing UK Phone', function() {
 	describe("phone('01902687632', 'GBR')", function() {
 		it('returns +441902687632', function() {
 			var result = (phone('01902687632', 'GBR') === null);
+			// because the UK mobile must start with 7
 			result.should.eql(true);
 		});
 	});
