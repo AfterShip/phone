@@ -41,7 +41,7 @@ npm install phone
 
 ## Usage
 ```
-var phone = require('phone`);
+var phone = require('phone');
 
 phone('(817) 569-8900', ''); // return +18175698900
 phone('(817) 569-8900', 'USA'); // return +18175698900
@@ -52,6 +52,15 @@ phone('6123-6123', ''); // return null, as default country is USA
 phone('6123-6123', 'HKG'); // return +85261236123
 
 ```
+
+
+## Test
+
+```
+npm test
+
+``
+
 
 ## License
 MIT
