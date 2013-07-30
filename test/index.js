@@ -26,9 +26,17 @@ describe('Testing USA Phone', function() {
 
 
 	describe("phone('22-6569-8900', '')", function() {
-		it('returns +', function() {
-			var result = phone('22-6569-8900', '');
-			result.should.eql('+12265698900');
+		// as 226 is NOT a valid USA code
+		it('returns null', function() {
+			var result = (phone('22-6569-8900', '') == null);
+			result.should.eql(true);
+		});
+	});
+
+	describe("phone('22-5569-8900', '')", function() {
+		it('returns +12255698900', function() {
+			var result = phone('22-5569-8900', '');
+			result.should.eql('+12255698900');
 		});
 	});
 
@@ -111,39 +119,32 @@ describe('Testing HK Phone', function() {
 
 
 describe('Testing UK Phone', function() {
-
-	// treat it as USA first
-	// then remove leading 0s for all countries except 'GAB', 'CIV', 'COG'
-	// if 10 digit, good. it is USA, add "+1" as prefix
-
-	describe("phone('01902687632', '')", function() {
-		it('returns +11902687632', function() {
-			var result = phone('01902687632', '');
-			result.should.eql('+11902687632');
-		});
-	});
-
-	describe("phone('01902687632', null)", function() {
-		it('returns +11902687632', function() {
-			var result = phone('01902687632', null);
-			result.should.eql('+11902687632');
-		});
-	});
-
-
-	// remove leading 0s for all countries except 'GAB', 'CIV', 'COG'
-	// if 8 digit, good. it is HKG, add "+852" as prefix, else , return null
-
-	describe("phone('01902687632', 'HKG')", function() {
-		it('returns +8521902687632', function() {
-			var result = (phone('01902687632', 'HKG') === null);
+	// return null, as `790` is NOT the USA area code
+	describe("phone('07902687632', '')", function() {
+		it('returns null', function() {
+			var result = (phone('07902687632', '') == null);
 			result.should.eql(true);
 		});
 	});
 
-	describe("phone('01902687632', 'GBR')", function() {
-		it('returns +441902687632', function() {
-			var result = (phone('01902687632', 'GBR') === null);
+	describe("phone('07902687632', null)", function() {
+		it('returns null', function() {
+			var result = (phone('07902687632', '') == null);
+			result.should.eql(true);
+		});
+	});
+
+
+	describe("phone('07902687632', 'GBR')", function() {
+		it('returns +447902687632', function() {
+			var result = phone('07902687632', 'GBR');
+			result.should.eql('+447902687632');
+		});
+	});
+
+	describe("phone('06902687632', 'GBR')", function() {
+		it('returns null', function() {
+			var result = (phone('06902687632', 'GBR') === null);
 			// because the UK mobile must start with 7
 			result.should.eql(true);
 		});
