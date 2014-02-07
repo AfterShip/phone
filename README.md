@@ -76,7 +76,7 @@ If you know that our rule is wrong, or can add more validation to make this npm 
 Please open an issue and let us know.
 
 ## Change Log
-
+* 0.0.5	Performance tuning, updated Iceland mobile format to 7 digits only.
 * 0.0.4	Added US, CA area code to make it more accurate.
 
 
