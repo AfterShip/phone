@@ -3,6 +3,22 @@ var should = require('should'),
 
 describe('Testing USA Phone', function() {
 
+
+	describe("phone('(817) 569-8900', '')", function() {
+		it('returns +18175698900, as no country code given, will treat it as USA', function() {
+			var result = phone('(817) 569-8900', '');
+			result.should.eql('+18175698900');
+		});
+	});
+
+
+	describe("phone('(852) 569-8900', '')", function() {
+		it('returns null, will treat it as USA, but 852 is NOT a valid USA mobile_begin_with', function() {
+			var result = (phone('(852) 569-8900', '') === null);
+			result.should.eql(true);
+		});
+	});
+
 	describe("phone('+1 (817) 569-8900', '')", function() {
 		it('returns +18175698900', function() {
 			var result = phone('+1 (817) 569-8900', '');
@@ -26,8 +42,7 @@ describe('Testing USA Phone', function() {
 
 
 	describe("phone('22-6569-8900', '')", function() {
-		// as 226 is NOT a valid USA code
-		it('returns null', function() {
+		it('returns null, as 226 is NOT a valid USA code', function() {
 			var result = (phone('22-6569-8900', '') == null);
 			result.should.eql(true);
 		});
