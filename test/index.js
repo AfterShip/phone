@@ -103,6 +103,14 @@ describe('Testing CAN Phone', function() {
 		});
 	});
 
+	describe("phone('40-3569-8900', 'CAN')", function() {
+		// should return +14035698900, as it is a valid CAN phone
+		it('returns +14035698900', function() {
+			var result = phone('40-3569-8900', 'CAN');
+			result.should.eql('+14035698900');
+		});
+	});
+
 
 });
 
