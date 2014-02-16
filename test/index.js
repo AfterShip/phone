@@ -8,7 +8,7 @@ describe('Testing USA Phone', function() {
 	test_number = '(817) 569-8900';
 	test_country = '';
 	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns ' + test_result + ', as no country code given, will treat it as USA';
+	test_explain = 'returns [' + test_result + '], as no country code given, will treat it as USA';
 	describe("phone('" + test_number + "', '" + test_country + "')", function() {
 		it(test_explain, function() {
 			var result = phone(test_number, test_country);
@@ -19,7 +19,7 @@ describe('Testing USA Phone', function() {
 	test_number = '(852) 569-8900';
 	test_country = '';
 	test_result = [];
-	test_explain = 'returns ' + test_result + ', will treat it as USA, but 852 is NOT a valid USA mobile_begin_with';
+	test_explain = 'returns [' + test_result + '], treat it as USA, but 852 is NOT a valid USA mobile_begin_with, so empty array.';
 	describe("phone('" + test_number + "', '" + test_country + "')", function() {
 		it(test_explain, function() {
 			var result = phone(test_number, test_country);
@@ -30,7 +30,29 @@ describe('Testing USA Phone', function() {
 	test_number = '+1 (817) 569-8900';
 	test_country = '';
 	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns returns ' + test_result;
+	test_explain = 'returns returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+1 (817) 569-8900';
+	test_country = null;
+	test_result = ['+18175698900', 'USA'];
+	test_explain = 'returns returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '2121234567';
+	test_country = '';
+	test_result = ['+12121234567', 'USA'];
+	test_explain = 'returns returns [' + test_result + '], no country given, make USA, fit USA legnth without country code, auto append. valid zip code: 212';
 	describe("phone('" + test_number + "', '" + test_country + "')", function() {
 		it(test_explain, function() {
 			var result = phone(test_number, test_country);
@@ -39,20 +61,6 @@ describe('Testing USA Phone', function() {
 	});
 
 
-//
-//	describe("phone('+1 (817) 569-8900', null)", function() {
-//		it('returns +18175698900', function() {
-//			var result = phone('+1 (817) 569-8900', null);
-//			result.should.eql('+18175698900');
-//		});
-//	});
-//
-//	describe("phone('212345678', '')", function() {
-//		it('returns null', function() {
-//			var result = (phone('212345678', '') === null);
-//			result.should.eql(true);
-//		});
-//	});
 //
 //
 //	describe("phone('22-6569-8900', '')", function() {
