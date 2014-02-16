@@ -3,19 +3,23 @@ var should = require('should'),
 
 var test_number, test_country, test_result, test_explain;
 
+
+/* suggest 10 test case for each country, except USA
+
+ without +, null --> invalid
+ without +, '' --> invalid
+ without +, valid iso3  --> valid
+ without +, valid begin with, invalid iso3 --> invalid
+ without +, invalid begin with, valid iso3 --> invalid
+
+ with +, null
+ with +, ''
+ with +, valid iso3
+ with +, valid begin with, invalid iso3
+ with +, invalid begin with, valid iso3 --> invalid
+ */
+
 describe('Testing USA Phone', function() {
-
-	test_number = '(817) 569-8900';
-	test_country = '';
-	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns [' + test_result + '], as no country code given, will treat it as USA';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
 	test_number = '(852) 569-8900';
 	test_country = '';
 	test_result = [];
@@ -52,7 +56,7 @@ describe('Testing USA Phone', function() {
 	test_number = '2121234567';
 	test_country = '';
 	test_result = ['+12121234567', 'USA'];
-	test_explain = 'returns returns [' + test_result + '], no country given, make USA, fit USA legnth without country code, auto append. valid zip code: 212';
+	test_explain = 'returns returns [' + test_result + '], no country given, make USA, fit USA length without country code, auto append. valid zip code: 212';
 	describe("phone('" + test_number + "', '" + test_country + "')", function() {
 		it(test_explain, function() {
 			var result = phone(test_number, test_country);
@@ -61,96 +65,174 @@ describe('Testing USA Phone', function() {
 	});
 
 
-//
-//
-//	describe("phone('22-6569-8900', '')", function() {
-//		it('returns null, as 226 is NOT a valid USA code', function() {
-//			var result = (phone('22-6569-8900', '') == null);
-//			result.should.eql(true);
-//		});
-//	});
-//
-//	describe("phone('22-5569-8900', '')", function() {
-//		it('returns +12255698900', function() {
-//			var result = phone('22-5569-8900', '');
-//			result.should.eql('+12255698900');
-//		});
-//	});
-//
-//	describe("phone('+1 (817) 569-8900', 'United States')", function() {
-//		it('returns +18175698900', function() {
-//			var result = phone('+1 (817) 569-8900', 'United States');
-//			result.should.eql('+18175698900');
-//		});
-//	});
-//
-//	describe("phone('+1 (817) 569-8900', ' United States ')", function() {
-//		it('returns +18175698900', function() {
-//			var result = phone('+1 (817) 569-8900', ' United States ');
-//			result.should.eql('+18175698900');
-//		});
-//	});
-//
-//	describe("phone('+1 (817) 569-8900', 'USA')", function() {
-//		it('returns +18175698900', function() {
-//			var result = phone('+1 (817) 569-8900', 'USA');
-//			result.should.eql('+18175698900');
-//		});
-//	});
-//
-//	describe("phone('+1 (817) 569-8900', 'US')", function() {
-//		it('returns +18175698900', function() {
-//			var result = phone('+1 (817) 569-8900', 'US');
-//			result.should.eql('+18175698900');
-//		});
-//	});
-//
-//});
-//
-//
-//describe('Testing CAN Phone', function() {
-//
-//	describe("phone('+1 (403) 569-8900', '')", function() {
-//		it('returns +14035698900', function() {
-//			var result = phone('+1 (403) 569-8900', '');
-//			result.should.eql('+14035698900');
-//		});
-//	});
-//
-//	describe("phone('+1 (403) 569-8900', null)", function() {
-//		it('returns +14035698900', function() {
-//			var result = phone('+1 (403) 569-8900', null);
-//			result.should.eql('+14035698900');
-//		});
-//	});
-//
-//	describe("phone('212345678', '')", function() {
-//		it('returns null', function() {
-//			var result = (phone('212345678', '') === null);
-//			result.should.eql(true);
-//		});
-//	});
-//
-//
-//	describe("phone('40-3569-8900', '')", function() {
-//		// as 403 is NOT a valid USA code
-//		it('returns null', function() {
-//			var result = (phone('40-3569-8900', '') == null);
-//			result.should.eql(true);
-//		});
-//	});
-//
-//	describe("phone('40-3569-8900', 'CAN')", function() {
-//		// should return +14035698900, as it is a valid CAN phone
-//		it('returns +14035698900', function() {
-//			var result = phone('40-3569-8900', 'CAN');
-//			result.should.eql('+14035698900');
-//		});
-//	});
-//
-//
-//});
-//
+	test_number = '22-6569-8900';
+	test_country = '';
+	test_result = [];
+	test_explain = 'returns returns [' + test_result + '], as 226 is NOT a valid USA code';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+
+	test_number = '22-5569-8900';
+	test_country = '';
+	test_result = ['+12255698900', 'USA'];
+	test_explain = 'returns returns [' + test_result + '], as 225 is a valid USA code';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+
+	test_number = '+1 (817) 569-8900';
+	test_country = 'United States';
+	test_result = ['+18175698900', 'USA'];
+	test_explain = 'returns returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+
+	test_number = '+1 (817) 569-8900';
+	test_country = 'United States ';
+	test_result = ['+18175698900', 'USA'];
+	test_explain = 'returns returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+1 (817) 569-8900';
+	test_country = 'USA';
+	test_result = ['+18175698900', 'USA'];
+	test_explain = 'returns returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+
+	test_number = '+1 (817) 569-8900';
+	test_country = 'USA ';
+	test_result = ['+18175698900', 'USA'];
+	test_explain = 'returns returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+
+	test_number = '+1 (817) 569-8900';
+	test_country = 'US';
+	test_result = ['+18175698900', 'USA'];
+	test_explain = 'returns returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+1 (817) 569-8900';
+	test_country = ' US ';
+	test_result = ['+18175698900', 'USA'];
+	test_explain = 'returns returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+
+	test_number = '+1 (817) 569-8900';
+	test_country = 'HKG';
+	test_result = [];
+	test_explain = 'returns returns [' + test_result + '], it is NOT a valid HKG phone number.';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+});
+
+
+describe('Testing CAN Phone', function() {
+
+	test_number = '+1 (403) 569-8900';
+	test_country = '';
+	test_result = ['+14035698900', 'CAN'];
+	test_explain = 'returns returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+
+	test_number = '+1 (403) 569-8900';
+	test_country = null;
+	test_result = ['+14035698900', 'CAN'];
+	test_explain = 'returns returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '(403) 569-8900';
+	test_country = 'CAN';
+	test_result = [];
+	test_explain = 'returns returns [' + test_result + '], it is a USA zip code';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '(403) 569-8900';
+	test_country = null;
+	test_result = [];
+	test_explain = 'returns returns [' + test_result + '], it is a USA zip code';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+
+	test_number = '212345678';
+	test_country = null;
+	test_result = [];
+	test_explain = 'returns returns [' + test_result + '], it is a USA zip code';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+});
+
 //describe('Testing HK Phone', function() {
 //
 //	describe("phone('6569-8900', '')", function() {
@@ -229,6 +311,3 @@ describe('Testing USA Phone', function() {
 //			result.should.eql(true);
 //		});
 //	});
-
-
-});
