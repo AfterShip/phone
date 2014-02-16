@@ -5,27 +5,27 @@ var test_number, test_country, test_result, test_explain;
 
 describe('Testing USA Phone', function() {
 
-//	test_number = '(817) 569-8900';
-//	test_country = '';
-//	test_result = ['+18175698900', 'USA'];
-//	test_explain = 'returns ' + test_result + ', as no country code given, will treat it as USA';
-//	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-//		it(test_explain, function() {
-//			var result = phone(test_number, test_country);
-//			result.should.eql(test_result);
-//		});
-//	});
-//
-//	test_number = '(852) 569-8900';
-//	test_country = '';
-//	test_result = [];
-//	test_explain = 'returns ' + test_result + ', will treat it as USA, but 852 is NOT a valid USA mobile_begin_with';
-//	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-//		it(test_explain, function() {
-//			var result = phone(test_number, test_country);
-//			result.should.eql(test_result);
-//		});
-//	});
+	test_number = '(817) 569-8900';
+	test_country = '';
+	test_result = ['+18175698900', 'USA'];
+	test_explain = 'returns ' + test_result + ', as no country code given, will treat it as USA';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '(852) 569-8900';
+	test_country = '';
+	test_result = [];
+	test_explain = 'returns ' + test_result + ', will treat it as USA, but 852 is NOT a valid USA mobile_begin_with';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
 
 	test_number = '+1 (817) 569-8900';
 	test_country = '';
