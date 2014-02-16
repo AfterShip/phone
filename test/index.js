@@ -401,81 +401,82 @@ describe('Testing CAN Phone', function() {
 	});
 });
 
-//describe('Testing HK Phone', function() {
+// test HKG, GBR, FRA
+
+
+describe('Testing HKG Phone', function() {
+
+	test_number = '+852 6123-4567';
+	test_country = null;
+	test_result = ['+85261234567', 'HKG'];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+852 6123-4567';
+	test_country = 'HKG';
+	test_result = ['+85261234567', 'HKG'];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+852 6123-4567';
+	test_country = 'USA';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+852 6123-4567';
+	test_country = 'Hong Kong';
+	test_result = ['+85261234567', 'HKG'];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+852 6123-4567';
+	test_country = 'United States';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
 //
-//	describe("phone('6569-8900', '')", function() {
-//		it('returns null', function() {
-//			var result = (phone('6569-8900', '') === null);
-//			result.should.eql(true);
-//		});
-//	});
+//	invalid +phone, null
+//	invalid +phone, valid iso
+//	invalid +phone, invalid iso
+//	invalid +phone, valid name
+//	invalid +phone, invalid name
 //
-//	describe("phone('6569-8900', null)", function() {
-//		it('returns null', function() {
-//			var result = (phone('6569-8900', null) === null);
-//			result.should.eql(true);
-//		});
-//	});
+//	valid phone, null
+//	valid phone, valid iso
+//	valid phone, invalid iso
+//	valid phone, valid name
+//	valid phone, invalid name
 //
-//	describe("phone('+852 8-569-8900', 'HKG')", function() {
-//		it('returns +85285698900', function() {
-//			var result = phone('+852 8-569-8900', 'HKG');
-//			result.should.eql('+85285698900');
-//		});
-//	});
-//
-//	describe("phone('+852 8-569-8900', 'USA')", function() {
-//		it('returns +85285698900', function() {
-//			var result = phone('+852 8-569-8900', 'USA');
-//			result.should.eql('+85285698900');
-//		});
-//	});
-//
-//	describe("phone('+852 8-569-8900', 'HK')", function() {
-//		it('returns +85285698900', function() {
-//			var result = phone('+852 8-569-8900', 'HK');
-//			result.should.eql('+85285698900');
-//		});
-//	});
-//
-//	describe("phone('212345678', 'HKG')", function() {
-//		it('returns null', function() {
-//			var result = (phone('212345678', 'HKG') === null);
-//			result.should.eql(true);
-//		});
-//	});
-//
-//});
-//
-//
-//describe('Testing UK Phone', function() {
-//	// return null, as `790` is NOT the USA area code
-//	describe("phone('07902687632', '')", function() {
-//		it('returns null', function() {
-//			var result = (phone('07902687632', '') == null);
-//			result.should.eql(true);
-//		});
-//	});
-//
-//	describe("phone('07902687632', null)", function() {
-//		it('returns null', function() {
-//			var result = (phone('07902687632', '') == null);
-//			result.should.eql(true);
-//		});
-//	});
-//
-//
-//	describe("phone('07902687632', 'GBR')", function() {
-//		it('returns +447902687632', function() {
-//			var result = phone('07902687632', 'GBR');
-//			result.should.eql('+447902687632');
-//		});
-//	});
-//
-//	describe("phone('06902687632', 'GBR')", function() {
-//		it('returns null', function() {
-//			var result = (phone('06902687632', 'GBR') === null);
-//			// because the UK mobile must start with 7
-//			result.should.eql(true);
-//		});
-//	});
+//	invalid phone, null
+//	invalid phone, valid iso
+//	invalid phone, invalid iso
+//	invalid phone, valid name
+//	invalid phone, invalid name
+});
