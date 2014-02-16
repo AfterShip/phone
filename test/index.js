@@ -1,30 +1,44 @@
 var should = require('should'),
 	phone = require('../lib/index');
 
+var test_number, test_country, test_result, test_explain;
+
 describe('Testing USA Phone', function() {
 
+//	test_number = '(817) 569-8900';
+//	test_country = '';
+//	test_result = ['+18175698900', 'USA'];
+//	test_explain = 'returns ' + test_result + ', as no country code given, will treat it as USA';
+//	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+//		it(test_explain, function() {
+//			var result = phone(test_number, test_country);
+//			result.should.eql(test_result);
+//		});
+//	});
+//
+//	test_number = '(852) 569-8900';
+//	test_country = '';
+//	test_result = [];
+//	test_explain = 'returns ' + test_result + ', will treat it as USA, but 852 is NOT a valid USA mobile_begin_with';
+//	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+//		it(test_explain, function() {
+//			var result = phone(test_number, test_country);
+//			result.should.eql(test_result);
+//		});
+//	});
 
-	describe("phone('(817) 569-8900', '')", function() {
-		it('returns +18175698900, as no country code given, will treat it as USA', function() {
-			var result = phone('(817) 569-8900', '');
-			result.should.eql(['+18175698900', 'USA']);
+	test_number = '+1 (817) 569-8900';
+	test_country = '';
+	test_result = ['+18175698900', 'USA'];
+	test_explain = 'returns returns ' + test_result;
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
 		});
 	});
 
-//
-//	describe("phone('(852) 569-8900', '')", function() {
-//		it('returns null, will treat it as USA, but 852 is NOT a valid USA mobile_begin_with', function() {
-//			var result = (phone('(852) 569-8900', '') === null);
-//			result.should.eql(true);
-//		});
-//	});
-//
-//	describe("phone('+1 (817) 569-8900', '')", function() {
-//		it('returns +18175698900', function() {
-//			var result = phone('+1 (817) 569-8900', '');
-//			result.should.eql('+18175698900');
-//		});
-//	});
+
 //
 //	describe("phone('+1 (817) 569-8900', null)", function() {
 //		it('returns +18175698900', function() {
