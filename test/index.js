@@ -406,6 +406,12 @@ describe('Testing CAN Phone', function() {
 
 describe('Testing HKG Phone', function() {
 
+//	valid +phone, null
+//	valid +phone, valid iso
+//	valid +phone, invalid iso
+//	valid +phone, valid name
+//	valid +phone, invalid name
+
 	test_number = '+852 6123-4567';
 	test_country = null;
 	test_result = ['+85261234567', 'HKG'];
@@ -461,22 +467,192 @@ describe('Testing HKG Phone', function() {
 		});
 	});
 
+
 //
 //	invalid +phone, null
 //	invalid +phone, valid iso
 //	invalid +phone, invalid iso
 //	invalid +phone, valid name
 //	invalid +phone, invalid name
+
+	test_number = '+852 7123-4567';
+	test_country = null;
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+852 7123-4567';
+	test_country = 'HKG';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+852 7123-4567';
+	test_country = 'USA';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+852 7123-4567';
+	test_country = 'Hong Kong';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '+852 7123-4567';
+	test_country = 'United States';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+
 //
 //	valid phone, null
 //	valid phone, valid iso
 //	valid phone, invalid iso
 //	valid phone, valid name
 //	valid phone, invalid name
+
+	test_number = '852 6123-4567';
+	test_country = null;
+	test_result = ['+85261234567', 'HKG'];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '852 6123-4567';
+	test_country = 'HKG';
+	test_result = ['+85261234567', 'HKG'];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '852 6123-4567';
+	test_country = 'USA';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '852 6123-4567';
+	test_country = 'Hong Kong';
+	test_result = ['+85261234567', 'HKG'];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '852 6123-4567';
+	test_country = 'United States';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
 //
 //	invalid phone, null
 //	invalid phone, valid iso
 //	invalid phone, invalid iso
 //	invalid phone, valid name
 //	invalid phone, invalid name
+
+	test_number = '852 7123-4567';
+	test_country = null;
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '852 7123-4567';
+	test_country = 'HKG';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '852 7123-4567';
+	test_country = 'USA';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '852 7123-4567';
+	test_country = 'Hong Kong';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+	test_number = '852 7123-4567';
+	test_country = 'United States';
+	test_result = [];
+	test_explain = 'returns [' + test_result + ']';
+	describe("phone('" + test_number + "', '" + test_country + "')", function() {
+		it(test_explain, function() {
+			var result = phone(test_number, test_country);
+			result.should.eql(test_result);
+		});
+	});
+
+
 });
