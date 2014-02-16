@@ -549,9 +549,9 @@ describe('Testing HKG Phone', function() {
 		});
 	});
 
-	test_number = '852 6123-4567';
+	test_number = '9123-4567';
 	test_country = 'HKG';
-	test_result = ['+85261234567', 'HKG'];
+	test_result = ['+85291234567', 'HKG'];
 	test_explain = 'returns [' + test_result + ']';
 	describe("phone('" + test_number + "', '" + test_country + "')", function() {
 		it(test_explain, function() {
@@ -571,7 +571,7 @@ describe('Testing HKG Phone', function() {
 		});
 	});
 
-	test_number = '852 6123-4567';
+	test_number = '6123-4567';
 	test_country = 'Hong Kong';
 	test_result = ['+85261234567', 'HKG'];
 	test_explain = 'returns [' + test_result + ']';
