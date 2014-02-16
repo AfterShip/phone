@@ -122,7 +122,8 @@ Please open an issue and let us know.
     Major changes:
     1. phone will return array with `formatted phone` and `iso3166 alpha3`.
     2. If not valid, will return `empty array` instead of `null`.
-    3. If `country` is passed, phone will do validation on the phone number against the country. If they are not match, phone will `return empty array` instead of the `formatted E.164 phone`.
+    3. If `country` is passed, phone will do validation on the phone number against the country.
+    If they are not match, phone will `return empty array` instead of the `formatted E.164 phone`.
 * 0.0.6	Added France mobile prefix `7`, updated USA, Canada area code.
 * 0.0.5	Performance tuning, updated Iceland mobile format to 7 digits only.
 * 0.0.4	Added US, CA area code to make it more accurate.
