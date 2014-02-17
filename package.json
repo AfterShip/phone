@@ -1,31 +1,36 @@
 {
-	"name": "phone",
-	"version": "0.0.5",
-	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
-	"main": "./lib/index",
-	"engines": {
-		"node": ">=0.8"
-	},
-	"directories": {
-		"lib": "./lib"
-	},
-	"scripts": {
-		"test": "mocha --recursive -R spec"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/aftership/node-phone"
-	},
-	"bugs": {
-		"url": "https://github.com/aftership/node-phone/issues"
-	},
-	"devDependencies": {
-		"mocha": "latest",
-		"should": "latest"
-	},
-	"keywords": [
-		"phone", "e.164"
-	],
-	"author": "AfterShip",
-	"license": "MIT"
+  "name": "phone",
+  "version": "0.0.6",
+  "description": "With a given country and phone number, validate and format the phone number to E.164 standard",
+  "main": "./lib/index",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --recursive -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aftership/node-phone"
+  },
+  "bugs": {
+    "url": "https://github.com/aftership/node-phone/issues"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "should": "latest"
+  },
+  "keywords": [
+    "phone",
+    "e.164"
+  ],
+  "author": "AfterShip",
+  "license": "MIT",
+  "homepage": "https://github.com/aftership/node-phone",
+  "dependencies": {
+    "should": "~3.0.1"
+  }
 }
