@@ -1,9 +1,6 @@
 var should = require('should'),
 	phone = require('../lib/index');
 
-var test_number, test_country, test_result, test_explain;
-
-
 /* suggest 10 test case for each country, except USA
 
  Test Case, for non-USA
@@ -35,624 +32,290 @@ var test_number, test_country, test_result, test_explain;
  */
 
 describe('Testing USA Phone', function() {
-	test_number = '(852) 569-8900';
-	test_country = '';
-	test_result = [];
-	test_explain = 'returns [' + test_result + '], treat it as USA, but 852 is NOT a valid USA mobile_begin_with, so empty array.';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 1', function() {
+		var number = '(852) 569-8900',
+			country = '',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
 
-	test_number = '+1 (817) 569-8900';
-	test_country = '';
-	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 2', function() {
+		var number = '+1 (817) 569-8900',
+			country = '',
+			result = ['+18175698900', 'USA'];
+
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
 
-	test_number = '+1 (817) 569-8900';
-	test_country = null;
-	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '2121234567';
-	test_country = '';
-	test_result = ['+12121234567', 'USA'];
-	test_explain = 'returns [' + test_result + '], no country given, make USA, fit USA length without country code, auto append. valid zip code: 212';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 3', function() {
+		var number = '+1 (817) 569-8900',
+			country = null,
+			result = ['+18175698900', 'USA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
 
 
-	test_number = '22-6569-8900';
-	test_country = '';
-	test_result = [];
-	test_explain = 'returns [' + test_result + '], as 226 is NOT a valid USA code';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 4', function() {
+		var number = '2121234567',
+			country = '',
+			result = ['+12121234567', 'USA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 5', function() {
+		var number = '22-6569-8900',
+			country = '',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 6', function() {
+		var number = '22-5569-8900',
+			country = '',
+			result = ['+12255698900', 'USA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 7', function() {
+		var number = '+1 (817) 569-8900',
+			country = 'United States',
+			result = ['+18175698900', 'USA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 8', function() {
+		var number = '+1 (817) 569-8900',
+			country = 'United States ',
+			result = ['+18175698900', 'USA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 9', function() {
+		var number = '+1 (817) 569-8900',
+			country = 'USA',
+			result = ['+18175698900', 'USA'];
+
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 10', function() {
+		var number = '+1 (817) 569-8900',
+			country = 'USA ',
+			result = ['+18175698900', 'USA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 11', function() {
+		var number = '+1 (817) 569-8900',
+			country = 'US',
+			result = ['+18175698900', 'USA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 12', function() {
+		var number = '+1 (817) 569-8900',
+			country = ' US',
+			result = ['+18175698900', 'USA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
 
 
-	test_number = '22-5569-8900';
-	test_country = '';
-	test_result = ['+12255698900', 'USA'];
-	test_explain = 'returns [' + test_result + '], as 225 is a valid USA code';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-
-	test_number = '+1 (817) 569-8900';
-	test_country = 'United States';
-	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-
-	test_number = '+1 (817) 569-8900';
-	test_country = 'United States ';
-	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (817) 569-8900';
-	test_country = 'USA';
-	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-
-	test_number = '+1 (817) 569-8900';
-	test_country = 'USA ';
-	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-
-	test_number = '+1 (817) 569-8900';
-	test_country = 'US';
-	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (817) 569-8900';
-	test_country = ' US ';
-	test_result = ['+18175698900', 'USA'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-
-	test_number = '+1 (817) 569-8900';
-	test_country = 'HKG';
-	test_result = [];
-	test_explain = 'returns [' + test_result + '], it is NOT a valid HKG phone number.';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 13', function() {
+		var number = '+1 (817) 569-8900',
+			country = 'HKG',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
 
 });
 
 
-describe('Testing CAN Phone', function() {
+describe('Testing MEX Phone', function() {
+	//	valid +phone, null
+	//	valid +phone, valid iso
+	//	valid +phone, invalid iso
+	//	valid +phone, valid name
+	//	valid +phone, invalid name
 
-	test_number = '+1 (403) 569-8900';
-	test_country = null;
-	test_result = ['+14035698900', 'CAN'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (403) 569-8900';
-	test_country = 'CAN';
-	test_result = ['+14035698900', 'CAN'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (403) 569-8900';
-	test_country = 'USA';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (403) 569-8900';
-	test_country = 'Canada';
-	test_result = ['+14035698900', 'CAN'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (403) 569-8900';
-	test_country = 'Canadas';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (401) 569-8900';
-	test_country = null;
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (401) 569-8900';
-	test_country = 'CAN';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (401) 569-8900';
-	test_country = 'HKG';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (401) 569-8900';
-	test_country = 'Canada';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+1 (401) 569-8900';
-	test_country = 'Canadas';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '(403) 569-8900';
-	test_country = null;
-	test_result = ['+14035698900', 'CAN'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '(403) 569-8900';
-	test_country = 'CAN';
-	test_result = ['+14035698900', 'CAN'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '(403) 569-8900';
-	test_country = 'USA';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 1', function() {
+		var number = '+52 1 762 100 9517',
+			country = null,
+			result = ['+5217621009517', 'MEX'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
 
 
-	test_number = '(403) 569-8900';
-	test_country = 'Canada';
-	test_result = ['+14035698900', 'CAN'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 2', function() {
+		var number = '+52 1 762 100 9517',
+			country = 'MEX',
+			result = ['+5217621009517', 'MEX'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+	describe('Test 3', function() {
+		var number = '+52 1 762 100 9517',
+			country = 'USA',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+	describe('Test 4', function() {
+		var number = '+52 1 762 100 9517',
+			country = 'Mexico',
+			result = ['+5217621009517', 'MEX'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+	describe('Test 5', function() {
+		var number = '+52 1 762 100 9517',
+			country = 'United States',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
 
-	test_number = '(403) 569-8900';
-	test_country = 'United States';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	//	invalid +phone, null
+	//	invalid +phone, valid iso
+	//	invalid +phone, invalid iso
+	//	invalid +phone, valid name
+	//	invalid +phone, invalid name
+
+
+	describe('Test 6', function() {
+		var number = '+52 62 100 9517',
+			country = null,
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+	describe('Test 7', function() {
+		var number = '+52 62 100 9517',
+			country = 'MEX',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+	describe('Test 8', function() {
+		var number = '+52 62 100 9517',
+			country = 'USA',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+	describe('Test 9', function() {
+		var number = '+52 62 100 9517',
+			country = 'Mexico',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+	describe('Test 10', function() {
+		var number = '+52 62 100 9517',
+			country = 'United States',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
 
-	test_number = '(401) 569-8900';
-	test_country = null;
-	test_result = ['+14015698900', 'USA'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	//	valid phone, null
+	//	valid phone, valid iso
+	//	valid phone, invalid iso
+	//	valid phone, valid name
+	//	valid phone, invalid name
+
+
+	describe('Test 11', function() {
+		var number = '52762 100 9517',
+			country = null,
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
-
-	test_number = '(401) 569-8900';
-	test_country = 'HKG';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 12', function() {
+		var number = '762 100 9517',
+			country = 'MEX',
+			result = ['+527621009517', 'MEX'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
-
-	test_number = '(401) 569-8900';
-	test_country = 'Canada';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 13', function() {
+		var number = '762 100 9517',
+			country = 'MEXINVALID',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
-
-	test_number = '(401) 569-8900';
-	test_country = 'Hong Kong';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 14', function() {
+		var number = '762 100 9517',
+			country = 'Mexico',
+			result = ['+527621009517', 'MEX'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
-});
-
-// test HKG, GBR, FRA
-
-
-describe('Testing HKG Phone', function() {
-
-//	valid +phone, null
-//	valid +phone, valid iso
-//	valid +phone, invalid iso
-//	valid +phone, valid name
-//	valid +phone, invalid name
-
-	test_number = '+852 6123-4567';
-	test_country = null;
-	test_result = ['+85261234567', 'HKG'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+852 6123-4567';
-	test_country = 'HKG';
-	test_result = ['+85261234567', 'HKG'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+852 6123-4567';
-	test_country = 'USA';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+852 6123-4567';
-	test_country = 'Hong Kong';
-	test_result = ['+85261234567', 'HKG'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+852 6123-4567';
-	test_country = 'United States';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-
-//
-//	invalid +phone, null
-//	invalid +phone, valid iso
-//	invalid +phone, invalid iso
-//	invalid +phone, valid name
-//	invalid +phone, invalid name
-
-	test_number = '+852 7123-4567';
-	test_country = null;
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+852 7123-4567';
-	test_country = 'HKG';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+852 7123-4567';
-	test_country = 'USA';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+852 7123-4567';
-	test_country = 'Hong Kong';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '+852 7123-4567';
-	test_country = 'United States';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-
-//
-//	valid phone, null
-//	valid phone, valid iso
-//	valid phone, invalid iso
-//	valid phone, valid name
-//	valid phone, invalid name
-
-	test_number = '852 6123-4567';
-	test_country = null;
-	test_result = ['+85261234567', 'HKG'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '9123-4567';
-	test_country = 'HKG';
-	test_result = ['+85291234567', 'HKG'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '852 6123-4567';
-	test_country = 'USA';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '6123-4567';
-	test_country = 'Hong Kong';
-	test_result = ['+85261234567', 'HKG'];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '852 6123-4567';
-	test_country = 'United States';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-//
-//	invalid phone, null
-//	invalid phone, valid iso
-//	invalid phone, invalid iso
-//	invalid phone, valid name
-//	invalid phone, invalid name
-
-	test_number = '852 7123-4567';
-	test_country = null;
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '852 7123-4567';
-	test_country = 'HKG';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '852 7123-4567';
-	test_country = 'USA';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '852 7123-4567';
-	test_country = 'Hong Kong';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
-		});
-	});
-
-	test_number = '852 7123-4567';
-	test_country = 'United States';
-	test_result = [];
-	test_explain = 'returns [' + test_result + ']';
-	describe("phone('" + test_number + "', '" + test_country + "')", function() {
-		it(test_explain, function() {
-			var result = phone(test_number, test_country);
-			result.should.eql(test_result);
+	describe('Test 15', function() {
+		var number = '762 100 9517',
+			country = 'Mexico Invalid',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
 		});
 	});
 
 
 });
+
+
+describe('Testing HKG Phone Quick Test', function() {
+
+	describe('Test 1', function() {
+		var number = '6123-6123',
+			country = 'HKG',
+			result = ['+85261236123', 'HKG'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+});
+
