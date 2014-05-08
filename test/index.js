@@ -319,3 +319,134 @@ describe('Testing HKG Phone Quick Test', function() {
 
 });
 
+
+describe('Testing BRA Phone Quick Test', function() {
+
+	describe('Test 1', function() {
+		var number = '+55 11 9 6123 1234',
+			country = 'BRA',
+			result = ['+5511961231234', 'BRA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('Test 2', function() {
+		var number = '+55 11 6123 1234', // as 9 is missing
+			country = 'BRA',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 4', function() {
+		var number = '+55 11 8 6123 1234', // prefix must be 9 after area code
+			country = 'BRA',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function() {
+		var number = '+55 69 8 6123 1234', // we don't check prefix for area code 69
+			country = 'BRA',
+			result = ['+5569861231234', 'BRA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+});
+
+// input --> output
+// 89234567890, RUS --> +79234567890, RUS
+// +79234567890, RUS --> +79234567890, RUS
+// +79234567890  ---> +79234567890, RUS
+// +70234567890, RUS  ---> invalid
+// 9234567890, RUS  ---> +79234567890, RUS
+
+
+describe('Testing RUS Phone Quick Test', function() {
+
+	describe('Test 1', function() {
+		var number = '89234567890',// remove the 8, treat it as 9234567890
+			country = 'RUS',
+			result = ['+79234567890', 'RUS'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function() {
+		var number = '+79234567890',
+			country = 'RUS',
+			result = ['+79234567890', 'RUS'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function() {
+		var number = '+79234567890',
+			country = '',
+			result = ['+79234567890', 'RUS'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 4', function() {
+		var number = '+70234567890',
+			country = 'RUS',
+			result = []; // as 0 is not a valid prefix, must be 9
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 5', function() {
+		var number = '+79234567890',
+			country = 'USA',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+});
+
+
+describe('Testing THA Phone Quick Test', function() {
+
+	describe('Test 1', function() {
+		var number = '0812345678', // remove the leading 0
+			country = 'THA',
+			result = ['+66812345678', 'THA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function() {
+		var number = '0912345678', // remove the leading 0
+			country = 'THA',
+			result = ['+66912345678', 'THA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function() {
+		var number = '812345678',
+			country = 'THA',
+			result = ['+66812345678', 'THA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+});
