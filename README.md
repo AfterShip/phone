@@ -80,7 +80,8 @@ var phone = require('phone');
 phone('(817) 569-8900', ''); // return ['+18175698900, 'USA']
 phone('(817) 569-8900', 'USA'); // return ['+18175698900', 'USA']
 phone('(817) 569-8900', 'HKG'); // return []
-phone('+1(817) 569-8900', HKG); // return [], as it is not a valid HKG mobile phone number
+phone('+1(817) 569-8900', 'HKG'); // return [], as it is not a valid HKG mobile phone number
+phone('+1(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('6123-6123', ''); // return [], as default country is USA
 phone('6123-6123', 'HKG'); // return ['+85261236123', 'HKG']
@@ -95,7 +96,8 @@ var phone = require('phone');
 phone('(817) 569-8900', ''); // return +18175698900
 phone('(817) 569-8900', 'USA'); // return +18175698900
 phone('(817) 569-8900', 'HKG'); // return null
-phone('+1(817) 569-8900', HKG); // return +18175698900
+phone('+1(817) 569-8900', 'HKG'); // return +18175698900
+phone('+1(817) 569-8900', ''); // return +18175698900
 phone('(817) 569-8900', ''); // return +18175698900
 phone('6123-6123', ''); // return null, as default country is USA
 phone('6123-6123', 'HKG'); // return +85261236123
