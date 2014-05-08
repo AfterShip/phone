@@ -51,6 +51,24 @@ describe('Testing input parameter Phone', function() {
 		});
 	});
 
+
+	describe('Test 3', function() {
+		var number = '+852 6569-8900',
+			result = ['+85265698900', 'HKG'];
+		it('returns ' + result, function() {
+			phone(number).should.eql(result);
+		});
+	});
+
+	describe('Test 4', function() {
+		var number = '+852 6569-8900',
+			country = 'HKG',
+			result = ['+85265698900', 'HKG'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
 });
 
 describe('Testing USA Phone', function() {
