@@ -31,6 +31,28 @@ var should = require('should'),
 
  */
 
+
+
+describe('Testing input parameter Phone', function() {
+
+	describe('Test 1', function() {
+		var number = '(852) 569-8900',
+			result = [];
+		it('returns ' + result, function() {
+			phone(number).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function() {
+		var number = '+1 (817) 569-8900',
+			result = ['+18175698900', 'USA'];
+		it('returns ' + result, function() {
+			phone(number).should.eql(result);
+		});
+	});
+
+});
+
 describe('Testing USA Phone', function() {
 	describe('Test 1', function() {
 		var number = '(852) 569-8900',

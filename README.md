@@ -76,7 +76,7 @@ npm install phone
 ## Usage (1.x branch)
 ```
 var phone = require('phone');
-
+phone('(817) 569-8900'); // return ['+18175698900, 'USA']
 phone('(817) 569-8900', ''); // return ['+18175698900, 'USA']
 phone('(817) 569-8900', 'USA'); // return ['+18175698900', 'USA']
 phone('(817) 569-8900', 'HKG'); // return []
