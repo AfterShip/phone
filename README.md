@@ -87,6 +87,13 @@ phone('(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('6123-6123', ''); // return [], as default country is USA
 phone('6123-6123', 'HKG'); // return ['+85261236123', 'HKG']
 
+// Query the database
+phone('+33675002145', 'alpha2'); // return ['+33675002145', 'FR']
+phone('+33675002145', 'alpha3'); // return ['+33675002145', 'FRA']
+phone('+33675002145', 'mcc'); // return ['+33675002145', '208']
+phone('0675002145', 'FRA', 'country_code'); // return ['+33675002145', '33']
+phone('0675002145', 208, 'country_code'); // return ['+33675002145', '33']
+phone('0675002145', 208, 'country_name'); // return ['+33675002145', 'France']
 ```
 
 

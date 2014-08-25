@@ -71,6 +71,77 @@ describe('Testing input parameter Phone', function() {
 
 });
 
+describe('Testing output parameter', function() {
+
+	it('with no parameter it should return the alpha3 country code',
+		function() {
+			var number = '+33675489621',
+				result = ["+33675489621", "FRA"];
+			phone(number).should.eql(result);
+		});
+
+	it('with alpha2 parameter it should return the alpha2 country code',
+		function() {
+			var number = '+33675489621',
+				result = ["+33675489621", "FR"];
+			phone(number, "alpha2").should.eql(result);
+		});
+
+	it('with alpha3 parameter it should return the alpha3 country code',
+		function() {
+			var number = '+33675489621',
+				result = ["+33675489621", "FRA"];
+			phone(number, "alpha3").should.eql(result);
+		});
+
+	it('with country_code parameter it should return the country code',
+		function() {
+			var number = '+33675489621',
+				result = ["+33675489621", "33"];
+			phone(number, "country_code").should.eql(result);
+		});
+
+	it('with country_name parameter it should return the country code',
+		function() {
+			var number = '+33675489621',
+				result = ["+33675489621", "France"];
+			phone(number, "country_name").should.eql(result);
+		});
+
+	it('with mcc parameter it should return the first mcc of the list',
+		function() {
+			var number = '+33675489621',
+				result = ["+33675489621", 208];
+			phone(number, "mcc").should.eql(result);
+		});
+
+	it('with USA and mcc parameter return the first mcc of the list.',
+		function() {
+			var number = '(817) 569-8900',
+				result = ['+18175698900', 310];
+			phone(number, "USA", "mcc").should.eql(result);
+		});
+});
+
+
+describe('Testing input parameter', function() {
+
+	it('with MCC it should grab the right iso3166 country',
+		function() {
+			var number = '0675489621',
+				result = ["+33675489621", "FRA"];
+			phone(number, 208).should.eql(result);
+		});
+
+	it('with MCC it should grab the right iso3166 country',
+		function() {
+			var number = '(817) 569-8900',
+				result = ["+18175698900", "USA"];
+			phone(number, 310).should.eql(result);
+		});
+});
+
+
 describe('Testing USA Phone', function() {
 	describe('Test 1', function() {
 		var number = '(852) 569-8900',
