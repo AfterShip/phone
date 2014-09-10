@@ -31,7 +31,12 @@ var should = require('should'),
 
  */
 
+describe('Testing availability of country object', function() {
 
+		it('returns a value', function() {
+			should.exist(phone.iso3166_data);
+		});
+});
 
 describe('Testing input parameter Phone', function() {
 
