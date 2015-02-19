@@ -495,7 +495,7 @@ describe('Testing NPL Phone Quick Test', function() {
 
 	describe('Test NP 1', function() {
 		var number = '09812345678', // remove the leading 0
-			country = 'THA',
+			country = 'NPL',
 			result = ['+9779812345678', 'NPL'];
 		it('returns ' + result, function() {
 			phone(number, country).should.eql(result);
