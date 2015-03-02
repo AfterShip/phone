@@ -431,6 +431,36 @@ describe('Testing PRI Phone Quick Test', function() {
 	});
 });
 
+describe('Testing VIR Phone Quick Test', function() {
+	describe('Test 1', function() {
+		var number = '+1-340.643.2400',
+			country = 'VIR',
+			result = ['+13406432400', 'VIR'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function() {
+		var number = '13406432400',
+			country = 'VIR',
+			result = ['+13406432400', 'VIR'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function() {
+		var number = '3406432400',
+			country = 'VIR',
+			result = ['+13406432400', 'VIR'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+});
+
+
 // input --> output
 // 89234567890, RUS --> +79234567890, RUS
 // +79234567890, RUS --> +79234567890, RUS
