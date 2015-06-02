@@ -86,7 +86,6 @@ phone('+1(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('6123-6123', ''); // return [], as default country is USA
 phone('6123-6123', 'HKG'); // return ['+85261236123', 'HKG']
-
 ```
 
 
@@ -102,7 +101,6 @@ phone('+1(817) 569-8900', ''); // return +18175698900
 phone('(817) 569-8900', ''); // return +18175698900
 phone('6123-6123', ''); // return null, as default country is USA
 phone('6123-6123', 'HKG'); // return +85261236123
-
 ```
 
 
@@ -110,8 +108,7 @@ phone('6123-6123', 'HKG'); // return +85261236123
 
 ```
 npm test
-
-``
+```
 
 ## Help
 
