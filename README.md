@@ -117,6 +117,8 @@ If you know that our rule is wrong, or can add more validation to make this npm 
 Please open an issue and let us know.
 
 ## Change Log
+* 1.0.4 Support more countries with mobile prefix
+
 * 1.0.0 `NOT compatible` with the `0.0.x branch`
 
     Major changes:
