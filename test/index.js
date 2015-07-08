@@ -409,7 +409,7 @@ describe('Testing PRI Phone Quick Test', function() {
 	describe('Test 1', function() {
 		var number = '+1-787-672-9999',
 			country = 'PRI',
-			result = ['+17876729999', 'PRI'];
+			result = { phone: '+17876729999', country: 'PRI' };
 		it('returns ' + result, function() {
 			phone(number, country).should.eql(result);
 		});
@@ -418,7 +418,7 @@ describe('Testing PRI Phone Quick Test', function() {
 	describe('Test 2', function() {
 		var number = '17876729999',
 			country = 'PRI',
-			result = ['+17876729999', 'PRI'];
+			result = { phone: '+17876729999', country: 'PRI' };
 		it('returns ' + result, function() {
 			phone(number, country).should.eql(result);
 		});
@@ -427,7 +427,7 @@ describe('Testing PRI Phone Quick Test', function() {
 	describe('Test 3', function() {
 		var number = '7876729999',
 			country = 'PRI',
-			result = ['+17876729999', 'PRI'];
+			result = { phone: '+17876729999', country: 'PRI' };
 		it('returns ' + result, function() {
 			phone(number, country).should.eql(result);
 		});
