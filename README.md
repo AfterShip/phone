@@ -117,6 +117,8 @@ If you know that our rule is wrong, or can add more validation to make this npm 
 Please open an issue and let us know.
 
 ## Change Log
+* 1.0.5 Bug fix for [#31](https://github.com/AfterShip/node-phone/issues/31), allow [extend more easily](https://github.com/AfterShip/node-phone/issues/32)
+
 * 1.0.4 Support more countries with mobile prefix
 
 * 1.0.0 `NOT compatible` with the `0.0.x branch`
@@ -129,6 +131,10 @@ Please open an issue and let us know.
 * 0.0.6	Added France mobile prefix `7`, updated USA, Canada area code.
 * 0.0.5	Performance tuning, updated Iceland mobile format to 7 digits only.
 * 0.0.4	Added US, CA area code to make it more accurate.
+
+## TO DO in version 2.0
+- Support detect both land line and mobile
+- Support more lookup other than ISO3166-alpha2, alpha3, may also support mobile country code (MCC)
 
 
 ## License

@@ -196,6 +196,333 @@ describe('Testing USA Phone', function() {
 });
 
 
+describe('Testing +1 but NOT in USA', function() {
+	describe('+1 340  United States Virgin Islands', function() {
+		var number = '+1 340 1234 567',
+				country = 'VIR',
+				result = ['+13401234567', 'VIR'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 670 Northern Mariana Islands', function() {
+		var number = '+1 670 1234 567',
+				country = 'MNP',
+				result = ['+16701234567', 'MNP'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('+1 671 Guam', function() {
+		var number = '+1 671 1234 567',
+				country = 'GUM',
+				result = ['+16711234567', 'GUM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 684 American Samoa', function() {
+		var number = '+1 684 1234 567',
+				country = 'ASM',
+				result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 684 American Samoa', function() {
+		var number = '+1 684 2584 567',
+				country = 'ASM',
+				result = ['+16842584567', 'ASM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 684 American Samoa', function() {
+		var number = '+1 684 7334 567',
+				country = 'ASM',
+				result = ['+16847334567', 'ASM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 787 / 939 Puerto Rico', function() {
+		var number = '+1 787 1234 567',
+				country = 'PRI',
+				result = ['+17871234567', 'PRI'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 787 / 939 Puerto Rico', function() {
+		var number = '+1 939 1234 567',
+				country = 'PRI',
+				result = ['+19391234567', 'PRI'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 242 Bahamas', function() {
+		var number = '+1 242 1234 567',
+				country = 'BHS',
+				result = ['+12421234567', 'BHS'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+	describe('+1 246 Barbados', function() {
+		var number = '+1 246 1234 567',
+				country = 'BRB',
+				result = ['+12461234567', 'BRB'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 264 Anguilla', function() {
+		var number = '+1 264 1234 567',
+				country = 'AIA',
+				result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 264 Anguilla', function() {
+		var number = '+1 264 5234 567',
+				country = 'AIA',
+				result = ['+12645234567', 'AIA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 264 Anguilla', function() {
+		var number = '+1 264 7234 567',
+				country = 'AIA',
+				result = ['+12647234567', 'AIA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 268 Antigua and Barbuda', function() {
+		var number = '+1 268 1234 567',
+				country = 'ATG',
+				result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 268 Antigua and Barbuda', function() {
+		var number = '+1 268 7234 567',
+				country = 'ATG',
+				result = ['+12687234567', 'ATG'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 284 British Virgin Islands', function() {
+		var number = '+1 284 1234 567',
+				country = 'VGB',
+				result = ['+12841234567', 'VGB'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('+1 345 Cayman Islands', function() {
+		var number = '+1 345 1234 567',
+				country = 'CYM',
+				result = ['+13451234567', 'CYM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 441 Bermuda', function() {
+		var number = '+1 441 1234 567',
+				country = 'BMU',
+				result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('+1 441 Bermuda', function() {
+		var number = '+1 441 3234 567',
+				country = 'BMU',
+				result = ['+14413234567', 'BMU'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 441 Bermuda', function() {
+		var number = '+1 441 5234 567',
+				country = 'BMU',
+				result = ['+14415234567', 'BMU'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 441 Bermuda', function() {
+		var number = '+1 441 7234 567',
+				country = 'BMU',
+				result = ['+14417234567', 'BMU'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('+1 473 Grenada', function() {
+		var number = '+1 473 1234 567',
+				country = 'GRD',
+				result = ['+14731234567', 'GRD'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('+1 649 Turks and Caicos Islands', function() {
+		var number = '+1 649 1234 567',
+				country = 'TCA',
+				result = [];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 649 Turks and Caicos Islands', function() {
+		var number = '+1 649 2234 567',
+				country = 'TCA',
+				result = ['+16492234567', 'TCA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 664 Montserrat', function() {
+		var number = '+1 664 1234 567',
+				country = 'MSR',
+				result = ['+16641234567', 'MSR'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('+1 721 Sint Maarten', function() {
+		var number = '+1 721 1234 567',
+				country = 'SXM',
+				result = ['+17211234567', 'SXM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 758 Saint Lucia', function() {
+		var number = '+1 758 1234 567',
+				country = 'LCA',
+				result = ['+17581234567', 'LCA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 767 Dominica', function() {
+		var number = '+1 767 1234 567',
+				country = 'DMA',
+				result = ['+17671234567', 'DMA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 784 Saint Vincent and the Grenadines', function() {
+		var number = '+1 784 1234 567',
+				country = 'VCT',
+				result = ['+17841234567', 'VCT'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('+1 809 / 829 / 849 Dominican Republic', function() {
+		var number = '+1 809 1234 567',
+				country = 'DOM',
+				result = ['+18091234567', 'DOM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 809 / 829 / 849 Dominican Republic', function() {
+		var number = '+1 829 1234 567',
+				country = 'DOM',
+				result = ['+18291234567', 'DOM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('+1 809 / 829 / 849 Dominican Republic', function() {
+		var number = '+1 849 1234 567',
+				country = 'DOM',
+				result = ['+18491234567', 'DOM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('+1 868 Trinidad and Tobago', function() {
+		var number = '+1 868 1234 567',
+				country = 'TTO',
+				result = ['+18681234567', 'TTO'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('+1 869 Saint Kitts and Nevis', function() {
+		var number = '+1 869 1234 567',
+				country = 'KNA',
+				result = ['+18691234567', 'KNA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+
+	describe('+1 876 Jamaica', function() {
+		var number = '+1 876 1234 567',
+				country = 'JAM',
+				result = ['+18761234567', 'JAM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+});
+
 describe('Testing MEX Phone', function() {
 	//	valid +phone, null
 	//	valid +phone, valid iso
