@@ -431,6 +431,35 @@ describe('Testing PRI Phone Quick Test', function() {
 	});
 });
 
+describe('Testing Guam Phone Quick Test', function() {
+	describe('Test 1', function() {
+		var number = '+1-671-488-1622',
+			country = 'GUM',
+			result = ['+16714881622', 'GUM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function() {
+		var number = '16714881622',
+			country = 'GUM',
+			result = ['+16714881622', 'GUM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function() {
+		var number = '6714881622',
+			country = 'GUM',
+			result = ['+16714881622', 'GUM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+});
+
 describe('Testing VIR Phone Quick Test', function() {
 	describe('Test 1', function() {
 		var number = '+1-340.643.2400',
