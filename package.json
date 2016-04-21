@@ -14,10 +14,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/aftership/node-phone"
+		"url": "https://github.com/aftership/phone"
 	},
 	"bugs": {
-		"url": "https://github.com/aftership/node-phone/issues"
+		"url": "https://github.com/aftership/phone/issues"
 	},
 	"devDependencies": {
 		"mocha": "latest",
