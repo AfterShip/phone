@@ -846,3 +846,52 @@ describe('Testing THA Phone Quick Test', function() {
 	});
 
 });
+
+describe('Testing NPL Phone Quick Test', function() {
+
+	describe('Test NP 1', function() {
+		var number = '09812345678', // remove the leading 0
+			country = 'NPL',
+			result = ['+9779812345678', 'NPL'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test NP 2', function() {
+		var number = '09712345678', // remove the leading 0
+			country = 'NPL',
+			result = ['+9779712345678', 'NPL'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test NP 3', function() {
+		var number = '09612345678',
+			country = 'NPL',
+			result = ['+9779612345678', 'NPL'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+	
+	describe('Test NP 4', function() {
+		var number = '+9779812345678',
+			country = 'NPL',
+			result = ['+9779812345678', 'NPL'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+	
+	describe('Test NP 5', function() {
+		var number = '9812345678',
+			country = 'NPL',
+			result = ['+9779812345678', 'NPL'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+});
