@@ -86,6 +86,22 @@ phone('+1(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('6123-6123', ''); // return [], as default country is USA
 phone('6123-6123', 'HKG'); // return ['+85261236123', 'HKG']
+phone.getDataForCountry('THA'); // return PhoneData
+/*
+{
+  alpha2: 'TH',
+  alpha3: 'THA',
+  country_code: '66',
+  country_name: 'Thailand',
+  mobile_begin_with: [
+    '8',
+    '9'
+  ],
+  phone_number_lengths: [
+    9
+  ]
+}
+*/
 ```
 
 
