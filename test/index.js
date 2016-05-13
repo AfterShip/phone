@@ -846,3 +846,43 @@ describe('Testing THA Phone Quick Test', function() {
 	});
 
 });
+
+describe('Testing get raw data', function() {
+
+	describe('Test 1', function() {
+		var country = 'THA';
+		it('returns ' + country + ' data', function() {
+			var c = phone.getDataForCountry(country);
+			c.alpha3.should.eql(country);
+		});
+		it('returns null', function() {
+			var c = phone.getDataForCountry();
+			should.equal(c, null);
+		});
+		it('returns USA data', function() {
+			var c = phone.getDataForCountry('US');
+			c.alpha3.should.eql('USA');
+		});
+	});
+
+	describe('Test sealed', function() {
+		var country = 'THA';
+		before(function() {
+			var c = phone.getDataForCountry(country);
+			c.alpha3 = '---';
+			c.alpha2 = '---';
+			c.mobile_begin_with.__some = '---';
+			c.mobile_begin_with = 0;
+			c.phone_number_lengths = 0;
+		});
+		it('still same as was', function() {
+			var c = phone.getDataForCountry(country);
+			c.alpha3.should.equal(country);
+			c.alpha2.should.equal('TH');
+			c.mobile_begin_with.should.not.equal(0);
+			should.strictEqual(c.mobile_begin_with.__some, undefined);
+			c.phone_number_lengths.should.not.equal(0);
+		});
+	});
+
+});
