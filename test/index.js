@@ -846,3 +846,35 @@ describe('Testing THA Phone Quick Test', function() {
 	});
 
 });
+
+
+describe('Testing TZA Phone Quick Test', function() {
+
+	describe('Test 1', function() {
+		var number = '0714795861', // remove the leading 0
+			country = 'TZA',
+			result = ['+255714795861', 'TZA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function() {
+		var number = '0684795861', // remove the leading 0
+			country = 'TZA',
+			result = ['+255684795861', 'TZA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function() {
+		var number = '714795861',
+			country = 'TZA',
+			result = ['+255714795861', 'TZA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+});
