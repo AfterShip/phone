@@ -117,6 +117,8 @@ If you know that our rule is wrong, or can add more validation to make this npm 
 Please open an issue and let us know.
 
 ## Change Log
+* 1.0.7 Apply pull request #48
+
 * 1.0.6 Apply pull request #30, #45, #46
 
 * 1.0.5 Bug fix for [#31](https://github.com/AfterShip/node-phone/issues/31), allow [extend more easily](https://github.com/AfterShip/node-phone/issues/32)
