@@ -80,7 +80,7 @@ console.log(phone('invalid phone number'));
 
 // output
 {
-	error: 'Invalid phonen number'
+	error: 'Invalid phone number'
 }
 
 ```
