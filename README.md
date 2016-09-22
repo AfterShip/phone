@@ -85,7 +85,7 @@ console.log(phone('invalid phone number'));
 
 ```
 
-Note: For the phone_beautified field, just supports USA and CAN phone numbers.
+Note: For the area_code in phone_beautified field, just supports USA and CAN phone numbers.
 
 ## Test
 
