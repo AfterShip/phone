@@ -59,8 +59,8 @@ console.log(phone('(817) 569-8900'));
 	country: '1',
 	area_code: '817',
 	number: '5698900',
-    iso3: 'USA',
-    type: 'm' // m for mobile, l for land line, 'u' for unknown
+	iso3: 'USA',
+	type: 'm' // m for mobile, l for land line, 'u' for unknown
 }
 
 console.log(phone('+852 6569-8900'));
@@ -72,20 +72,20 @@ console.log(phone('+852 6569-8900'));
 	country: '852',
 	area_code: '',
 	number: '65698900',
-    iso3: 'HKG',
-    type: 'm'
+  	iso3: 'HKG',
+  	type: 'm'
 }
 
 console.log(phone('invalid phone number'));
 
 // output
 {
-	error: 'Invalid phonen number'
+	error: 'Invalid phone number'
 }
 
 ```
 
-
+Note: For the area_code in phone_beautified field, just supports USA and CAN phone numbers.
 
 ## Test
 
