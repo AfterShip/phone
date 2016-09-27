@@ -1,8 +1,9 @@
+'use strict';
+
 var should = require('should');
 var phone = require('../lib/index');
 
 /* suggest 10 test case for each country, except USA
-
  Test Case, for non-USA
 
  valid +phone, null
@@ -28,12 +29,9 @@ var phone = require('../lib/index');
  invalid phone, invalid iso
  invalid phone, valid name
  invalid phone, invalid name
-
- */
-
+*/
 
 describe('Testing input parameter Phone', function () {
-
 	describe('Test 1', function () {
 		var number = '(852) 569-8900',
 			result = {
@@ -1421,5 +1419,4 @@ describe('Testing TZA Phone Quick Test', function () {
 			phone(number, country).should.eql(result);
 		});
 	});
-
 });
