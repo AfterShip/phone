@@ -1,0 +1,22 @@
+# For more information about the properties used in
+# this file, please see the EditorConfig documentation:
+# http://editorconfig.org/
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[{*.yml,package.json}]
+indent_size = 2
+# The indent style for `*.yml` and `package.json` must be space
+# http://www.yaml.org/spec/1.2/spec.html#id2777534
+# https://github.com/npm/npm/issues/4718
+indent_style = space
