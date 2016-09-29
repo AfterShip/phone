@@ -11,7 +11,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha --recursive -R spec"
+    "test": "npm run lint && mocha --recursive -R spec"
   },
   "repository": {
     "type": "git",
