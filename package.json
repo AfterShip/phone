@@ -11,8 +11,11 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint && mocha --recursive -R spec"
+    "test": "mocha --recursive -R spec"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/aftership/phone"
@@ -22,8 +25,9 @@
   },
   "devDependencies": {
     "eslint-config-aftership": "^3.1.4",
-    "mocha": "latest",
-    "should": "latest"
+    "mocha": "^3.1.0",
+    "pre-commit": "^1.1.3",
+    "should": "^11.1.0"
   },
   "keywords": [
     "phone",
