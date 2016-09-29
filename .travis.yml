@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+    - "0.10"
+    - "4.5"
+notifications:
+    email:
+        - adam@aftership.net
+env:
+    - CACHE_DIR=cache
+cache:
+    directories:
+        - $CACHE_DIR
+sudo: false
+branches:
+    except:
+        - production
+script:
+    - npm test
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
