@@ -1409,3 +1409,74 @@ describe('Testing TZA Phone Quick Test', function () {
 		});
 	});
 });
+
+describe('Testing SWE Phone Quick Test', function () {
+	describe('Test 1', function () {
+		var number = '0709771337'; // remove the leading 0
+		var country = 'SWE';
+		var result = {
+			phone_number: '+46709771337',
+			phone_beautified: '+46 7097-7133-7',
+			country: '46',
+			area_code: '',
+			number: '709771337',
+			iso3: 'SWE',
+			type: 'm'
+		};
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function () {
+		var number = '709771337';
+		var country = 'SWE';
+		var result = {
+			phone_number: '+46709771337',
+			phone_beautified: '+46 7097-7133-7',
+			country: '46',
+			area_code: '',
+			number: '709771337',
+			iso3: 'SWE',
+			type: 'm'
+		};
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function () {
+		var number = '0709 - 77 13 37';
+		var country = 'SWE';
+		var result = {
+			phone_number: '+46709771337',
+			phone_beautified: '+46 7097-7133-7',
+			country: '46',
+			area_code: '',
+			number: '709771337',
+			iso3: 'SWE',
+			type: 'm'
+		};
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	/** Fails since the middle 0 is not stripped
+	describe('Test 4', function () {
+		var number = '+46 (0) 709 - 77 13 37';
+		var country = 'SWE';
+		var result = {
+			phone_number: '+46709771337',
+			phone_beautified: '+46 7097-7133-7',
+			country: '46',
+			area_code: '',
+			number: '709771337',
+			iso3: 'SWE',
+			type: 'm'
+		};
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country).should.eql(result);
+		});
+	});*/
+});
