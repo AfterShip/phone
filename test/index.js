@@ -1411,7 +1411,8 @@ describe('Testing TZA Phone Quick Test', function () {
 });
 
 describe('Testing SWE Phone Quick Test', function () {
-	var country = 'SWE';
+	var country3 = 'SWE';
+	var country2 = 'SE';
 	var result = {
 		phone_number: '+46709771337',
 		phone_beautified: '+46 7097-7133-7',
@@ -1425,21 +1426,24 @@ describe('Testing SWE Phone Quick Test', function () {
 	describe('Test 1', function () {
 		var number = '0709771337'; // remove the leading 0
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 
 	describe('Test 2', function () {
 		var number = '709771337';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 
 	describe('Test 3', function () {
 		var number = '0709 - 77 13 37';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 
@@ -1453,7 +1457,8 @@ describe('Testing SWE Phone Quick Test', function () {
 });
 
 describe('Testing FIN Phone Quick Test', function () {
-	var country = 'FIN';
+	var country3 = 'FIN';
+	var country2 = 'FI';
 	var result = {
 		phone_number: '+358401111111',
 		phone_beautified: '+358 4011-1111-1',
@@ -1467,27 +1472,31 @@ describe('Testing FIN Phone Quick Test', function () {
 	describe('Test 1', function () {
 		var number = '0401111111';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 
 	describe('Test 2', function () {
 		var number = '358401111111';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 
 	describe('Test 3', function () {
 		var number = '+35 840 111 1111';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 });
 
 describe('Testing DNK Phone Quick Test', function () {
-	var country = 'DNK';
+	var country3 = 'DNK';
+	var country2 = 'DK';
 	var result = {
 		phone_number: '+4528199871',
 		phone_beautified: '+45 2819-9871',
@@ -1501,27 +1510,31 @@ describe('Testing DNK Phone Quick Test', function () {
 	describe('Test 1', function () {
 		var number = '028199871';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 
 	describe('Test 2', function () {
 		var number = '4528199871';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 
 	describe('Test 3', function () {
 		var number = '+45 281 99 871';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 });
 
 describe('Testing NOR Phone Quick Test', function () {
-	var country = 'NOR';
+	var country3 = 'NOR';
+	var country2 = 'NO';
 	var result = {
 		phone_number: '+4797134809',
 		phone_beautified: '+47 9713-4809',
@@ -1535,21 +1548,24 @@ describe('Testing NOR Phone Quick Test', function () {
 	describe('Test 1', function () {
 		var number = '097134809';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 
 	describe('Test 2', function () {
 		var number = '+4797134809';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 
 	describe('Test 3', function () {
 		var number = '+47 97-134809';
 		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country).should.eql(result);
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
 		});
 	});
 });
