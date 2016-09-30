@@ -1447,6 +1447,23 @@ describe('Testing SWE Phone Quick Test', function () {
 		});
 	});
 
+	describe('Test long "virtual" number', function () {
+		var number = '467090322880009';
+		var result = {
+			phone_number: '+467090322880009',
+			phone_beautified: '+46 7090-3228-8000-9',
+			country: '46',
+			area_code: '',
+			number: '7090322880009',
+			iso3: 'SWE',
+			type: 'm'
+		};
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
 	/** Fails since the middle 0 is not stripped
 	describe('Test 4', function () {
 		var number = '+46 (0) 709 - 77 13 37';
