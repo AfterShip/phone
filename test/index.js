@@ -1409,3 +1409,180 @@ describe('Testing TZA Phone Quick Test', function () {
 		});
 	});
 });
+
+describe('Testing SWE Phone Quick Test', function () {
+	var country3 = 'SWE';
+	var country2 = 'SE';
+	var result = {
+		phone_number: '+46709771337',
+		phone_beautified: '+46 7097-7133-7',
+		country: '46',
+		area_code: '',
+		number: '709771337',
+		iso3: 'SWE',
+		type: 'm'
+	};
+
+	describe('Test 1', function () {
+		var number = '0709771337'; // remove the leading 0
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function () {
+		var number = '709771337';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function () {
+		var number = '0709 - 77 13 37';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
+	describe('Test long "virtual" number', function () {
+		var number = '467090322880009';
+		var result = {
+			phone_number: '+467090322880009',
+			phone_beautified: '+46 7090-3228-8000-9',
+			country: '46',
+			area_code: '',
+			number: '7090322880009',
+			iso3: 'SWE',
+			type: 'm'
+		};
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
+	/** Fails since the middle 0 is not stripped
+	describe('Test 4', function () {
+		var number = '+46 (0) 709 - 77 13 37';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country).should.eql(result);
+		});
+	});*/
+});
+
+describe('Testing FIN Phone Quick Test', function () {
+	var country3 = 'FIN';
+	var country2 = 'FI';
+	var result = {
+		phone_number: '+358401111111',
+		phone_beautified: '+358 4011-1111-1',
+		country: '358',
+		area_code: '',
+		number: '401111111',
+		iso3: 'FIN',
+		type: 'm'
+	};
+
+	describe('Test 1', function () {
+		var number = '0401111111';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function () {
+		var number = '358401111111';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function () {
+		var number = '+35 840 111 1111';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+});
+
+describe('Testing DNK Phone Quick Test', function () {
+	var country3 = 'DNK';
+	var country2 = 'DK';
+	var result = {
+		phone_number: '+4528199871',
+		phone_beautified: '+45 2819-9871',
+		country: '45',
+		area_code: '',
+		number: '28199871',
+		iso3: 'DNK',
+		type: 'm'
+	};
+
+	describe('Test 1', function () {
+		var number = '028199871';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function () {
+		var number = '4528199871';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function () {
+		var number = '+45 281 99 871';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+});
+
+describe('Testing NOR Phone Quick Test', function () {
+	var country3 = 'NOR';
+	var country2 = 'NO';
+	var result = {
+		phone_number: '+4797134809',
+		phone_beautified: '+47 9713-4809',
+		country: '47',
+		area_code: '',
+		number: '97134809',
+		iso3: 'NOR',
+		type: 'm'
+	};
+
+	describe('Test 1', function () {
+		var number = '097134809';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function () {
+		var number = '+4797134809';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function () {
+		var number = '+47 97-134809';
+		it('returns ' + JSON.stringify(result), function () {
+			phone(number, country2).should.eql(result);
+			phone(number, country3).should.eql(result);
+		});
+	});
+});
