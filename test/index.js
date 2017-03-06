@@ -4,31 +4,31 @@ require('should');
 var phone = require('../lib/index');
 
 /* suggest 10 test case for each country, except USA
- Test Case, for non-USA
+	Test Case, for non-USA
 
- valid +phone, null
- valid +phone, valid iso
- valid +phone, invalid iso
- valid +phone, valid name
- valid +phone, invalid name
+	valid +phone, null
+	valid +phone, valid iso
+	valid +phone, invalid iso
+	valid +phone, valid name
+	valid +phone, invalid name
 
- invalid +phone, null
- invalid +phone, valid iso
- invalid +phone, invalid iso
- invalid +phone, valid name
- invalid +phone, invalid name
+	invalid +phone, null
+	invalid +phone, valid iso
+	invalid +phone, invalid iso
+	invalid +phone, valid name
+	invalid +phone, invalid name
 
- valid phone, null
- valid phone, valid iso
- valid phone, invalid iso
- valid phone, valid name
- valid phone, invalid name
+	valid phone, null
+	valid phone, valid iso
+	valid phone, invalid iso
+	valid phone, valid name
+	valid phone, invalid name
 
- invalid phone, null
- invalid phone, valid iso
- invalid phone, invalid iso
- invalid phone, valid name
- invalid phone, invalid name
+	invalid phone, null
+	invalid phone, valid iso
+	invalid phone, invalid iso
+	invalid phone, valid name
+	invalid phone, invalid name
 */
 
 describe('Testing input parameter Phone', function () {
