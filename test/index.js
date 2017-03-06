@@ -4,31 +4,31 @@ require('should');
 var phone = require('../lib/index');
 
 /* suggest 10 test case for each country, except USA
- Test Case, for non-USA
+	Test Case, for non-USA
 
- valid +phone, null
- valid +phone, valid iso
- valid +phone, invalid iso
- valid +phone, valid name
- valid +phone, invalid name
+	valid +phone, null
+	valid +phone, valid iso
+	valid +phone, invalid iso
+	valid +phone, valid name
+	valid +phone, invalid name
 
- invalid +phone, null
- invalid +phone, valid iso
- invalid +phone, invalid iso
- invalid +phone, valid name
- invalid +phone, invalid name
+	invalid +phone, null
+	invalid +phone, valid iso
+	invalid +phone, invalid iso
+	invalid +phone, valid name
+	invalid +phone, invalid name
 
- valid phone, null
- valid phone, valid iso
- valid phone, invalid iso
- valid phone, valid name
- valid phone, invalid name
+	valid phone, null
+	valid phone, valid iso
+	valid phone, invalid iso
+	valid phone, valid name
+	valid phone, invalid name
 
- invalid phone, null
- invalid phone, valid iso
- invalid phone, invalid iso
- invalid phone, valid name
- invalid phone, invalid name
+	invalid phone, null
+	invalid phone, valid iso
+	invalid phone, invalid iso
+	invalid phone, valid name
+	invalid phone, invalid name
 */
 
 describe('Testing input parameter Phone', function () {
@@ -1449,7 +1449,7 @@ describe('Testing SWE Phone Quick Test', function () {
 
 	describe('Test long "virtual" number', function () {
 		var number = '467090322880009';
-		var result = {
+		var expected = {
 			phone_number: '+467090322880009',
 			phone_beautified: '+46 7090-3228-8000-9',
 			country: '46',
@@ -1458,9 +1458,9 @@ describe('Testing SWE Phone Quick Test', function () {
 			iso3: 'SWE',
 			type: 'm'
 		};
-		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country2).should.eql(result);
-			phone(number, country3).should.eql(result);
+		it('returns ' + JSON.stringify(expected), function () {
+			phone(number, country2).should.eql(expected);
+			phone(number, country3).should.eql(expected);
 		});
 	});
 
