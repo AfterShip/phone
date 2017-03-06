@@ -1449,7 +1449,7 @@ describe('Testing SWE Phone Quick Test', function () {
 
 	describe('Test long "virtual" number', function () {
 		var number = '467090322880009';
-		var result = {
+		var expected = {
 			phone_number: '+467090322880009',
 			phone_beautified: '+46 7090-3228-8000-9',
 			country: '46',
@@ -1458,9 +1458,9 @@ describe('Testing SWE Phone Quick Test', function () {
 			iso3: 'SWE',
 			type: 'm'
 		};
-		it('returns ' + JSON.stringify(result), function () {
-			phone(number, country2).should.eql(result);
-			phone(number, country3).should.eql(result);
+		it('returns ' + JSON.stringify(expected), function () {
+			phone(number, country2).should.eql(expected);
+			phone(number, country3).should.eql(expected);
 		});
 	});
 
