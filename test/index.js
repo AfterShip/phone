@@ -878,3 +878,34 @@ describe('Testing TZA Phone Quick Test', function() {
 	});
 
 });
+
+describe('Testing KAZ Phone Quick Test', function() {
+
+	describe('Test 1', function() {
+		var number = '+77012345678',
+			country = 'KAZ',
+			result = ['+77012345678', 'KAZ'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function() {
+		var number = '+77412345678',
+			country = 'KAZ',
+			result = ['+77412345678', 'KAZ'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function() {
+		var number = '+77712345678',
+			country = 'KAZ',
+			result = ['+77712345678', 'KAZ'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+});
