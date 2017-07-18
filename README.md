@@ -117,6 +117,8 @@ If you know that our rule is wrong, or can add more validation to make this npm 
 Please open an issue and let us know.
 
 ## Change Log
+* 1.0.10 Apply pull request [#72](https://github.com/AfterShip/phone/pull/78),[#73](https://github.com/AfterShip/phone/pull/73),[#78](https://github.com/AfterShip/phone/pull/78)
+
 * 1.0.8 Apply pull request #53, 54
 
 * 1.0.7 Apply pull request #48
