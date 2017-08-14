@@ -1,6 +1,6 @@
 {
 	"name": "phone",
-	"version": "1.0.10",
+	"version": "1.0.11",
 	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
 	"main": "./lib/index",
 	"engines": {
