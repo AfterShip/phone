@@ -90,8 +90,8 @@ phone('6123-6123', 'HKG'); // return ['+85261236123', 'HKG']
 
 Get all country fields
 ```
-phone('+919876994821', 'IND', true); // return [ '+919876994821',  { alpha2: 'IN',    alpha3: 'IND',    country_code: '91',    // country_name: 'India',    mobile_begin_with: [ '7', '8', '9' ],    phone_number_lengths: [ 10 ] } ]
-phone('+919876994821', null, true ); // return [ '+919876994821',  { alpha2: 'IN',    alpha3: 'IND',    country_code: '91',    // country_name: 'India',    mobile_begin_with: [ '7', '8', '9' ],    phone_number_lengths: [ 10 ] } ]
+phone('+919608871806', 'IND', true); // return [ '+919608871806',  { alpha2: 'IN',    alpha3: 'IND',    country_code: '91',    // country_name: 'India',    mobile_begin_with: [ '7', '8', '9' ],    phone_number_lengths: [ 10 ] } ]
+phone('+919608871806', null, true ); // return [ '+919608871806',  { alpha2: 'IN',    alpha3: 'IND',    country_code: '91',    // country_name: 'India',    mobile_begin_with: [ '7', '8', '9' ],    phone_number_lengths: [ 10 ] } ]
 
 ```
 
