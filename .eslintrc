@@ -1,0 +1,6 @@
+{
+  "extends": "aftership",
+  "rules": {
+    "max-lines": 0
+  }
+}

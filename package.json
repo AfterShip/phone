@@ -10,7 +10,8 @@
 		"lib": "./lib"
 	},
 	"scripts": {
-		"test": "mocha --recursive -R spec"
+		"test": "mocha --recursive -R spec",
+		"lint": "eslint ."
 	},
 	"repository": {
 		"type": "git",
@@ -20,11 +21,15 @@
 		"url": "https://github.com/aftership/phone/issues"
 	},
 	"devDependencies": {
+		"eslint": "^4.5.0",
+		"eslint-config-aftership": "^4.0.2",
+		"eslint-plugin-import": "^2.7.0",
 		"mocha": "latest",
 		"should": "latest"
 	},
 	"keywords": [
-		"phone", "e.164"
+		"phone",
+		"e.164"
 	],
 	"author": "AfterShip",
 	"license": "MIT"
