@@ -2,7 +2,8 @@
 	"name": "phone",
 	"version": "1.0.12",
 	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
-	"main": "./lib/index",
+	"main": "./dist/index.js",
+	"browser": "./web/index.js",
 	"engines": {
 		"node": ">=6.10.0"
 	},
@@ -11,7 +12,9 @@
 	},
 	"scripts": {
 		"test": "mocha --recursive -R spec",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"build": "babel lib -d dist",
+		"build:client": "webpack --hide-modules --progress"
 	},
 	"repository": {
 		"type": "git",
@@ -21,11 +24,16 @@
 		"url": "https://github.com/aftership/phone/issues"
 	},
 	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-minify-webpack-plugin": "^0.2.0",
+		"babel-preset-env": "^1.6.0",
 		"eslint": "^4.5.0",
 		"eslint-config-aftership": "^4.0.2",
 		"eslint-plugin-import": "^2.7.0",
 		"mocha": "latest",
-		"should": "latest"
+		"should": "latest",
+		"webpack": "^3.5.5"
 	},
 	"keywords": [
 		"phone",

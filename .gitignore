@@ -17,3 +17,7 @@ npm-debug.log
 
 .publishrc
 .npmignore
+
+# ==== build output
+dist
+web
