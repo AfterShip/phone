@@ -2,6 +2,7 @@
 
 const path = require('path');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 	devtool: 'source-map',
@@ -11,6 +12,7 @@ module.exports = {
 		filename: 'index.js'
 	},
 	plugins: [
+		new webpack.optimize.ModuleConcatenationPlugin(),
 		new MinifyPlugin()
 	],
 	module: {
@@ -27,7 +29,8 @@ module.exports = {
 						['env', {
 							targets: {
 								browser: '>1%'
-							}
+							},
+							modules: false
 						}]
 					]
 				}
