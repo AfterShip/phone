@@ -21,3 +21,5 @@ npm-debug.log
 # ==== build output
 dist
 web
+
+coverage

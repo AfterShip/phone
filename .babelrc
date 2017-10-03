@@ -2,9 +2,8 @@
   "presets": [
     ["env", {
       "targets": {
-        "node": ">=6.11.2"
-      },
-      "debug": true
+        "node": "6.11"
+      }
     }]
   ]
 }

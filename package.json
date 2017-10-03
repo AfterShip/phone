@@ -11,7 +11,7 @@
 		"lib": "./lib"
 	},
 	"scripts": {
-		"test": "mocha --recursive -R spec",
+		"test": "jest --coverage",
 		"lint": "eslint .",
 		"build": "babel lib -d dist",
 		"build:client": "webpack --hide-modules --progress"
@@ -31,7 +31,7 @@
 		"eslint": "^4.5.0",
 		"eslint-config-aftership": "^4.0.2",
 		"eslint-plugin-import": "^2.7.0",
-		"mocha": "latest",
+		"jest": "^21.2.1",
 		"should": "latest",
 		"webpack": "^3.5.5"
 	},
