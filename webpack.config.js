@@ -9,7 +9,9 @@ module.exports = {
 	entry: './lib/index.js',
 	output: {
 		path: path.resolve(__dirname, 'web'),
-		filename: 'index.js'
+		filename: 'index.js',
+		libraryTarget: 'umd',
+		library: 'phone'
 	},
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin(),
