@@ -1,5 +1,5 @@
-## What is node-phone?
-`node-phone` is used to normalize the `mobile` phone number into a E.164 format.
+## What is phone?
+`phone` is used to normalize the `mobile` phone number into a E.164 format.
 
 The common problem is user normally input the phone number in this way:
 
@@ -16,6 +16,9 @@ What we want is always:
 +18175698900
 ```
 
+## Older browser
+
+Please read the `README` inside the `example` folder
 
 ##FAQ (1.x branch)
 
@@ -147,4 +150,3 @@ Please open an issue and let us know.
 
 ## License
 MIT
-

@@ -1,8 +1,11 @@
 'use strict';
 
 const path = require('path');
+const webpack = require('webpack');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
+	devtool: 'source-map',
 	entry: './example/client/index.js',
 	output: {
 		path: path.resolve(__dirname),
@@ -15,6 +18,10 @@ module.exports = {
 			modules: false
 		}
 	},
+	plugins: [
+		new webpack.optimize.ModuleConcatenationPlugin(),
+		new MinifyPlugin()
+	],
 	module: {
 		rules: [
 			{

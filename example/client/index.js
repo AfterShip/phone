@@ -1,5 +1,5 @@
 import 'babel-polyfill';
-import Phone from '../../web/';
+import Phone from '../../dist/';
 
 const input = document.getElementById('phone');
 const code = document.getElementById('code');

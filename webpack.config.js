@@ -8,7 +8,7 @@ module.exports = {
 	devtool: 'source-map',
 	entry: './lib/index.js',
 	output: {
-		path: path.resolve(__dirname, 'web'),
+		path: path.resolve(__dirname, 'dist'),
 		filename: 'index.js',
 		libraryTarget: 'umd',
 		library: 'phone'
