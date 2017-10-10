@@ -14,7 +14,8 @@
 		"test": "jest --coverage",
 		"lint": "eslint .",
 		"build": "babel lib -d dist",
-		"build:client": "webpack --hide-modules --progress"
+		"build:client": "webpack --hide-modules --progress",
+		"start:example": "webpack-dev-server --config ./example/webpack.config.js --progress"
 	},
 	"repository": {
 		"type": "git",
@@ -27,13 +28,15 @@
 		"babel-cli": "^6.26.0",
 		"babel-loader": "^7.1.2",
 		"babel-minify-webpack-plugin": "^0.2.0",
+		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.6.0",
 		"eslint": "^4.5.0",
 		"eslint-config-aftership": "^4.0.2",
 		"eslint-plugin-import": "^2.7.0",
 		"jest": "^21.2.1",
 		"should": "latest",
-		"webpack": "^3.5.5"
+		"webpack": "^3.5.5",
+		"webpack-dev-server": "^2.9.1"
 	},
 	"keywords": [
 		"phone",
