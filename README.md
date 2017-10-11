@@ -16,13 +16,16 @@ What we want is always:
 +18175698900
 ```
 
-## Older browser
+## Old browsers & browser support
 
-Please read the `README` inside the `example` folder
+We currently transpile script to base on target env which that browser global usage '>1%' and "node: 6.10".
+
+You can check on the [brwoserlist](http://browserl.ist/?q=%3E1%25)
+You also need polyfill for some old browser more details please read the `README` inside the `example` folder
 
 ##FAQ (1.x branch)
 
-1. Does node-phone do any phone validation?
+1. Does `phone` do any phone validation?
 
 	Yes: If you provide the 2nd parameter (country), and the phone number do not start with `+` sign.
 
@@ -45,7 +48,7 @@ We don't validate if the number is mobile or not.
 
 ##FAQ (0.0.x branch)
 
-1. Does node-phone do any phone validation?
+1. Does phone do any phone validation?
 
 	Yes: If you provide the 2nd parameter (country), and the phone number do not start with `+` sign.
 
@@ -128,7 +131,7 @@ Please open an issue and let us know.
 
 * 1.0.6 Apply pull request #30, #45, #46
 
-* 1.0.5 Bug fix for [#31](https://github.com/AfterShip/node-phone/issues/31), allow [extend more easily](https://github.com/AfterShip/node-phone/issues/32)
+* 1.0.5 Bug fix for [#31](https://github.com/AfterShip/phone/issues/31), allow [extend more easily](https://github.com/AfterShip/phone/issues/32)
 
 * 1.0.4 Support more countries with mobile prefix
 
