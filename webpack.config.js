@@ -30,9 +30,11 @@ module.exports = {
 					presets: [
 						['env', {
 							targets: {
-								browser: '>1%'
+								browsers: '>1%',
+								node: '6.10'
 							},
-							modules: false
+							modules: false,
+							debug: true
 						}]
 					]
 				}

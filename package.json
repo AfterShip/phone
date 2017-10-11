@@ -13,7 +13,8 @@
 		"test": "jest --coverage",
 		"lint": "eslint .",
 		"build": "webpack --hide-modules --progress",
-		"start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress"
+		"start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
+		"prepublishOnly": "yarn build"
 	},
 	"repository": {
 		"type": "git",
@@ -32,7 +33,6 @@
 		"eslint-config-aftership": "^4.0.2",
 		"eslint-plugin-import": "^2.7.0",
 		"jest": "^21.2.1",
-		"should": "latest",
 		"webpack": "^3.5.5",
 		"webpack-dev-server": "^2.9.1"
 	},
