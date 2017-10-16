@@ -1,6 +1,6 @@
 {
 	"name": "phone",
-	"version": "2.0.0-rc.1",
+	"version": "2.0.0-rc.2",
 	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
 	"main": "./dist/index.js",
 	"engines": {
@@ -10,7 +10,7 @@
 		"lib": "./lib"
 	},
 	"scripts": {
-		"test": "jest --coverage",
+		"test": "jest && codecov",
 		"lint": "eslint .",
 		"build": "webpack --hide-modules --progress",
 		"start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
@@ -29,6 +29,7 @@
 		"babel-minify-webpack-plugin": "^0.2.0",
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.6.0",
+		"codecov": "^2.3.1",
 		"eslint": "^4.5.0",
 		"eslint-config-aftership": "^4.0.2",
 		"eslint-plugin-import": "^2.7.0",
@@ -41,5 +42,9 @@
 		"e.164"
 	],
 	"author": "AfterShip",
-	"license": "MIT"
+	"license": "MIT",
+	"jest": {
+		"coverageDirectory": "./coverage/",
+		"collectCoverage": true
+	}
 }
