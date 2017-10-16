@@ -49,11 +49,11 @@ npm test
 
 We currently transpile script to base on target env which that browser global usage '>1%' and "node: 6.10".
 
-You can check on the [brwoserlist](http://browserl.ist/?q=%3E1%25)
+You can check on the [browserlist](http://browserl.ist/?q=%3E1%25)
 You also need polyfill for some old browser more details please read the `README` inside the `example` folder
 
 
-##FAQ
+## FAQ
 
 1. Does `phone` do any phone validation?
 
