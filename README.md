@@ -1,3 +1,5 @@
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 ## What is phone?
 `phone` is used to normalize the `mobile` phone number into a E.164 format.
 
