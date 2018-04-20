@@ -1,4 +1,4 @@
-# Phone &middot; [![codecov](https://codecov.io/gh/AfterShip/phone/branch/master/graph/badge.svg)](https://codecov.io/gh/AfterShip/phone) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+# Phone &middot; [![Build Status](https://travis-ci.org/AfterShip/phone.svg?branch=v2)](https://travis-ci.org/AfterShip/phone) [![codecov](https://codecov.io/gh/AfterShip/phone/branch/master/graph/badge.svg)](https://codecov.io/gh/AfterShip/phone) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## What is phone?
 `phone` is used to normalize the `mobile` phone number into a E.164 format.
@@ -25,8 +25,8 @@ npm install phone
 
 
 ## Usage
-```
-var phone = require('phone');
+```javascript
+import phone from 'phone';
 phone('+852 6569-8900'); // return ['+85265698900', 'HKG']
 phone('(817) 569-8900'); // return ['+18175698900, 'USA']
 phone('(817) 569-8900', ''); // return ['+18175698900, 'USA']
