@@ -1,0 +1,6 @@
+{
+  "extends": "aftership",
+  env: {
+    "jest": true
+  }
+}
