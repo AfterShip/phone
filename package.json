@@ -2,9 +2,10 @@
 	"name": "phone",
 	"version": "2.0.0-rc.2",
 	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
+	"browser": "./lib/index.js",
 	"main": "./dist/index.js",
 	"engines": {
-		"node": ">=6.10.0"
+		"node": ">=8.11.1"
 	},
 	"directories": {
 		"lib": "./lib"
@@ -13,12 +14,14 @@
 		"test": "yarn jest && codecov",
 		"jest": "jest",
 		"lint": "eslint .",
-		"build": "NODE_ENV=production webpack --hide-modules --progress",
+		"build": "yarn build:umd",
+		"build:umd": "NODE_ENV=production webpack --hide-modules --progress",
 		"start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
 		"prepublishOnly": "yarn build",
 		"precommit": "lint-staged",
 		"prettier": "prettier --write",
-		"prepush": "yarn lint && yarn jest"
+		"prepush": "yarn lint && yarn jest",
+		"clean": "rm -rf dist es"
 	},
 	"lint-staged": {
 		"*.{js}": [
