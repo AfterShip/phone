@@ -1,6 +1,6 @@
 {
 	"name": "phone",
-	"version": "2.0.0-rc.2",
+	"version": "2.0.0",
 	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
 	"main": "./dist/index.js",
 	"engines": {
