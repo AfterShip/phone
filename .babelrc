@@ -1,3 +1,13 @@
 {
-  "presets": ["env"]
+  "presets": [["env", {
+    "targets": {
+      "browsers": [">1%"]
+    },
+    "modules": false
+  }]],
+  "env": {
+    "test": {
+      "presets": ["env"]
+    }
+  }
 }

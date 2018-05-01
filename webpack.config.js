@@ -29,8 +29,6 @@ module.exports = {
 									browsers: '>1%',
 									node: '8.11.1',
 								},
-								modules: false,
-								debug: true,
 							},
 						],
 					],

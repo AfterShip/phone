@@ -20,6 +20,7 @@ npm-debug.log
 # ==== build output
 dist
 web
+es
 
 coverage
 *.log

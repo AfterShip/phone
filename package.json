@@ -2,7 +2,8 @@
 	"name": "phone",
 	"version": "2.0.0-rc.2",
 	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
-	"browser": "./lib/index.js",
+	"browser": "./es/index.js",
+	"jsnext:main": "./es/index.js",
 	"main": "./dist/index.js",
 	"engines": {
 		"node": ">=8.11.1"
@@ -16,6 +17,7 @@
 		"lint": "eslint .",
 		"build": "yarn build:umd",
 		"build:umd": "NODE_ENV=production webpack --hide-modules --progress",
+		"build:es": "babel lib -d es --ignore=**/__tests__/**",
 		"start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
 		"prepublishOnly": "yarn build",
 		"precommit": "lint-staged",
