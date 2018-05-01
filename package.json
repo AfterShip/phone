@@ -15,7 +15,7 @@
 		"test": "yarn jest && codecov",
 		"jest": "jest",
 		"lint": "eslint .",
-		"build": "yarn build:umd",
+		"build": "yarn build:umd & yarn build:es",
 		"build:umd": "NODE_ENV=production webpack --hide-modules --progress",
 		"build:es": "babel lib -d es --ignore=**/__tests__/**",
 		"start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
