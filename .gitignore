@@ -21,4 +21,5 @@ npm-debug.log
 dist
 web
 
-coverage
+.coverage
+*.log
