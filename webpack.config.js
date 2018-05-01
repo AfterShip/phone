@@ -9,6 +9,8 @@ module.exports = {
 		filename: 'index.js',
 		libraryTarget: 'umd',
 		library: 'phone',
+		// https://github.com/webpack/webpack/issues/6522  umd build issue with webpack
+		// hack fixes for now
 		globalObject: "typeof self !== 'undefined' ? self : this",
 	},
 	module: {
