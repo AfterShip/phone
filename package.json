@@ -61,7 +61,15 @@
 	"author": "AfterShip",
 	"license": "MIT",
 	"jest": {
-		"coverageDirectory": "./coverage/",
-		"collectCoverage": true
+		"coverageDirectory": "<rootDir>/../coverage",
+		"collectCoverageFrom": [
+			"lib/**/*.{js,jsx}"
+		],
+		"collectCoverage": true,
+		"coverageReporters": [
+			"lcov",
+			"text-summary",
+			"text"
+		]
 	}
 }
