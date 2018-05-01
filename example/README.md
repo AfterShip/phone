@@ -21,6 +21,7 @@ import 'babel-polyfill';
 const path = require('path');
 
 module.exports = {
+	mode: "production",
 	entry: './example/client/index.js',
 	output: {
 		path: path.resolve(__dirname),

@@ -1,5 +1,5 @@
 {
-  "extends": "aftership",
+  "extends": ["aftership/universal", "prettier"],
   env: {
     "jest": true
   }

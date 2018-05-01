@@ -1,8 +1,7 @@
 const path = require('path');
-const webpack = require('webpack');
-const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
+	mode: 'development',
 	devtool: 'source-map',
 	entry: './example/client/index.js',
 	output: {
@@ -16,10 +15,6 @@ module.exports = {
 			modules: false,
 		},
 	},
-	plugins: [
-		new webpack.optimize.ModuleConcatenationPlugin(),
-		new MinifyPlugin(),
-	],
 	module: {
 		rules: [
 			{

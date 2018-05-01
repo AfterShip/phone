@@ -1,6 +1,4 @@
-'use strict';
-
-const phone = require('../lib/index');
+import phone from '../lib';
 
 /* suggest 10 test case for each country, except USA
 

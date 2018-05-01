@@ -9,6 +9,7 @@ module.exports = {
 		filename: 'index.js',
 		libraryTarget: 'umd',
 		library: 'phone',
+		globalObject: "typeof self !== 'undefined' ? self : this",
 	},
 	module: {
 		rules: [
@@ -24,7 +25,7 @@ module.exports = {
 							{
 								targets: {
 									browsers: '>1%',
-									node: '6.10',
+									node: '8.11.1',
 								},
 								modules: false,
 								debug: true,
