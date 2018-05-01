@@ -1,6 +1,3 @@
 {
-  "extends": "aftership",
-  "rules": {
-    "max-lines": 0
-  }
+  "extends": ["aftership/universal", "prettier"]
 }
