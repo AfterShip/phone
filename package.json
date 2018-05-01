@@ -61,7 +61,7 @@
 	"author": "AfterShip",
 	"license": "MIT",
 	"jest": {
-		"coverageDirectory": "./.coverage/",
+		"coverageDirectory": "./coverage/",
 		"collectCoverage": true
 	}
 }
