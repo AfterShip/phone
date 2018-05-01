@@ -21,8 +21,9 @@
 		"prepush": "yarn lint && yarn jest"
 	},
 	"lint-staged": {
-		"*.{js,json}": [
+		"*.{js}": [
 			"prettier --write",
+			"eslint . --fix",
 			"git add"
 		]
 	},
