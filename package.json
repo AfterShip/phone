@@ -10,13 +10,15 @@
 		"lib": "./lib"
 	},
 	"scripts": {
-		"test": "jest && codecov",
+		"test": "yarn jest && codecov",
+		"jest": "jest",
 		"lint": "eslint .",
 		"build": "webpack --hide-modules --progress",
 		"start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
 		"prepublishOnly": "yarn build",
 		"precommit": "lint-staged",
-		"prettier": "prettier --write"
+		"prettier": "prettier --write",
+		"prepush": "yarn lint && yarn jest"
 	},
 	"lint-staged": {
 		"*.{js,json}": [
