@@ -1,6 +1,4 @@
-'use strict';
-
-const getISO3166 = require('../lib/getISO3166');
+import getISO3166 from '../lib/getISO3166';
 
 describe('getISO3166', () => {
 	it('should return the first data (USA) when country length equal to 0', () => {

@@ -1,6 +1,4 @@
-'use strict';
-
-const phone = require('../lib/index');
+import phone from '../lib';
 
 /* suggest 10 test case for each country, except USA
 
@@ -32,7 +30,6 @@ const phone = require('../lib/index');
 
  */
 
-
 describe('Testing input parameter Phone', () => {
 	describe('Test 1', () => {
 		const number = '(852) 569-8900';
@@ -49,7 +46,6 @@ describe('Testing input parameter Phone', () => {
 			expect(phone(number)).toEqual(result);
 		});
 	});
-
 
 	describe('Test 3', () => {
 		const number = '+852 6569-8900';
@@ -120,7 +116,6 @@ describe('Testing USA Phone', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
-
 
 	describe('Test 4', () => {
 		const number = '2121234567';
@@ -204,7 +199,6 @@ describe('Testing USA Phone', () => {
 		});
 	});
 
-
 	describe('Test 13', () => {
 		const number = '+1 (817) 569-8900';
 		const country = 'HKG';
@@ -214,7 +208,6 @@ describe('Testing USA Phone', () => {
 		});
 	});
 });
-
 
 describe('Testing +1 but NOT in USA', () => {
 	describe('+1 340  United States Virgin Islands', () => {
@@ -234,7 +227,6 @@ describe('Testing +1 but NOT in USA', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
-
 
 	describe('+1 671 Guam', () => {
 		const number = '+1 671 1234 567';
@@ -361,7 +353,6 @@ describe('Testing +1 but NOT in USA', () => {
 		});
 	});
 
-
 	describe('+1 345 Cayman Islands', () => {
 		const number = '+1 345 1234 567';
 		const country = 'CYM';
@@ -379,7 +370,6 @@ describe('Testing +1 but NOT in USA', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
-
 
 	describe('+1 441 Bermuda', () => {
 		const number = '+1 441 3234 567';
@@ -408,7 +398,6 @@ describe('Testing +1 but NOT in USA', () => {
 		});
 	});
 
-
 	describe('+1 473 Grenada', () => {
 		const number = '+1 473 1234 567';
 		const country = 'GRD';
@@ -417,7 +406,6 @@ describe('Testing +1 but NOT in USA', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
-
 
 	describe('+1 649 Turks and Caicos Islands', () => {
 		const number = '+1 649 1234 567';
@@ -445,7 +433,6 @@ describe('Testing +1 but NOT in USA', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
-
 
 	describe('+1 721 Sint Maarten', () => {
 		const number = '+1 721 1234 567';
@@ -483,7 +470,6 @@ describe('Testing +1 but NOT in USA', () => {
 		});
 	});
 
-
 	describe('+1 809 / 829 / 849 Dominican Republic', () => {
 		const number = '+1 809 1234 567';
 		const country = 'DOM';
@@ -511,7 +497,6 @@ describe('Testing +1 but NOT in USA', () => {
 		});
 	});
 
-
 	describe('+1 868 Trinidad and Tobago', () => {
 		const number = '+1 868 1234 567';
 		const country = 'TTO';
@@ -521,7 +506,6 @@ describe('Testing +1 but NOT in USA', () => {
 		});
 	});
 
-
 	describe('+1 869 Saint Kitts and Nevis', () => {
 		const number = '+1 869 1234 567';
 		const country = 'KNA';
@@ -530,7 +514,6 @@ describe('Testing +1 but NOT in USA', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
-
 
 	describe('+1 876 Jamaica', () => {
 		const number = '+1 876 1234 567';
@@ -557,7 +540,6 @@ describe('Testing MEX Phone', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
-
 
 	describe('Test 2', () => {
 		const number = '+52 1 762 100 9517';
@@ -597,7 +579,6 @@ describe('Testing MEX Phone', () => {
 	//	invalid +phone, invalid iso
 	//	invalid +phone, valid name
 	//	invalid +phone, invalid name
-
 
 	describe('Test 6', () => {
 		const number = '+52 62 100 9517';
@@ -646,7 +627,6 @@ describe('Testing MEX Phone', () => {
 	//	valid phone, valid name
 	//	valid phone, invalid name
 
-
 	describe('Test 11', () => {
 		const number = '52762 100 9517';
 		const country = null;
@@ -689,7 +669,6 @@ describe('Testing MEX Phone', () => {
 	});
 });
 
-
 describe('Testing HKG Phone Quick Test', () => {
 	describe('Test 1', () => {
 		const number = '6123-6123';
@@ -701,7 +680,6 @@ describe('Testing HKG Phone Quick Test', () => {
 	});
 });
 
-
 describe('Testing BRA Phone Quick Test', () => {
 	describe('Test 1', () => {
 		const number = '+55 11 9 6123 1234';
@@ -711,7 +689,6 @@ describe('Testing BRA Phone Quick Test', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
-
 
 	describe('Test 2', () => {
 		const number = '+55 11 6123 1234'; // as 9 is missin;
@@ -777,7 +754,6 @@ describe('Testing PRI Phone Quick Test', () => {
 // +70234567890, RUS  ---> invalid
 // 9234567890, RUS  ---> +79234567890, RUS
 
-
 describe('Testing RUS Phone Quick Test', () => {
 	describe('Test 1', () => {
 		const number = '89234567890'; // remove the 8, treat it as 923456789;
@@ -825,7 +801,6 @@ describe('Testing RUS Phone Quick Test', () => {
 	});
 });
 
-
 describe('Testing THA Phone Quick Test', () => {
 	describe('Test 1', () => {
 		const number = '0812345678'; // remove the leading ;
@@ -854,7 +829,6 @@ describe('Testing THA Phone Quick Test', () => {
 		});
 	});
 });
-
 
 describe('Testing TZA Phone Quick Test', () => {
 	describe('Test 1', () => {

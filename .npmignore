@@ -25,6 +25,9 @@ flow-typed
 __tests__/
 webpack.config.js
 .eslintrc
+.pretterrc
+webpack/
+.prettierignore
 
 
 # =============== log ignore builtAssets
