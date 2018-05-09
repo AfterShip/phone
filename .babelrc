@@ -6,6 +6,9 @@
     "modules": false
   }]],
   "env": {
+    "dev": {
+      "presets": ["env"]
+    },
     "test": {
       "presets": ["env"]
     }
