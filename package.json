@@ -1,6 +1,6 @@
 {
 	"name": "phone",
-	"version": "2.0.0-rc.2",
+	"version": "2.0.0",
 	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
 	"browser": "./es/index.js",
 	"jsnext:main": "./es/index.js",
@@ -23,7 +23,9 @@
 		"precommit": "lint-staged",
 		"prettier": "prettier --write",
 		"prepush": "yarn lint && yarn jest",
-		"clean": "rm -rf dist es"
+		"clean": "rm -rf dist es",
+		"postinstall": "node scripts/country-data.js && yarn prettier data/**/*.js",
+		"dev": "BABEL_ENV=dev nodemon --exec babel-node"
 	},
 	"lint-staged": {
 		"*.{js}": [
