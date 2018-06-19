@@ -913,3 +913,34 @@ describe('Testing KAZ Phone Quick Test', () => {
 		});
 	});
 });
+
+describe('Testing Argentina', () => {
+	describe('Test 1 - with international prefix', () => {
+		const number = '+5491132461234';
+		const country = 'ARG';
+		const result = ['+5491132461234', 'ARG'];
+
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
+
+	describe('Test 1 - without international prefix', () => {
+		const number = '+541132461234';
+		const country = 'ARG';
+		const result = [];
+
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
+
+	describe('Test 1 - with international prefix, without country code', () => {
+		const number = '+5491132461234';
+		const result = ['+5491132461234', 'ARG'];
+
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+});
