@@ -195,7 +195,6 @@ describe('Testing USA Phone', function() {
 
 });
 
-
 describe('Testing MEX Phone', function() {
 	//	valid +phone, null
 	//	valid +phone, valid iso
@@ -460,6 +459,35 @@ describe('Testing Guam Phone Quick Test', function() {
 	});
 });
 
+describe('Testing JAM Phone Quick Test', function() {
+	describe('Test 1', function() {
+		var number = '+1-876-247-0550',
+			country = 'JAM',
+			result = ['+18762470550', 'JAM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 2', function() {
+		var number = '18762470550',
+			country = 'JAM',
+			result = ['+18762470550', 'JAM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+	describe('Test 3', function() {
+		var number = '8762470550',
+			country = 'JAM',
+			result = ['+18762470550', 'JAM'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+});
+
 describe('Testing VIR Phone Quick Test', function() {
 	describe('Test 1', function() {
 		var number = '+1-340.643.2400',
@@ -572,6 +600,19 @@ describe('Testing THA Phone Quick Test', function() {
 		var number = '812345678',
 			country = 'THA',
 			result = ['+66812345678', 'THA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
+});
+
+describe('Testing Nortern Mariana Islands Phone', function() {
+
+	describe('Test 1', function() {
+		var number = '+1 (670) 569-8900',
+			country = ' Northern Mariana Islands',
+			result = ['+16705698900', 'MNP'];
 		it('returns ' + result, function() {
 			phone(number, country).should.eql(result);
 		});
