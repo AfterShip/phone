@@ -183,6 +183,15 @@ describe('Testing USA Phone', function() {
 		});
 	});
 
+	describe('Test NYC 1', function() {
+		var number = '+1 (934) 569-8900',
+			country = ' US',
+			result = ['+19345698900', 'USA'];
+		it('returns ' + result, function() {
+			phone(number, country).should.eql(result);
+		});
+	});
+
 
 	describe('Test 13', function() {
 		var number = '+1 (817) 569-8900',
