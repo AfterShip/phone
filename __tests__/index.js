@@ -913,3 +913,26 @@ describe('Testing KAZ Phone Quick Test', () => {
 		});
 	});
 });
+
+
+describe('Testing PAN Phone Quick Test', () => {
+    describe('Test 1', () => {
+        const number = '+507 61234567';
+        const country = 'PAN';
+        const result = ['+50761234567', 'PAN'];
+        test('returns ' + result, () => {
+            expect(phone(number, country)).toEqual(result);
+        });
+    });
+
+
+    describe('Test 2', () => {
+        const number = '+507 51234567'; // start from 5 is landlines
+        const country = 'PAN';
+        const result = [];
+        test('returns ' + result, () => {
+            expect(phone(number, country)).toEqual(result);
+        });
+    });
+
+});
