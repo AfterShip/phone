@@ -936,3 +936,41 @@ describe('Testing PAN Phone Quick Test', () => {
     });
 
 });
+
+describe('Testing MUS Phone Quick Test', () => {
+
+    describe('Test 1', () => {
+        const number = '+230 51234567';
+        const result = ['+23051234567', 'MUS'];
+        test('returns ' + result, () => {
+            expect(phone(number)).toEqual(result);
+        });
+    });
+
+
+    describe('Test 2', () => {
+        const number = '+230 5123-4567';
+        const result = ['+23051234567', 'MUS'];
+        test('returns ' + result, () => {
+            expect(phone(number)).toEqual(result);
+        });
+    });
+
+    describe('Test 3', () => {
+        const number = '+230 6123-4567'; //Landlines
+        const result = [];
+        test('returns ' + result, () => {
+            expect(phone(number)).toEqual(result);
+        });
+    });
+
+    describe('Test 4', () => {
+        const number = '+230 6123-4567'; //Country code not match with number
+        const country = 'HKG';
+        const result = [];
+        test('returns ' + result, () => {
+            expect(phone(number, country)).toEqual(result);
+        });
+    });
+
+});
