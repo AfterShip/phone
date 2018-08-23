@@ -974,3 +974,35 @@ describe('Testing MUS Phone Quick Test', () => {
     });
 
 });
+
+
+describe('Testing CHN Phone Quick Test', () => {
+
+    //Test for new pattern (199, 198, 166)
+    describe('Test for pattern 199', () => {
+        const number = '+86 199 51343779';
+        const result = ['+8619951343779', 'CHN'];
+        test('returns ' + result, () => {
+            expect(phone(number)).toEqual(result);
+        });
+    });
+
+    describe('Test for pattern 198', () => {
+        const number = '+86 198 51343779';
+        const result = ['+8619851343779', 'CHN'];
+        test('returns ' + result, () => {
+            expect(phone(number)).toEqual(result);
+        });
+    });
+
+    describe('Test for pattern 166', () => {
+        const number = '+86 166 51343779';
+        const result = ['+8616651343779', 'CHN'];
+        test('returns ' + result, () => {
+            expect(phone(number)).toEqual(result);
+        });
+    });
+
+
+
+});
