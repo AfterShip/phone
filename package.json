@@ -1,16 +1,20 @@
 {
 	"name": "phone",
-	"version": "1.0.10",
+	"version": "2.2.0",
 	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
-	"main": "./lib/index",
+	"main": "./dist/index.js",
 	"engines": {
-		"node": ">=0.8"
+		"node": ">=6.10.0"
 	},
 	"directories": {
 		"lib": "./lib"
 	},
 	"scripts": {
-		"test": "mocha --recursive -R spec"
+		"test": "jest && codecov",
+		"lint": "eslint .",
+		"build": "webpack --hide-modules --progress",
+		"start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
+		"prepublishOnly": "yarn build"
 	},
 	"repository": {
 		"type": "git",
@@ -20,12 +24,27 @@
 		"url": "https://github.com/aftership/phone/issues"
 	},
 	"devDependencies": {
-		"mocha": "latest",
-		"should": "latest"
+		"babel-cli": "^6.26.0",
+		"babel-loader": "^7.1.5",
+		"babel-minify-webpack-plugin": "^0.2.0",
+		"babel-polyfill": "^6.26.0",
+		"babel-preset-env": "^1.7.0",
+		"codecov": "^2.3.1",
+		"eslint": "^4.5.0",
+		"eslint-config-aftership": "^4.5.0",
+		"eslint-plugin-import": "^2.13.0",
+		"jest": "^23.3.0",
+		"webpack": "^3.5.5",
+		"webpack-dev-server": "^2.9.1"
 	},
 	"keywords": [
-		"phone", "e.164"
+		"phone",
+		"e.164"
 	],
 	"author": "AfterShip",
-	"license": "MIT"
+	"license": "MIT",
+	"jest": {
+		"coverageDirectory": "./coverage/",
+		"collectCoverage": true
+	}
 }
