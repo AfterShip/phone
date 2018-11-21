@@ -741,7 +741,7 @@ describe('Testing BRA Phone Quick Test', () => {
 	});
 });
 
-describe.only('Testing TW Phone Quick Test', () => {
+describe('Testing TW Phone Quick Test', () => {
 	describe('Test 1', () => {
 		const number = '+886-09-123-45678';
 		const country = 'TW';
