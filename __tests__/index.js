@@ -741,29 +741,29 @@ describe('Testing BRA Phone Quick Test', () => {
 	});
 });
 
-describe('Testing PRI Phone Quick Test', () => {
+describe.only('Testing TW Phone Quick Test', () => {
 	describe('Test 1', () => {
-		const number = '+1-787-672-9999';
-		const country = 'PRI';
-		const result = ['+17876729999', 'PRI'];
+		const number = '+886-09-123-45678';
+		const country = 'TW';
+		const result = ['+886912345678', 'TWN'];
 		test('returns ' + result, () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
 
 	describe('Test 2', () => {
-		const number = '17876729999';
-		const country = 'PRI';
-		const result = ['+17876729999', 'PRI'];
+		const number = '8860912345678';
+		const country = 'TW';
+		const result = ['+886912345678', 'TWN'];
 		test('returns ' + result, () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
 
 	describe('Test 3', () => {
-		const number = '7876729999';
-		const country = 'PRI';
-		const result = ['+17876729999', 'PRI'];
+		const number = '0912345678';
+		const country = 'TW';
+		const result = ['+886912345678', 'TWN'];
 		test('returns ' + result, () => {
 			expect(phone(number, country)).toEqual(result);
 		});
@@ -823,6 +823,35 @@ describe('Testing RUS Phone Quick Test', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
+});
+
+describe('Testing PRI Phone Quick Test', () => {
+  describe('Test 1', () => {
+    const number = '+1-787-672-9999';
+    const country = 'PRI';
+    const result = ['+17876729999', 'PRI'];
+    test('returns ' + result, () => {
+      expect(phone(number, country)).toEqual(result);
+    });
+  });
+
+  describe('Test 2', () => {
+    const number = '17876729999';
+    const country = 'PRI';
+    const result = ['+17876729999', 'PRI'];
+    test('returns ' + result, () => {
+      expect(phone(number, country)).toEqual(result);
+    });
+  });
+
+  describe('Test 3', () => {
+    const number = '7876729999';
+    const country = 'PRI';
+    const result = ['+17876729999', 'PRI'];
+    test('returns ' + result, () => {
+      expect(phone(number, country)).toEqual(result);
+    });
+  });
 });
 
 
