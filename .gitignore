@@ -6,6 +6,7 @@ node_modules/
 # =============== RubyMine.gitignore
 # =============== PhPStorm.gitignore
 .idea
+*.iml
 
 
 # =============== OSX.gitignore
