@@ -975,7 +975,6 @@ describe('Testing MUS Phone Quick Test', () => {
 
 });
 
-
 describe('Testing CHN Phone Quick Test', () => {
 
     //Test for new pattern (199, 198, 166)
@@ -1003,6 +1002,28 @@ describe('Testing CHN Phone Quick Test', () => {
         });
     });
 
+});
 
-
+describe('Testing GRL numbers', () => {
+	describe('Test for numbers starting with 5', () => {
+		const number = '+299 555299';
+		const result = ['+299555299', 'GRL'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+	describe('Test for numbers starting with 2', () => {
+		const number = '+299 233299';
+		const result = ['+299233299', 'GRL'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+	describe('Test for landlines', () => {
+		const number = '+299 321000';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 });
