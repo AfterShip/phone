@@ -975,34 +975,56 @@ describe('Testing MUS Phone Quick Test', () => {
 
 });
 
-
 describe('Testing CHN Phone Quick Test', () => {
 
-    //Test for new pattern (199, 198, 166)
-    describe('Test for pattern 199', () => {
-        const number = '+86 199 51343779';
-        const result = ['+8619951343779', 'CHN'];
-        test('returns ' + result, () => {
-            expect(phone(number)).toEqual(result);
-        });
-    });
+	//Test for new pattern (199, 198, 166)
+	describe('Test for pattern 199', () => {
+		const number = '+86 199 51343779';
+		const result = ['+8619951343779', 'CHN'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 
-    describe('Test for pattern 198', () => {
-        const number = '+86 198 51343779';
-        const result = ['+8619851343779', 'CHN'];
-        test('returns ' + result, () => {
-            expect(phone(number)).toEqual(result);
-        });
-    });
+	describe('Test for pattern 198', () => {
+		const number = '+86 198 51343779';
+		const result = ['+8619851343779', 'CHN'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 
-    describe('Test for pattern 166', () => {
-        const number = '+86 166 51343779';
-        const result = ['+8616651343779', 'CHN'];
-        test('returns ' + result, () => {
-            expect(phone(number)).toEqual(result);
-        });
-    });
+	describe('Test for pattern 166', () => {
+		const number = '+86 166 51343779';
+		const result = ['+8616651343779', 'CHN'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+});
 
+describe('Testing ARG numbers', () => {
+	describe('Test for number without 9 prefix', () => {
+		const number = '+54 233 123 4567';
+		const result = ['+542331234567', 'ARG'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 
+	describe('Test for number with 9 prefix', () => {
+		const number = '+54 9 233 123 4567';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 
+	describe('Test for number with 15 prefix', () => {
+		const number = '+54 15 233 123 4567';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 });
