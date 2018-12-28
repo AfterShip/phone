@@ -35,7 +35,7 @@ const error_numbers = errors.map(({ jsonPayload: {data} }) => {
             phone_number_lengths,
         }] = iso3166s.filter(({ alpha2 }) => alpha2 === countryCode);
         const localPhoneNumber = phoneNumber.replace('+' + country_code, '');
-        const isBeginWithRight = mobile_begin_with.some(num => new RegExp(`^${num}`).test(localPhoneNumber));
+        const isBeginWithRight = mobile_begin_with.length === 0 || mobile_begin_with.some(num => new RegExp(`^${num}`).test(localPhoneNumber));
         const new_mobile_begin_with = isBeginWithRight ? mobile_begin_with: mobile_begin_with.concat(localPhoneNumber[0]);
         const new_phone_number_lengths = [...new Set(phone_number_lengths.concat(localPhoneNumber.length))];
         
