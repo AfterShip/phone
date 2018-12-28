@@ -1,0 +1,3105 @@
+[
+  {
+    "insertId": "9zpvdug1gwuqtr",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-28T16:34:36Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T16:34:41.145224885Z"
+  },
+  {
+    "insertId": "ut6f24g1e48dvm",
+    "jsonPayload": {
+      "data": "+5612123226",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro"
+      }
+    },
+    "timestamp": "2018-12-28T16:08:57Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T16:08:58.667906385Z"
+  },
+  {
+    "insertId": "l3r2rcg1dgh72o",
+    "jsonPayload": {
+      "data": "+786 453 8287",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-28T07:23:03Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T07:23:05.019479286Z"
+  },
+  {
+    "insertId": "ibv8efg1auer98",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921",
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-28T03:54:07Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T03:54:09.693605838Z"
+  },
+  {
+    "insertId": "d1t8eeg1cqf78u",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-28T03:52:02Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T03:52:04.657676977Z"
+  },
+  {
+    "insertId": "148dn1g18wxii2",
+    "jsonPayload": {
+      "data": "+7023250341",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-28T03:48:27Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T03:48:29.591861928Z"
+  },
+  {
+    "insertId": "1pvjph4g1ai8i7x",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-28T03:44:03Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T03:44:04.943726122Z"
+  },
+  {
+    "insertId": "ilrnr7g1c5pc46",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-28T03:36:11Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T03:36:14.412184063Z"
+  },
+  {
+    "insertId": "usu91qg1cbowxf",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293"
+      }
+    },
+    "timestamp": "2018-12-28T03:24:32Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T03:24:37.649147679Z"
+  },
+  {
+    "insertId": "y4qkbhg195madw",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293"
+      }
+    },
+    "timestamp": "2018-12-28T03:01:39Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T03:01:42.330810307Z"
+  },
+  {
+    "insertId": "15wo6jgg184mcy8",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-28T01:43:00Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T01:43:01.319610192Z"
+  },
+  {
+    "insertId": "1snkt3tg17dw8g5",
+    "jsonPayload": {
+      "data": "+8139658971",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-28T00:57:21Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T00:57:26.657287283Z"
+  },
+  {
+    "insertId": "y55tbtg181ky6p",
+    "jsonPayload": {
+      "data": "+8139658971",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "project_id": "aftership-pro"
+      }
+    },
+    "timestamp": "2018-12-28T00:57:04Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T00:57:06.963382884Z"
+  },
+  {
+    "insertId": "1vzf51ag1bowe1z",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+8139658971"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293",
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-28T00:57:03Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T00:57:05.741436976Z"
+  },
+  {
+    "insertId": "vn9h7cg17geo6f",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+8139658971"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-28T00:57:02Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T00:57:05.816840375Z"
+  },
+  {
+    "insertId": "rrbg8dg181a9yp",
+    "jsonPayload": {
+      "data": "+8139658971",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921",
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro"
+      }
+    },
+    "timestamp": "2018-12-28T00:57:02Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T00:57:06.668631410Z"
+  },
+  {
+    "insertId": "1pvjph4g19irt7h",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7023250341"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-28T00:48:15Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T00:48:16.526179904Z"
+  },
+  {
+    "insertId": "ujbs9lg1b898m2",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293",
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-28T00:29:01Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-28T00:29:05.424609388Z"
+  },
+  {
+    "insertId": "1xnk299g1axa6gg",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293"
+      }
+    },
+    "timestamp": "2018-12-27T23:31:04Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T23:31:09.669705490Z"
+  },
+  {
+    "insertId": "ldpfs0g1ak63eh",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-27T22:41:20Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T22:41:21.561773645Z"
+  },
+  {
+    "insertId": "1js54kjg16k7hse",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+3233642930"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T22:38:26Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T22:38:29.307434650Z"
+  },
+  {
+    "insertId": "kjknzhg16heqr5",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-27T22:29:09Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T22:29:09.829517447Z"
+  },
+  {
+    "insertId": "1dy8gntg1adz9v2",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T22:25:09Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T22:25:14.092062673Z"
+  },
+  {
+    "insertId": "1fm9ptig1ajeqkl",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921",
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-27T22:23:07Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T22:23:09.098213679Z"
+  },
+  {
+    "insertId": "8vq0ufg16blhv7",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T22:15:04Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T22:15:08.926402047Z"
+  },
+  {
+    "insertId": "hhg39lg1an0t9s",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996"
+      }
+    },
+    "timestamp": "2018-12-27T22:01:30Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T22:01:33.249395452Z"
+  },
+  {
+    "insertId": "4zviq2g171rh14",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-27T22:00:00Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T22:00:00.868990176Z"
+  },
+  {
+    "insertId": "dvnm9qg170u4mh",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-27T21:54:32Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T21:54:35.784665443Z"
+  },
+  {
+    "insertId": "gxv7nwg18vdqb8",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293"
+      }
+    },
+    "timestamp": "2018-12-27T21:38:29Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T21:38:33.199225757Z"
+  },
+  {
+    "insertId": "yf6nogg174g0oz",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-27T21:11:55Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T21:11:57.553673262Z"
+  },
+  {
+    "insertId": "dvl8ppg184jhtb",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-27T21:05:48Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T21:05:49.973387692Z"
+  },
+  {
+    "insertId": "yz3tv9g19y7zpa",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-27T21:01:56Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T21:01:58.620372405Z"
+  },
+  {
+    "insertId": "7s06lng19fva4i",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-27T20:27:13Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T20:27:17.008982379Z"
+  },
+  {
+    "insertId": "dbkk8ug16u0l9e",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+3233642930"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T20:18:15Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T20:18:16.854123068Z"
+  },
+  {
+    "insertId": "q3c1eag19mesw7",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921",
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro"
+      }
+    },
+    "timestamp": "2018-12-27T20:16:09Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T20:16:11.867198227Z"
+  },
+  {
+    "insertId": "1u1iejsg17pmwcf",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-27T19:34:44Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T19:34:48.470630193Z"
+  },
+  {
+    "insertId": "1sdojhug1927y9j",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T19:32:48Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T19:32:50.476531268Z"
+  },
+  {
+    "insertId": "1ndxmuag19bpa4i",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921",
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-27T19:20:05Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T19:20:10.286062764Z"
+  },
+  {
+    "insertId": "ln6pm1g161zlgy",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-27T19:18:47Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T19:18:51.010960674Z"
+  },
+  {
+    "insertId": "1r9ivf4g192w8vd",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996"
+      }
+    },
+    "timestamp": "2018-12-27T19:10:57Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T19:11:00.148269157Z"
+  },
+  {
+    "insertId": "1jhv8j9g17sgl5j",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+3233642930"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T19:10:35Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T19:10:40.087686750Z"
+  },
+  {
+    "insertId": "1gg6tvfg15vt9o3",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-27T18:42:28Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T18:42:32.639596323Z"
+  },
+  {
+    "insertId": "1s3mghcg15p19rx",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+3233642930"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T17:53:35Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T17:53:38.796741716Z"
+  },
+  {
+    "insertId": "16qoud1g1664d52",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+6307766763"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T15:42:14Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T15:42:17.552618764Z"
+  },
+  {
+    "insertId": "1wjmxayg17baip5",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+5491156131452"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921",
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro"
+      }
+    },
+    "timestamp": "2018-12-27T14:08:19Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T14:08:20.955799855Z"
+  },
+  {
+    "insertId": "1s3x99rg12z70vr",
+    "jsonPayload": {
+      "data": "+5491156131452",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-27T11:03:39Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T11:03:42.023404228Z"
+  },
+  {
+    "insertId": "ln59h2g12p5e7t",
+    "jsonPayload": {
+      "data": "+2085761489",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-27T07:28:51Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T07:28:53.104369773Z"
+  },
+  {
+    "insertId": "wqtyf4g129np9r",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+5491156131452"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro"
+      }
+    },
+    "timestamp": "2018-12-27T06:54:23Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T06:54:24.966550612Z"
+  },
+  {
+    "insertId": "kasprg11s0lig",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T04:34:21Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T04:34:26.587450820Z"
+  },
+  {
+    "insertId": "1wtnzweg14le0i7",
+    "jsonPayload": {
+      "data": "+86 1381054799",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-27T03:05:25Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T03:05:27.891642014Z"
+  },
+  {
+    "insertId": "184o4v7g12sfdoy",
+    "jsonPayload": {
+      "data": "+3233642930",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-27T03:04:23Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T03:04:23.855079422Z"
+  },
+  {
+    "insertId": "vd0zm7g11jq7ag",
+    "jsonPayload": {
+      "data": "+86 1381054799",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921",
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-27T03:01:58Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T03:02:00.058459296Z"
+  },
+  {
+    "insertId": "32gk9sg12caomy",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7652012837"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-27T02:15:33Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T02:15:37.052157278Z"
+  },
+  {
+    "insertId": "8lyq1kg13h9cdg",
+    "jsonPayload": {
+      "data": "+86 1381054799",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-27T02:04:38Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T02:04:42.651378138Z"
+  },
+  {
+    "insertId": "kauw2g13fq4rr",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T01:38:50Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T01:38:53.607384041Z"
+  },
+  {
+    "insertId": "17a9po4g130q5ig",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T01:24:36Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T01:24:38.401646794Z"
+  },
+  {
+    "insertId": "1fwctg2g105y1vu",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+3233642930"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-27T01:18:31Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T01:18:36.193131253Z"
+  },
+  {
+    "insertId": "efyim3g137hdk8",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T01:10:47Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T01:10:52.823644279Z"
+  },
+  {
+    "insertId": "w735mjg107iiey",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-27T01:00:47Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T01:00:52.699078163Z"
+  },
+  {
+    "insertId": "1j7v71pg10hzvbu",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-27T00:18:33Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T00:18:35.307964259Z"
+  },
+  {
+    "insertId": "zipqxwfvnl5yg",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-27T00:13:32Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-27T00:13:35.244261422Z"
+  },
+  {
+    "insertId": "kkerfg12ol74v",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-26T23:52:43Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T23:52:45.769795998Z"
+  },
+  {
+    "insertId": "16qoud1g11f3mkk",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-26T23:51:47Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T23:51:51.546364675Z"
+  },
+  {
+    "insertId": "9fnyd1g12fzqib",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T23:38:25Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T23:38:29.433153705Z"
+  },
+  {
+    "insertId": "1dy7l8jg1340uzw",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T23:38:00Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T23:38:03.471976252Z"
+  },
+  {
+    "insertId": "rrbg8dg108rhrg",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-26T23:10:57Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T23:11:00.881306515Z"
+  },
+  {
+    "insertId": "1nxo30nfzi4waa",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-26T23:07:50Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T23:07:54.226249628Z"
+  },
+  {
+    "insertId": "bnw1rufzbswnu",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-26T22:46:38Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T22:46:40.503033783Z"
+  },
+  {
+    "insertId": "15megw1fyeortf",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-26T22:29:03Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T22:29:08.634444600Z"
+  },
+  {
+    "insertId": "1sxnyg0g10wckza",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-26T22:26:57Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T22:26:58.771858429Z"
+  },
+  {
+    "insertId": "pj7fy7g107nhwk",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+3233642930"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-26T21:14:59Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T21:15:03.941748118Z"
+  },
+  {
+    "insertId": "1rjmpaug1090qe4",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T21:14:04Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T21:14:06.776959545Z"
+  },
+  {
+    "insertId": "tyw7hjfyykahr",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-26T21:09:13Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T21:09:17.349429162Z"
+  },
+  {
+    "insertId": "1sngvdpg10ovat4",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996"
+      }
+    },
+    "timestamp": "2018-12-26T20:49:21Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T20:49:26.435419756Z"
+  },
+  {
+    "insertId": "1ixu338g11gn8di",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro"
+      }
+    },
+    "timestamp": "2018-12-26T20:33:46Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T20:33:51.776554172Z"
+  },
+  {
+    "insertId": "2i44lfg11hm3g9",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+8139658971"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro"
+      }
+    },
+    "timestamp": "2018-12-26T20:00:46Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T20:00:50.342982813Z"
+  },
+  {
+    "insertId": "fjfmrog107mgvf",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996"
+      }
+    },
+    "timestamp": "2018-12-26T19:31:51Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T19:31:55.099846095Z"
+  },
+  {
+    "insertId": "gnky9zg104r0a5",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T19:16:18Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T19:16:19.905356505Z"
+  },
+  {
+    "insertId": "4g54b1fyruqyh",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-26T19:09:29Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T19:09:30.846399723Z"
+  },
+  {
+    "insertId": "tfdszrfyzekwg",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-26T19:04:21Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T19:04:26.321716460Z"
+  },
+  {
+    "insertId": "1snfyorg108bj88",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-26T18:58:08Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:58:10.342137174Z"
+  },
+  {
+    "insertId": "gxbrttfyc4rid",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+3233642930"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T18:57:59Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:58:05.696577678Z"
+  },
+  {
+    "insertId": "t5aybvg10x8dvs",
+    "jsonPayload": {
+      "data": "+8139658971",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-26T18:55:56Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:56:00.672198007Z"
+  },
+  {
+    "insertId": "17aauhyg10sly7y",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+8139658971"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293"
+      }
+    },
+    "timestamp": "2018-12-26T18:46:35Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:46:39.283359802Z"
+  },
+  {
+    "insertId": "1r9rs20fy0q623",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996"
+      }
+    },
+    "timestamp": "2018-12-26T18:43:52Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:43:54.462841130Z"
+  },
+  {
+    "insertId": "1e87fdefy3r9w7",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-26T18:38:22Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:38:25.285722955Z"
+  },
+  {
+    "insertId": "chmt9pfyl39z7",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-26T18:37:20Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:37:25.862286200Z"
+  },
+  {
+    "insertId": "1os4977fz9zz3t",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996"
+      }
+    },
+    "timestamp": "2018-12-26T18:30:20Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:30:24.272431026Z"
+  },
+  {
+    "insertId": "1ohsnscfzn1qp9",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-26T18:15:50Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:15:54.950356221Z"
+  },
+  {
+    "insertId": "134vfwsfzmlc7t",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293"
+      }
+    },
+    "timestamp": "2018-12-26T18:10:52Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:10:53.801479236Z"
+  },
+  {
+    "insertId": "dbydqxfzdxoxr",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T18:07:21Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:07:24.840418476Z"
+  },
+  {
+    "insertId": "dbik7xfza0p7z",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-26T18:01:47Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T18:01:49.785555266Z"
+  },
+  {
+    "insertId": "khxeafxm1wrs",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T17:47:24Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-6wrsj",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T17:47:29.551006054Z"
+  },
+  {
+    "insertId": "gxicgefy6msj2",
+    "jsonPayload": {
+      "data": "+5612123226",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-26T17:36:12Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-s24n6",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T17:36:14.836007931Z"
+  },
+  {
+    "insertId": "zix9sifydrmus",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-26T17:28:36Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T17:28:38.869206156Z"
+  },
+  {
+    "insertId": "sbct1yfzlnoap",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-26T17:27:03Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T17:27:04.707794727Z"
+  },
+  {
+    "insertId": "116ki4sfyi728r",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "2555070995741504844"
+      }
+    },
+    "timestamp": "2018-12-26T17:24:59Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-spspr",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-qg2f5"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T17:25:04.200310494Z"
+  },
+  {
+    "insertId": "1snlpncfxh1e44",
+    "jsonPayload": {
+      "data": "+7605217589",
+      "message": "The phone number is not valid."
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820",
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com"
+      }
+    },
+    "timestamp": "2018-12-26T16:53:27Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T16:53:28.337076833Z"
+  },
+  {
+    "insertId": "yz20qxg101cv4o",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "zone": "us-central1-f",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T16:47:14Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T16:47:18.235944871Z"
+  },
+  {
+    "insertId": "ilngqjfzxk3vo",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921"
+      }
+    },
+    "timestamp": "2018-12-26T16:37:22Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T16:37:23.908890344Z"
+  },
+  {
+    "insertId": "j5qvz6fyrahqm",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7038691850"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293"
+      }
+    },
+    "timestamp": "2018-12-26T15:25:03Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T15:25:06.496794467Z"
+  },
+  {
+    "insertId": "9fps1yfyqgoed",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+7605217589"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "zone": "us-central1-f",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820"
+      }
+    },
+    "timestamp": "2018-12-26T14:52:12Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-tchxl",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T14:52:16.471347417Z"
+  },
+  {
+    "insertId": "12aj37bfx0y78p",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+5491156131452"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "1748163863365442293",
+        "zone": "us-central1-c",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T14:51:16Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-9nm4s",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-ws9ww",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T14:51:21.017712532Z"
+  },
+  {
+    "insertId": "q3bvhmfv763k3",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+86155552671"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "3179386312311665996",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+        "zone": "us-central1-f"
+      }
+    },
+    "timestamp": "2018-12-26T08:04:43Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-h4486",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-wq57c",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T08:04:44.030822322Z"
+  },
+  {
+    "insertId": "8w5wn2fxmpuwz",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+86155552671"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1",
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "5023266105206207820",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+        "zone": "us-central1-f"
+      }
+    },
+    "timestamp": "2018-12-26T07:57:25Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-5jddb",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-vm8v2",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T07:57:30.339758372Z"
+  },
+  {
+    "insertId": "1o2081fupcxce",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+86155552671"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T04:58:43Z",
+    "severity": "ERROR",
+    "labels": {
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b",
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T04:58:47.721481557Z"
+  },
+  {
+    "insertId": "1m9tz2pfup1hnz",
+    "jsonPayload": {
+      "message": "The phone number is not valid.",
+      "data": "+86155552671"
+    },
+    "resource": {
+      "type": "container",
+      "labels": {
+        "container_name": "nodejs-core-aftershipapi-com",
+        "namespace_id": "production",
+        "instance_id": "4960700607935771921",
+        "pod_id": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+        "zone": "us-central1-c",
+        "project_id": "aftership-pro",
+        "cluster_name": "gke-aftership-service-pro-1"
+      }
+    },
+    "timestamp": "2018-12-26T04:02:27Z",
+    "severity": "ERROR",
+    "labels": {
+      "container.googleapis.com/pod_name": "deployment-core-aftershipapi-com-6dd6f8dd95-7757x",
+      "container.googleapis.com/stream": "stdout",
+      "container.googleapis.com/namespace_name": "production",
+      "compute.googleapis.com/resource_name": "fluentd-gcp-v3.1.0-xhj9b"
+    },
+    "logName": "projects/aftership-pro/logs/nodejs-core-aftershipapi-com",
+    "receiveTimestamp": "2018-12-26T04:02:31.840149794Z"
+  }
+]
