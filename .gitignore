@@ -22,3 +22,6 @@ dist
 web
 
 coverage
+
+# ==== .env
+.env
