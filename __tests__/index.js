@@ -213,6 +213,14 @@ describe('Testing USA Phone', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
+
+	describe('Test 14', () => {
+		const number = '+1 (888) 569-8900';
+		const result = ['+18885698900', 'USA'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 });
 
 
@@ -825,6 +833,13 @@ describe('Testing RUS Phone Quick Test', () => {
 	});
 });
 
+describe('Testing Argentina Phone Quick Test', () => {
+	describe('Test 1', () => {
+		const number = '+5491156131499';
+		const result = ['+5491156131499', 'ARG'];
+		expect(phone(number)).toEqual(result);
+	});
+});
 
 describe('Testing THA Phone Quick Test', () => {
 	describe('Test 1', () => {

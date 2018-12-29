@@ -10,6 +10,7 @@
 .tern-project
 lib/
 src/
+script/
 example/
 .babelrc
 .eslintignore
