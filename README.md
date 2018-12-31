@@ -1,9 +1,9 @@
 # Phone &middot; [![Build Status](https://travis-ci.org/AfterShip/phone.svg?branch=v2)](https://travis-ci.org/AfterShip/phone) [![codecov](https://codecov.io/gh/AfterShip/phone/branch/master/graph/badge.svg)](https://codecov.io/gh/AfterShip/phone) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## What is phone?
-`phone` is used to normalize the `mobile` phone number into a E.164 format.
+`phone` is used to normalize mobile phone numbers into E.164 format.
 
-The common problem is user normally input the phone number in this way:
+A common problem is that users normally input phone numbers this way:
 
 ```
 `(817) 569-8900` or
@@ -12,7 +12,7 @@ The common problem is user normally input the phone number in this way:
 `+1(817) 569-8900` or ...
 ```
 
-What we want is always:
+We always want:
 
 ```
 +18175698900
@@ -47,39 +47,30 @@ npm test
 
 ## Old browsers & browser support
 
-We currently transpile script to base on target env which that browser global usage '>1%' and "node: 6.10".
+We currently transpile script to work on target environments for which the browser's global usage is >1%, and Node.JS 6.10+.
 
-You can check on the [browserlist](http://browserl.ist/?q=%3E1%25)
-You also need polyfill for some old browser more details please read the `README` inside the `example` folder
+You can check browser usage statistics on the [browserlist](http://browserl.ist/?q=%3E1%25).
+You may need polyfills for some older browsers; for more details, please read the `example/README` file.
 
 
 ## FAQ
 
-1. Does `phone` do any phone validation?
+1. Does `phone` do any logical validation?
 
-	Yes: If you provide the 2nd parameter (country), and the phone number do not start with `+` sign.
+	Yes. If you provide the 2nd parameter (country), and the phone number does not start with a `+`.
 
-	`phone` will validate `phone_number_lengths` and `mobile_begin_with`
+	`phone` will validate `phone_number_lengths` and `mobile_begin_with`.
 
-2. Why some of the number is valid, but return null?
-	This npm is used to validate a mobile phone number for sending the SMS.
-	So, we try to match all possible rule, such as area code, number prefix, etc. to test if it is a mobile phone number.
-	However, some countries, like USA, we can only check if it is a valid `AREA CODE`, there is no mobile phone prefix.
+2. Why is `phone` returning null for a valid phone number?
+	This package is used to validate a mobile phone number for sending the SMS.
+	Therefore, we try to match all possible rules for specifically checking whether a number is mobile, such as area code, number prefix, etc.
+	However, some countries, like the USA, don't have mobile identifiers; so we can only check if it the input has a valid area code.
 
-	For UK, we know that mobile phone number is always start with `7`, in this case, this npm will be more helpful.
-
-3. Why do you make this?
-
-	Because we need to normalize the phone number for SMS notification for mobile phone only.
-
-We don't validate if the number is mobile or not.
-
+	For example, we know that UK mobile phone numbers always start with `7`. In this case, `phone` can verify that the number is actually mobile.
 
 ## Help
 
-We try to google for many results, but none of package can fit our need.
-If you know that our rule is wrong, or can add more validation to make this npm more accurate.
-Please open an issue and let us know.
+We've tried to make sure that this package works for as many cases as possible, but there are a lot out there!
+If you notice that we have an incorrect rule for a country or other case, please open an issue to let us know.
 
-## License
-MIT
+This project is licensed under the [MIT license](https://github.com/AfterShip/phone/blob/master/LICENSE).
