@@ -31,3 +31,6 @@ stackdriver
 
 # === logs
 logs
+
+# === vscode
+.vscode

@@ -1021,3 +1021,23 @@ describe('Testing CHN Phone Quick Test', () => {
 
 
 });
+
+describe('test phone with trunk prefix', () => {
+	test('Austrilia phone with trunk prefix (0)', () => {
+		const number = '+61(0)488888888';
+		const result = ['+61488888888', 'AUS'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Russian Federation phone with trunk prefix (8)', () => {
+		const number = '+7(8)9234567890';
+		const result = ['+79234567890', 'RUS'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Micronesia with trunk prefix (0)', () => {
+		const number = '+691(0)1234567';
+		const result = ['+6911234567', 'FSM'];
+		expect(phone(number)).toEqual(result);
+	});
+});
