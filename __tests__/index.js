@@ -1034,4 +1034,10 @@ describe('test phone with trunk prefix', () => {
 		const result = ['+79234567890', 'RUS'];
 		expect(phone(number)).toEqual(result);
 	});
+
+	test('Micronesia with trunk prefix (0)', () => {
+		const number = '+691(0)1234567';
+		const result = ['+6911234567', 'FSM'];
+		expect(phone(number)).toEqual(result);
+	});
 });
