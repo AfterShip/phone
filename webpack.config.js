@@ -11,7 +11,8 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'index.js',
 		libraryTarget: 'umd',
-		library: 'phone'
+		library: 'phone',
+		globalObject: 'this'
 	},
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin(),
