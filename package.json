@@ -41,8 +41,9 @@
 		"ts-node": "^7.0.1",
 		"twilio": "^3.26.0",
 		"typescript": "^3.2.2",
-		"webpack": "^3.5.5",
-		"webpack-dev-server": "^2.9.1"
+		"webpack": "^4.28.3",
+		"webpack-cli": "^3.2.1",
+		"webpack-dev-server": "^3.1.14"
 	},
 	"keywords": [
 		"phone",
