@@ -833,14 +833,6 @@ describe('Testing RUS Phone Quick Test', () => {
 	});
 });
 
-describe('Testing Argentina Phone Quick Test', () => {
-	describe('Test 1', () => {
-		const number = '+5491156131499';
-		const result = ['+5491156131499', 'ARG'];
-		expect(phone(number)).toEqual(result);
-	});
-});
-
 describe('Testing THA Phone Quick Test', () => {
 	describe('Test 1', () => {
 		const number = '0812345678'; // remove the leading ;
@@ -931,96 +923,117 @@ describe('Testing KAZ Phone Quick Test', () => {
 
 
 describe('Testing PAN Phone Quick Test', () => {
-    describe('Test 1', () => {
-        const number = '+507 61234567';
-        const country = 'PAN';
-        const result = ['+50761234567', 'PAN'];
-        test('returns ' + result, () => {
-            expect(phone(number, country)).toEqual(result);
-        });
-    });
+	describe('Test 1', () => {
+		const number = '+507 61234567';
+		const country = 'PAN';
+		const result = ['+50761234567', 'PAN'];
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
 
 
-    describe('Test 2', () => {
-        const number = '+507 51234567'; // start from 5 is landlines
-        const country = 'PAN';
-        const result = [];
-        test('returns ' + result, () => {
-            expect(phone(number, country)).toEqual(result);
-        });
-    });
-
+	describe('Test 2', () => {
+		const number = '+507 51234567'; // start from 5 is landlines
+		const country = 'PAN';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
 });
 
 describe('Testing MUS Phone Quick Test', () => {
+	describe('Test 1', () => {
+		const number = '+230 51234567';
+		const result = ['+23051234567', 'MUS'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 
-    describe('Test 1', () => {
-        const number = '+230 51234567';
-        const result = ['+23051234567', 'MUS'];
-        test('returns ' + result, () => {
-            expect(phone(number)).toEqual(result);
-        });
-    });
 
+	describe('Test 2', () => {
+		const number = '+230 5123-4567';
+		const result = ['+23051234567', 'MUS'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 
-    describe('Test 2', () => {
-        const number = '+230 5123-4567';
-        const result = ['+23051234567', 'MUS'];
-        test('returns ' + result, () => {
-            expect(phone(number)).toEqual(result);
-        });
-    });
+	describe('Test 3', () => {
+		const number = '+230 6123-4567'; // Landlines
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 
-    describe('Test 3', () => {
-        const number = '+230 6123-4567'; //Landlines
-        const result = [];
-        test('returns ' + result, () => {
-            expect(phone(number)).toEqual(result);
-        });
-    });
-
-    describe('Test 4', () => {
-        const number = '+230 6123-4567'; //Country code not match with number
-        const country = 'HKG';
-        const result = [];
-        test('returns ' + result, () => {
-            expect(phone(number, country)).toEqual(result);
-        });
-    });
-
+	describe('Test 4', () => {
+		const number = '+230 6123-4567'; // Country code not match with number
+		const country = 'HKG';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
 });
 
 
 describe('Testing CHN Phone Quick Test', () => {
+	// Test for new pattern (199, 198, 166)
+	describe('Test for pattern 199', () => {
+		const number = '+86 199 51343779';
+		const result = ['+8619951343779', 'CHN'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 
-    //Test for new pattern (199, 198, 166)
-    describe('Test for pattern 199', () => {
-        const number = '+86 199 51343779';
-        const result = ['+8619951343779', 'CHN'];
-        test('returns ' + result, () => {
-            expect(phone(number)).toEqual(result);
-        });
-    });
+	describe('Test for pattern 198', () => {
+		const number = '+86 198 51343779';
+		const result = ['+8619851343779', 'CHN'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 
-    describe('Test for pattern 198', () => {
-        const number = '+86 198 51343779';
-        const result = ['+8619851343779', 'CHN'];
-        test('returns ' + result, () => {
-            expect(phone(number)).toEqual(result);
-        });
-    });
-
-    describe('Test for pattern 166', () => {
-        const number = '+86 166 51343779';
-        const result = ['+8616651343779', 'CHN'];
-        test('returns ' + result, () => {
-            expect(phone(number)).toEqual(result);
-        });
-    });
-
-
-
+	describe('Test for pattern 166', () => {
+		const number = '+86 166 51343779';
+		const result = ['+8616651343779', 'CHN'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
 });
+
+
+describe('Testing ARG numbers', () => {
+	describe('Test for number without 9 prefix', () => {
+		const number = '+54 233 123 4567';
+		const result = ['+542331234567', 'ARG'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+
+	describe('Test for number with 9 prefix', () => {
+		const number = '+54 9 233 123 4567';
+		const result = ['+542331234567', 'ARG'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+
+	describe('Test for number with 15 prefix', () => {
+		const number = '+54 15 233 123 4567';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+});
+
 
 describe('test phone with trunk prefix', () => {
 	test('Austrilia phone with trunk prefix (0)', () => {
@@ -1038,6 +1051,14 @@ describe('test phone with trunk prefix', () => {
 	test('Micronesia with trunk prefix (0)', () => {
 		const number = '+691(0)1234567';
 		const result = ['+6911234567', 'FSM'];
+		expect(phone(number)).toEqual(result);
+	});
+});
+
+describe('test phone with no mobile_begin_with', () => {
+	test('Test 1', () => {
+		const number = '+298 212345';
+		const result = ['+298212345', 'FRO'];
 		expect(phone(number)).toEqual(result);
 	});
 });
