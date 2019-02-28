@@ -1092,6 +1092,24 @@ describe( 'Testing MMR Phone', () => {
 });
 
 
+describe( 'Testing Canada Phone', () => {
+	describe('Should return result when it match begin with', () => {
+		const number = '+1 367 1234567';
+		const result = ['+13671234567', 'CAN'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+	describe('Should not return result when it match begin with', () => {
+		const number = '+1 111 1234567';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+});
+
+
 describe('test phone with trunk prefix', () => {
 	test('Austrilia phone with trunk prefix (0)', () => {
 		const number = '+61(0)488888888';
