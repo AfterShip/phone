@@ -833,14 +833,6 @@ describe('Testing RUS Phone Quick Test', () => {
 	});
 });
 
-describe('Testing Argentina Phone Quick Test', () => {
-	describe('Test 1', () => {
-		const number = '+5491156131499';
-		const result = ['+5491156131499', 'ARG'];
-		expect(phone(number)).toEqual(result);
-	});
-});
-
 describe('Testing THA Phone Quick Test', () => {
 	describe('Test 1', () => {
 		const number = '0812345678'; // remove the leading ;
@@ -1028,7 +1020,7 @@ describe('Testing ARG numbers', () => {
 
 	describe('Test for number with 9 prefix', () => {
 		const number = '+54 9 233 123 4567';
-		const result = [];
+		const result = ['+542331234567', 'ARG'];
 		test('returns ' + result, () => {
 			expect(phone(number)).toEqual(result);
 		});
