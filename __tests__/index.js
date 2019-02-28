@@ -1017,7 +1017,6 @@ describe('Testing ARG numbers', () => {
 		});
 	});
 
-
 	describe('Test for number with 9 prefix', () => {
 		const number = '+54 9 233 123 4567';
 		const result = ['+542331234567', 'ARG'];
@@ -1052,6 +1051,14 @@ describe('test phone with trunk prefix', () => {
 	test('Micronesia with trunk prefix (0)', () => {
 		const number = '+691(0)1234567';
 		const result = ['+6911234567', 'FSM'];
+		expect(phone(number)).toEqual(result);
+	});
+});
+
+describe('test phone with no mobile_begin_with', () => {
+	test('Test 1', () => {
+		const number = '+298 212345';
+		const result = ['+298212345', 'FRO'];
 		expect(phone(number)).toEqual(result);
 	});
 });
