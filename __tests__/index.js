@@ -1128,6 +1128,24 @@ describe( 'Testing Cameroon Phone', () => {
 });
 
 
+describe( 'Testing New Caledonia Phone', () => {
+	describe('Should return result when it matches mobile_begin_with', () => {
+		const number = '+687 812345';
+		const result = ['+687812345', 'NCL'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+	describe('Should not return result when it does not match mobile_begin_with', () => {
+		const number = '+687 112345';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+});
+
+
 describe('test phone with trunk prefix', () => {
 	test('Austrilia phone with trunk prefix (0)', () => {
 		const number = '+61(0)488888888';
