@@ -1093,15 +1093,51 @@ describe( 'Testing MMR Phone', () => {
 
 
 describe( 'Testing Canada Phone', () => {
-	describe('Should return result when it match begin with', () => {
+	describe('Should return result when it matches mobile_begin_with', () => {
 		const number = '+1 367 1234567';
 		const result = ['+13671234567', 'CAN'];
 		test('returns ' + result, () => {
 			expect(phone(number)).toEqual(result);
 		});
 	});
-	describe('Should not return result when it match begin with', () => {
+	describe('Should not return result when it does not match mobile_begin_with', () => {
 		const number = '+1 111 1234567';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+});
+
+
+describe( 'Testing Cameroon Phone', () => {
+	describe('Should return result when it matches mobile_begin_with', () => {
+		const number = '+237 612345678';
+		const result = ['+237612345678', 'CMR'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+	describe('Should not return result when it does not match mobile_begin_with', () => {
+		const number = '+237 112345678';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+});
+
+
+describe( 'Testing New Caledonia Phone', () => {
+	describe('Should return result when it matches mobile_begin_with', () => {
+		const number = '+687 812345';
+		const result = ['+687812345', 'NCL'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+	describe('Should not return result when it does not match mobile_begin_with', () => {
+		const number = '+687 112345';
 		const result = [];
 		test('returns ' + result, () => {
 			expect(phone(number)).toEqual(result);
