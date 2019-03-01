@@ -1146,6 +1146,24 @@ describe( 'Testing New Caledonia Phone', () => {
 });
 
 
+describe( 'Testing Ukraine Phone', () => {
+	describe('Should return result when it matches mobile_begin_with', () => {
+		const number = '+380 73 123 45 67';
+		const result = ['+380731234567', 'UKR'];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+	describe('Should not return result when it does not match mobile_begin_with', () => {
+		const number = '+380 11 123 45 67';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number)).toEqual(result);
+		});
+	});
+});
+
+
 describe('test phone with trunk prefix', () => {
 	test('Austrilia phone with trunk prefix (0)', () => {
 		const number = '+61(0)488888888';
