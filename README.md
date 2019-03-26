@@ -26,7 +26,8 @@ npm install phone
 
 ## Usage
 ```javascript
-import phone from 'phone';
+const phone  = require('phone');
+
 phone('+852 6569-8900'); // return ['+85265698900', 'HKG']
 phone('(817) 569-8900'); // return ['+18175698900, 'USA']
 phone('(817) 569-8900', ''); // return ['+18175698900, 'USA']
@@ -82,6 +83,8 @@ You may need polyfills for some older browsers; for more details, please read th
 ## Help
 
 We've tried to make sure that this package works for as many cases as possible, if you notice that we have an incorrect rule for a country or other case, please open an issue to let us know.
+
+For creating new pull requests regarding add or modify phone number formats, please include the reference information such as PDFs, websites, etc. Thank you very much. 
 
 ## License
 
