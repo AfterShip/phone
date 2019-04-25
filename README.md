@@ -29,15 +29,21 @@ npm install phone
 const phone  = require('phone');
 
 phone('+852 6569-8900'); // return ['+85265698900', 'HKG']
-phone('(817) 569-8900'); // return ['+18175698900, 'USA']
-phone('(817) 569-8900', ''); // return ['+18175698900, 'USA']
+phone('+1(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('(817) 569-8900', 'USA'); // return ['+18175698900', 'USA']
 phone('(817) 569-8900', 'HKG'); // return []
 phone('+1(817) 569-8900', 'HKG'); // return [], as it is not a valid HKG mobile phone number
-phone('+1(817) 569-8900', ''); // return ['+18175698900', 'USA']
-phone('(817) 569-8900', ''); // return ['+18175698900', 'USA']
-phone('6123-6123', ''); // return [], as default country is USA
 phone('6123-6123', 'HKG'); // return ['+85261236123', 'HKG']
+```
+
+If both country code and country phone prefix are not provided, will treat as USA or Canada by default 
+
+```
+phone('(817) 569-8900'); // return ['+18175698900, 'USA']
+phone('(817) 569-8900', ''); // return ['+18175698900, 'USA']
+phone('(817) 569-8900', ''); // return ['+18175698900', 'USA']
+phone('780-569-8900', ''); // return ['+17805698900, 'CAN'], 780 is a Canada phone prefix
+phone('6123-6123', ''); // return [], as default country is USA / CAN and it does not match any result
 ```
 
 ## Test

@@ -131,10 +131,10 @@ describe('Testing USA Phone', () => {
 		});
 	});
 
-	describe('Test 5', () => {
+	describe('Test 5, does not provide country, should match canada phone number', () => {
 		const number = '22-6569-8900';
 		const country = '';
-		const result = [];
+		const result = ['+12265698900', 'CAN'];
 		test('returns ' + result, () => {
 			expect(phone(number, country)).toEqual(result);
 		});
@@ -223,6 +223,34 @@ describe('Testing USA Phone', () => {
 	});
 });
 
+describe('Testing default Canada phone number', () => {
+	describe('Test 1, does not provide country, should match canada phone number', () => {
+		const number = '+1905-555-1234';
+		const country = '';
+		const result = ['+19055551234', 'CAN'];
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
+
+	describe('Test 2, does not provide country and plus sign, should match canada phone number', () => {
+		const number = '519-555-1234';
+		const country = '';
+		const result = ['+15195551234', 'CAN'];
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
+
+	describe('Test 3, does not provide country and plus sign but with "1", should match nothing', () => {
+		const number = '1519-555-1234';
+		const country = '';
+		const result = [];
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
+});
 
 describe('Testing +1 but NOT in USA', () => {
 	describe('+1 340  United States Virgin Islands', () => {
