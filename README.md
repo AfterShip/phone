@@ -38,7 +38,7 @@ phone('6123-6123', 'HKG'); // return ['+85261236123', 'HKG']
 
 If both country code and country phone prefix are not provided, will treat as USA or Canada by default 
 
-```
+```javascript
 phone('(817) 569-8900'); // return ['+18175698900, 'USA']
 phone('(817) 569-8900', ''); // return ['+18175698900, 'USA']
 phone('(817) 569-8900', ''); // return ['+18175698900', 'USA']
