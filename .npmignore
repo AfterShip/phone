@@ -10,6 +10,7 @@
 .tern-project
 lib/
 src/
+script/
 example/
 .babelrc
 .eslintignore
@@ -181,3 +182,8 @@ bower_components
 
 config/examples.json
 config.json
+
+# ------------------------------------------------------------------------------
+# customized scripts
+# ------------------------------------------------------------------------------
+scripts

@@ -1,50 +1,59 @@
 {
-	"name": "phone",
-	"version": "2.3.0",
-	"description": "With a given country and phone number, validate and format the phone number to E.164 standard",
-	"main": "./dist/index.js",
-	"engines": {
-		"node": ">=6.10.0"
-	},
-	"directories": {
-		"lib": "./lib"
-	},
-	"scripts": {
-		"test": "jest && codecov",
-		"lint": "eslint .",
-		"build": "webpack --hide-modules --progress",
-		"start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
-		"prepublishOnly": "yarn build"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/aftership/phone"
-	},
-	"bugs": {
-		"url": "https://github.com/aftership/phone/issues"
-	},
-	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-loader": "^7.1.5",
-		"babel-minify-webpack-plugin": "^0.2.0",
-		"babel-polyfill": "^6.26.0",
-		"babel-preset-env": "^1.7.0",
-		"codecov": "^2.3.1",
-		"eslint": "^4.5.0",
-		"eslint-config-aftership": "^4.5.0",
-		"eslint-plugin-import": "^2.13.0",
-		"jest": "^23.3.0",
-		"webpack": "^3.5.5",
-		"webpack-dev-server": "^2.9.1"
-	},
-	"keywords": [
-		"phone",
-		"e.164"
-	],
-	"author": "AfterShip",
-	"license": "MIT",
-	"jest": {
-		"coverageDirectory": "./coverage/",
-		"collectCoverage": true
-	}
+  "name": "phone",
+  "version": "2.3.11",
+  "description": "With a given country and phone number, validate and format the phone number to E.164 standard",
+  "main": "./dist/index.js",
+  "engines": {
+    "node": ">=6.10.0"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test": "jest && codecov",
+    "lint": "eslint .",
+    "build": "webpack --hide-modules --progress",
+    "start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
+    "prepublishOnly": "yarn build",
+    "fix:numbers": "ts-node -P scripts/add-new-rules/tsconfig.json scripts/add-new-rules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aftership/phone"
+  },
+  "bugs": {
+    "url": "https://github.com/aftership/phone/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "codecov": "^2.3.1",
+    "dotenv": "^6.2.0",
+    "eslint": "^4.5.0",
+    "eslint-config-aftership": "^4.5.0",
+    "eslint-plugin-import": "^2.13.0",
+    "jest": "^23.3.0",
+    "lodash": "^4.17.11",
+    "ts-node": "^7.0.1",
+    "twilio": "^3.26.0",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-sources": "1.0.1"
+  },
+  "keywords": [
+    "phone",
+    "e.164"
+  ],
+  "author": "AfterShip",
+  "license": "MIT",
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  }
 }

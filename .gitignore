@@ -22,3 +22,15 @@ dist
 web
 
 coverage
+
+# ==== .env
+.env
+
+# ==== stackdriver
+stackdriver
+
+# === logs
+logs
+
+# === vscode
+.vscode
