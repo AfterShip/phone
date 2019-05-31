@@ -1,6 +1,6 @@
 {
   "name": "phone",
-  "version": "2.3.11",
+  "version": "2.3.13",
   "description": "With a given country and phone number, validate and format the phone number to E.164 standard",
   "main": "./dist/index.js",
   "engines": {
@@ -11,6 +11,7 @@
   },
   "scripts": {
     "test": "jest && codecov",
+    "test:update": "jest --updateSnapshot",
     "lint": "eslint .",
     "build": "webpack --hide-modules --progress",
     "start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
