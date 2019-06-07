@@ -5,7 +5,7 @@ const MinifyPlugin = require('babel-minify-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-	devtool: 'source-map',
+	devtool: process.env.NODE_ENV === 'development' ? 'source-map' : 'none',
 	entry: './lib/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
