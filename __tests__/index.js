@@ -748,29 +748,19 @@ describe('Testing BRA Phone Quick Test', () => {
 		});
 	});
 
-
-	describe('Test 2', () => {
-		const number = '+55 11 6123 1234'; // as 9 is missin;
-		const country = 'BRA';
-		const result = [];
-		test('returns ' + result, () => {
-			expect(phone(number, country)).toEqual(result);
-		});
-	});
-
 	describe('Test 4', () => {
-		const number = '+55 11 8 6123 1234'; // prefix must be 9 after area cod;
-		const country = 'BRA';
-		const result = [];
-		test('returns ' + result, () => {
-			expect(phone(number, country)).toEqual(result);
-		});
-	});
-
-	describe('Test 2', () => {
-		const number = '+55 69 8 6123 1234'; // we don't check prefix for area code 6;
+		const number = '+55 69 8 6123 1234';
 		const country = 'BRA';
 		const result = ['+5569861231234', 'BRA'];
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
+
+	describe('Test 5', () => {
+		const number = '+55 65 9 9123 4567';
+		const country = 'BRA';
+		const result = ['+5565991234567', 'BRA'];
 		test('returns ' + result, () => {
 			expect(phone(number, country)).toEqual(result);
 		});
