@@ -6,8 +6,8 @@ const webpack = require('webpack');
 
 module.exports = {
 	// devtool: 'source-map',
-	devtool: 'none',
 	entry: './lib/index.js',
+	mode: 'production',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'index.js',
