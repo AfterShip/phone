@@ -1,6 +1,6 @@
 {
   "name": "phone",
-  "version": "2.3.17",
+  "version": "2.3.18",
   "description": "With a given country and phone number, validate and format the phone number to E.164 standard",
   "main": "./dist/index.js",
   "engines": {
@@ -38,7 +38,7 @@
     "eslint-config-aftership": "^4.5.0",
     "eslint-plugin-import": "^2.17.3",
     "jest": "^24.8.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "ts-node": "^7.0.1",
     "twilio": "^3.31.1",
     "typescript": "^3.5.1",
