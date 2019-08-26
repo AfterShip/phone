@@ -1219,3 +1219,29 @@ describe('test phone with no mobile_begin_with', () => {
 		expect(phone(number)).toEqual(result);
 	});
 });
+
+describe('[CORE-1562] add new phone number rules for `+17215201993、+5164518135、+6062311120、+16782069397`', () => {
+	test('Test +17215201993', () => {
+		const number = '+17215201993';
+		const result = ['+17215201993', 'SXM'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Test +5164518135', () => {
+		const number = '+5164518135';
+		const result = ['+5164518135', 'PER'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Test +6062311120', () => {
+		const number = '+6062311120';
+		const result = ['+6062311120', 'MYS'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Test +16782069397', () => {
+		const number = '+16782069397';
+		const result = ['+16782069397', 'USA'];
+		expect(phone(number)).toEqual(result);
+	});
+})
