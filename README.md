@@ -77,7 +77,7 @@ You may need polyfills for some older browsers; for more details, please read th
 
 2. Why is `phone` returning null for a valid phone number?
 
-	This package is used to validate a mobile phone number for sending the SMS.
+	This package is used to validate a mobile phone number for sending the SMS. Set allowLandline to true as the third parameter if you want to allow non-mobile phone numbers.
 
 	Therefore, we try to match all possible rules for specifically checking whether a number is mobile, such as area code, number prefix, etc.
 
