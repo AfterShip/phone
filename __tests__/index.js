@@ -1234,4 +1234,62 @@ describe('[CORE-1562] add new phone number rules for `+17215201993、+5164518135
 		const result = ['+16782069397', 'USA'];
 		expect(phone(number)).toEqual(result);
 	});
-})
+});
+
+
+describe('Landline phone number test', () => {
+	test('Test mobile phone number, should success', () => {
+		const number = '+85293785433';
+		const result = ['+85293785433', 'HKG'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Test landline phone number without 3rd parameter, should fail', () => {
+		const number = '+85223785433';
+		const result = [];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Test landline phone number with 3rd parameter, should success', () => {
+		const number = '+85223785433';
+		const result = ['+85223785433', 'HKG'];
+		expect(phone(number, '', true)).toEqual(result);
+	});
+
+	test('Test mobile phone number without plus sign, should success', () => {
+		const number = '85293785433';
+		const result = ['+85293785433', 'HKG'];
+		expect(phone(number, 'HKG')).toEqual(result);
+	});
+
+	test('Test landline phone number without plus sign without 3rd parameter, should fail', () => {
+		const number = '85223785433';
+		const result = [];
+		expect(phone(number, 'HKG')).toEqual(result);
+	});
+
+	test('Test landline phone number without plus sign with 3rd parameter, should success', () => {
+		const number = '85223785433';
+		const result = ['+85223785433', 'HKG'];
+		expect(phone(number, 'HKG', true)).toEqual(result);
+	});
+
+	test('Test mobile phone number without plus sign nor country code, should success', () => {
+		const number = '93785433';
+		const result = ['+85293785433', 'HKG'];
+		expect(phone(number, 'HKG')).toEqual(result);
+	});
+
+	test('Test landline phone number without plus sign nor country code without 3rd parameter, should fail', () => {
+		const number = '23785433';
+		const result = [];
+		expect(phone(number, 'HKG')).toEqual(result);
+	});
+
+	test('Test landline phone number without plus sign nor country code with 3rd parameter, should success', () => {
+		const number = '23785433';
+		const result = ['+85223785433', 'HKG'];
+		expect(phone(number, 'HKG', true)).toEqual(result);
+	});
+});
+
