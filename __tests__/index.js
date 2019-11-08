@@ -765,6 +765,15 @@ describe('Testing BRA Phone Quick Test', () => {
 			expect(phone(number, country)).toEqual(result);
 		});
 	});
+
+	describe('Test 6', () => {
+		const number = '+5599988311895';
+		const country = 'BRA';
+		const result = ['+5599988311895', 'BRA'];
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
 });
 
 describe('Testing PRI Phone Quick Test', () => {
