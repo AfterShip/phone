@@ -65,13 +65,21 @@ const phone = require('phone');
 Parameter | Type | Required | Description
 --- | --- | --- | ---
 phone | String | Yes | The phone number text you want to process
-country | String | No | Provided country code in iso-3166 alpha 3 format
+country | String | No | Provided country code in iso-3166 alpha 2 or 3 format
 allowLandLine | Boolean | No | Set to true if you want to use the module to validate landlane phone number  
 
 #### Returns
 
 Array
 
+Array index | Type | Description
+--- | --- | ---
+0 | String | Normalized phone number in E.164 format
+1 | String | Detected phone number country code in iso-3166 alpha 3 format
+
+If the phone number cannot be reformatted due to any reason (e.g. unable to match any country), the result would be an empty array.
+
+The function response is in Array format for some historical reason and expected to be updated to a proper object response in the next major version bump. (Will not change on version 2.x)
 
 ## Test
 
