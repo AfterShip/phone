@@ -1,6 +1,6 @@
 {
   "name": "phone",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "description": "With a given country and phone number, validate and format the phone number to E.164 standard",
   "main": "./dist/index.js",
   "engines": {
@@ -27,13 +27,13 @@
     "url": "https://github.com/aftership/phone/issues"
   },
   "devDependencies": {
-    "@types/node": "^13.7.0",
+    "@types/node": "^13.7.1",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.5",
     "babel-minify-webpack-plugin": "^0.3.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "codecov": "^3.6.4",
+    "codecov": "^3.6.5",
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "eslint-config-aftership": "^5.1.0",
@@ -41,11 +41,11 @@
     "jest": "^24.8.0",
     "lodash": "^4.17.15",
     "ts-node": "^8.6.2",
-    "twilio": "^3.39.3",
+    "twilio": "^3.39.4",
     "typescript": "^3.7.5",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
     "webpack-sources": "^1.4.3"
   },
   "keywords": [
