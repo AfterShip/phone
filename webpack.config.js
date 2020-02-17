@@ -6,7 +6,7 @@ const webpack = require('webpack');
 
 module.exports = {
 	// devtool: 'source-map',
-	entry: ['idempotent-babel-polyfill', './lib/index.js'],
+	entry: './lib/index.js',
 	mode: 'production',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -33,7 +33,7 @@ module.exports = {
 						['env', {
 							targets: {
 								browsers: '>1%',
-								node: 4,
+								node: '6.10'
 							},
 							modules: false,
 							debug: true
