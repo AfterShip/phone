@@ -748,29 +748,28 @@ describe('Testing BRA Phone Quick Test', () => {
 		});
 	});
 
-
-	describe('Test 2', () => {
-		const number = '+55 11 6123 1234'; // as 9 is missin;
-		const country = 'BRA';
-		const result = [];
-		test('returns ' + result, () => {
-			expect(phone(number, country)).toEqual(result);
-		});
-	});
-
 	describe('Test 4', () => {
-		const number = '+55 11 8 6123 1234'; // prefix must be 9 after area cod;
-		const country = 'BRA';
-		const result = [];
-		test('returns ' + result, () => {
-			expect(phone(number, country)).toEqual(result);
-		});
-	});
-
-	describe('Test 2', () => {
-		const number = '+55 69 8 6123 1234'; // we don't check prefix for area code 6;
+		const number = '+55 69 8 6123 1234';
 		const country = 'BRA';
 		const result = ['+5569861231234', 'BRA'];
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
+
+	describe('Test 5', () => {
+		const number = '+55 65 9 9123 4567';
+		const country = 'BRA';
+		const result = ['+5565991234567', 'BRA'];
+		test('returns ' + result, () => {
+			expect(phone(number, country)).toEqual(result);
+		});
+	});
+
+	describe('Test 6', () => {
+		const number = '+5599988311895';
+		const country = 'BRA';
+		const result = ['+5599988311895', 'BRA'];
 		test('returns ' + result, () => {
 			expect(phone(number, country)).toEqual(result);
 		});
@@ -1219,3 +1218,87 @@ describe('test phone with no mobile_begin_with', () => {
 		expect(phone(number)).toEqual(result);
 	});
 });
+
+describe('[CORE-1562] add new phone number rules for `+17215201993、+5164518135、+6062311120、+16782069397`', () => {
+	test('Test +17215201993', () => {
+		const number = '+17215201993';
+		const result = ['+17215201993', 'SXM'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Test +5164518135', () => {
+		const number = '+5164518135';
+		const result = ['+5164518135', 'PER'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Test +6062311120', () => {
+		const number = '+6062311120';
+		const result = ['+6062311120', 'MYS'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Test +16782069397', () => {
+		const number = '+16782069397';
+		const result = ['+16782069397', 'USA'];
+		expect(phone(number)).toEqual(result);
+	});
+});
+
+
+describe('Landline phone number test', () => {
+	test('Test mobile phone number, should success', () => {
+		const number = '+85293785433';
+		const result = ['+85293785433', 'HKG'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Test landline phone number without 3rd parameter, should fail', () => {
+		const number = '+85223785433';
+		const result = [];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('Test landline phone number with 3rd parameter, should success', () => {
+		const number = '+85223785433';
+		const result = ['+85223785433', 'HKG'];
+		expect(phone(number, '', true)).toEqual(result);
+	});
+
+	test('Test mobile phone number without plus sign, should success', () => {
+		const number = '85293785433';
+		const result = ['+85293785433', 'HKG'];
+		expect(phone(number, 'HKG')).toEqual(result);
+	});
+
+	test('Test landline phone number without plus sign without 3rd parameter, should fail', () => {
+		const number = '85223785433';
+		const result = [];
+		expect(phone(number, 'HKG')).toEqual(result);
+	});
+
+	test('Test landline phone number without plus sign with 3rd parameter, should success', () => {
+		const number = '85223785433';
+		const result = ['+85223785433', 'HKG'];
+		expect(phone(number, 'HKG', true)).toEqual(result);
+	});
+
+	test('Test mobile phone number without plus sign nor country code, should success', () => {
+		const number = '93785433';
+		const result = ['+85293785433', 'HKG'];
+		expect(phone(number, 'HKG')).toEqual(result);
+	});
+
+	test('Test landline phone number without plus sign nor country code without 3rd parameter, should fail', () => {
+		const number = '23785433';
+		const result = [];
+		expect(phone(number, 'HKG')).toEqual(result);
+	});
+
+	test('Test landline phone number without plus sign nor country code with 3rd parameter, should success', () => {
+		const number = '23785433';
+		const result = ['+85223785433', 'HKG'];
+		expect(phone(number, 'HKG', true)).toEqual(result);
+	});
+});
+

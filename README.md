@@ -26,7 +26,7 @@ npm install phone
 
 ## Usage
 ```javascript
-const phone  = require('phone');
+const phone = require('phone');
 
 phone('+852 6569-8900'); // return ['+85265698900', 'HKG']
 phone('+1(817) 569-8900', ''); // return ['+18175698900', 'USA']
@@ -45,6 +45,41 @@ phone('(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('780-569-8900', ''); // return ['+17805698900, 'CAN'], 780 is a Canada phone prefix
 phone('6123-6123', ''); // return [], as default country is USA / CAN and it does not match any result
 ```
+
+If you want to validate landline phone numbers, set `allowLandline` to true:
+
+```javascript
+phone('+(852) 2356-4902', '', true);
+```
+
+## API
+
+```javascript
+const phone = require('phone');
+```
+
+### `phone(phone: String, [country: string, allowLandline: Boolean]): Array`
+
+#### Input
+
+Parameter | Type | Required | Description
+--- | --- | --- | ---
+phone | String | Yes | The phone number text you want to process
+country | String | No | Provided country code in iso-3166 alpha 2 or 3 format
+allowLandLine | Boolean | No | Set to true if you want to use the module to validate landlane phone number  
+
+#### Returns
+
+Array
+
+Array index | Type | Description
+--- | --- | ---
+0 | String | Normalized phone number in E.164 format
+1 | String | Detected phone number country code in iso-3166 alpha 3 format
+
+If the phone number cannot be reformatted due to any reason (e.g. unable to match any country), the result would be an empty array.
+
+The function response is in Array format for some historical reason and expected to be updated to a proper object response in the next major version bump. (Will not change on version 2.x)
 
 ## Test
 
@@ -77,14 +112,9 @@ You may need polyfills for some older browsers; for more details, please read th
 
 2. Why is `phone` returning null for a valid phone number?
 
-	This package is used to validate a mobile phone number for sending the SMS.
+	By default the function will validate a mobile phone number only, to validate a landline phone number, please set 3rd parameter `allowLandline` to true.
 
-	Therefore, we try to match all possible rules for specifically checking whether a number is mobile, such as area code, number prefix, etc.
-
-	However, some countries, like the USA, don't have mobile identifiers, so we can only check if the input has a valid area code.
-
-	For example, we know that UK mobile phone numbers always start with `7`. In this case, `phone` can verify that the number is actually mobile.
-
+	If you find the result is still incorrect, please submit a ticket to improve our validation rules.
 
 ## Help
 
