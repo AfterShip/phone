@@ -23,6 +23,12 @@ We always want:
 npm install phone
 ```
 
+or
+
+```
+yarn add phone
+```
+
 
 ## Usage
 ```javascript
@@ -70,7 +76,7 @@ allowLandLine | Boolean | No | Set to true if you want to use the module to vali
 
 #### Returns
 
-Array
+The return would always be an Array
 
 Array index | Type | Description
 --- | --- | ---
@@ -84,7 +90,7 @@ The function response is in Array format for some historical reason and expected
 ## Test
 
 ```
-npm test
+yarn test
 ```
 
 ## Build
