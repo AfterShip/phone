@@ -52,10 +52,16 @@ phone('780-569-8900', ''); // return ['+17805698900, 'CAN'], 780 is a Canada pho
 phone('6123-6123', ''); // return [], as default country is USA / CAN and it does not match any result
 ```
 
-If you want to validate landline phone numbers, set `allowLandline` to true:
+If you want to skip phone number initial digit checking, set `allowLandline` to true:
 
 ```javascript
 phone('+(852) 2356-4902', '', true);
+```
+
+And the initial digit checking will be disabled completely, even you enter a phone number start with a non-exist digit:
+
+```javascript
+phone('+(852) 0356-4902', '', true); // return [ '+85203564902', 'HKG' ], even the phone number start with `0` is not a valid landline phone number
 ```
 
 ## API
@@ -72,7 +78,7 @@ Parameter | Type | Required | Description
 --- | --- | --- | ---
 phone | String | Yes | The phone number text you want to process
 country | String | No | Provided country code in iso-3166 alpha 2 or 3 format
-allowLandLine | Boolean | No | Set to true if you want to use the module to validate landlane phone number  
+allowLandLine | Boolean | No | Set to true if you want to skip phone number initial digit checking
 
 #### Returns
 
