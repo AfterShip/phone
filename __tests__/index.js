@@ -1298,3 +1298,132 @@ describe('Landline phone number test', () => {
 	});
 });
 
+describe('#190 phone number with plus sign BUT without country code (intentionally wrong input)', () => {
+	test('1. with +, country code, and country, should get the result', () => {
+		const number = '+85293785433';
+		const country = 'HKG';
+		const result = ['+85293785433', 'HKG'];
+		expect(phone(number, country)).toEqual(result);
+	});
+
+	test('2. without +, with country code, with country, should get the result', () => {
+		const number = '85293785433';
+		const country = 'HKG';
+		const result = ['+85293785433', 'HKG'];
+		expect(phone(number, country)).toEqual(result);
+	});
+
+	test('3a. with +, without country code, with country, should get empty array', () => {
+		const number = '+93785433';
+		const country = 'HKG';
+		const result = [];
+		expect(phone(number, country)).toEqual(result);
+	});
+
+	test('3b. with +, without country code, with country, should get empty array', () => {
+		const number = '+41414141';
+		const country = 'NO';
+		const result = [];
+		expect(phone(number, country)).toEqual(result);
+	});
+
+	test('3c. with +, without country code, with country, should get empty array', () => {
+		const number = '+2011231234';
+		const country = 'USA';
+		const result = [];
+		expect(phone(number, country)).toEqual(result);
+	});
+
+	test('4a. without +, without country code, with country, should get the result', () => {
+		const number = '93785433';
+		const country = 'HKG';
+		const result = ['+85293785433', 'HKG'];
+		expect(phone(number, country)).toEqual(result);
+	});
+
+	test('4b. without +, without country code, with country, should get the result', () => {
+		const number = '2014125632';
+		const country = 'USA';
+		const result = ['+12014125632', 'USA'];
+		expect(phone(number, country)).toEqual(result);
+	});
+
+	test('4c. without +, without country code, with country, should get the result', () => {
+		const number = '41414141';
+		const country = 'NO';
+		const result = ['+4741414141', 'NOR'];
+		expect(phone(number, country)).toEqual(result);
+	});
+
+	test('5a. with +, with country code, without country, should get the result', () => {
+		const number = '+4741414141';
+		const result = ['+4741414141', 'NOR'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('5b. with +, with country code, without country, should get the result', () => {
+		const number = '+85296587452';
+		const result = ['+85296587452', 'HKG'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('5c. with +, with country code, without country, should get the result', () => {
+		const number = '+13612145896';
+		const result = ['+13612145896', 'USA'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('6a. without +, with country code, without country, should get the result', () => {
+		const number = '13612145896';
+		const result = ['+13612145896', 'USA'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('6b. without +, with country code, without country, default USA and should get empty result', () => {
+		const number = '4741414141';
+		const result = [];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('6c. without +, with country code, without country, default USA and should get empty result', () => {
+		const number = '96587452';
+		const result = [];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('7a. with +, without country code, without country, should get empty result', () => {
+		const number = '+96587452';
+		const result = [];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('7b. with +, without country code, without country, should get empty result', () => {
+		const number = '+3612145896';
+		const result = [];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('7c. with +, without country code, without country, should get empty result', () => {
+		const number = '+41414141';
+		const result = [];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('8a. without +, without country code, without country, should get empty result', () => {
+		const number = '96587452';
+		const result = [];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('8b. without +, without country code, without country, default USA, should get result', () => {
+		const number = '3612145896';
+		const result = ['+13612145896', 'USA'];
+		expect(phone(number)).toEqual(result);
+	});
+
+	test('8c. without +, without country code, without country, should get empty result', () => {
+		const number = '41414141';
+		const result = [];
+		expect(phone(number)).toEqual(result);
+	});
+});
