@@ -31,7 +31,7 @@ yarn add phone
 
 ## Demo
 
-[Try it on CodeSandbox](https://codesandbox.io/s/phone-browser-example-kcbdk?file=/src/index.js)
+[Try it on CodeSandbox](https://codesandbox.io/s/phone-browser-example-react-o5vt5?file=/src/App.js)
 
 ## Usage
 ```javascript
