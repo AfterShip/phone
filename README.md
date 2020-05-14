@@ -29,6 +29,9 @@ or
 yarn add phone
 ```
 
+## Demo
+
+[Try it on CodeSandbox](https://codesandbox.io/s/phone-browser-example-kcbdk?file=/src/index.js)
 
 ## Usage
 ```javascript
