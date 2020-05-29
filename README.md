@@ -131,6 +131,11 @@ You may need polyfills for some older browsers; for more details, please read th
 
 	If you find the result is still incorrect, please submit a ticket to improve our validation rules.
 
+3. How does `allowLandline` work?
+	
+	Mobile phone number detection is achieved by comparing the beginning digits of a phone number to a list of possible mobile prefixes for a country. In some countries, some or all of these prefixes are the same for both mobile phones and landlines; when `allowLandline` is set to `false` you should not assume that all possible landline phone numbers will be reliably filtered out.
+
+
 ## Help
 
 We've tried to make sure that this package works for as many cases as possible, if you notice that we have an incorrect rule for a country or other case, please open an issue to let us know.
