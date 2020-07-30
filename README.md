@@ -127,7 +127,7 @@ You may need polyfills for some older browsers; for more details, please read th
 
 2. Why is `phone` returning null for a valid phone number?
 
-	By default the function will validate a mobile phone number only, to validate a landline phone number, please set 3rd parameter `allowLandline` to true.
+	By default, the function will validate a mobile phone number only, to validate a landline phone number, please set 3rd parameter `allowLandline` to true.
 
 	If you find the result is still incorrect, please submit a ticket to improve our validation rules.
 
