@@ -45,6 +45,8 @@ phone('+1(817) 569-8900', 'HKG'); // return [], as it is not a valid HKG mobile 
 phone('6123-6123', 'HKG'); // return ['+85261236123', 'HKG']
 ```
 
+## Without country code and no phone prefix
+
 If both country code and country phone prefix are not provided, will treat as USA or Canada by default 
 
 ```javascript
@@ -54,6 +56,36 @@ phone('(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('780-569-8900', ''); // return ['+17805698900, 'CAN'], 780 is a Canada phone prefix
 phone('6123-6123', ''); // return [], as default country is USA / CAN and it does not match any result
 ```
+
+Even you input a valid phone number with a valid prefix, if there is no plus sign, it will not work as expected:
+
+```javascript
+phone('85291234567', '')
+```
+
+`852` is a valid Hong Kong phone prefix, and `91234567` is a valid Hong Kong mobile phone number.
+However, there is no plus sign provided, the module will assume the phone number is a USA or Canada phone number, 
+hence no result will be found.   
+
+If you know you have provided country phone prefix, make sure you also provide a plus sign:
+
+```javascript
+phone('+85291234567', '')
+
+// return [ '+85291234567', 'HKG' ]
+```
+
+or, if you know the country, and only want to reformat the phone number to E.163 format:
+
+```javascript
+phone('91234567', 'HKG')
+
+// return [ '+85291234567', 'HKG' ]
+```
+
+
+
+## Skipping phone number initial digit checking
 
 If you want to skip phone number initial digit checking, set `allowLandline` to true:
 
