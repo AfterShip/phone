@@ -75,7 +75,7 @@ phone('+85291234567', '')
 // return [ '+85291234567', 'HKG' ]
 ```
 
-or, if you know the country, and only want to reformat the phone number to E.163 format:
+or, if you know the country, and only want to reformat the phone number to E.164 format:
 
 ```javascript
 phone('91234567', 'HKG')
