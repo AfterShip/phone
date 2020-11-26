@@ -123,6 +123,7 @@ Array index | Type | Description
 --- | --- | ---
 0 | String | Normalized phone number in E.164 format
 1 | String | Detected phone number country code in iso-3166 alpha 3 format
+2 | String | Detected phone number country code in iso-3166 alpha 2 format
 
 If the phone number cannot be reformatted due to any reason (e.g. unable to match any country), the result would be an empty array.
 
