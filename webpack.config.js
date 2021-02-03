@@ -6,25 +6,28 @@ const webpack = require('webpack');
 
 module.exports = {
 	// devtool: 'source-map',
-	entry: './lib/index.js',
+	entry: {
+		index: './lib/index.js',
+		allData: './lib/allData.js',
+	},
 	mode: 'production',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'index.js',
+		filename: '[name].js',
 		libraryTarget: 'umd',
 		library: 'phone',
-		globalObject: 'this'
+		globalObject: 'this',
 	},
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin(),
-		new MinifyPlugin()
+		new MinifyPlugin(),
 	],
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				include: [
-					path.resolve(__dirname, 'lib')
+					path.resolve(__dirname, 'lib'),
 				],
 				loader: 'babel-loader',
 				options: {
@@ -33,14 +36,14 @@ module.exports = {
 						['env', {
 							targets: {
 								browsers: '>1%',
-								node: '6.10'
+								node: '6.10',
 							},
 							modules: false,
-							debug: true
-						}]
-					]
-				}
-			}
-		]
-	}
+							debug: true,
+						}],
+					],
+				},
+			},
+		],
+	},
 };

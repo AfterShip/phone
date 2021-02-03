@@ -37,6 +37,10 @@ yarn add phone
 ```javascript
 const phone = require('phone');
 
+// setup phone data, only run once enough
+const allData = require('phone/dist/allData');
+phone.setupData(allData);
+
 phone('+852 6569-8900'); // return ['+85265698900', 'HKG']
 phone('+1(817) 569-8900', ''); // return ['+18175698900', 'USA']
 phone('(817) 569-8900', 'USA'); // return ['+18175698900', 'USA']

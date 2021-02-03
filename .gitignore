@@ -34,3 +34,6 @@ logs
 
 # === vscode
 .vscode
+
+iso3166Data/*
+lib/allData.js

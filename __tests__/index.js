@@ -1,6 +1,10 @@
 'use strict';
 
 const phone = require('../lib/index');
+const allData = require('../lib/allData');
+
+phone.setupData(allData);
+
 
 /* suggest 10 test case for each country, except USA
 
@@ -1083,7 +1087,7 @@ describe('Testing GRL numbers', () => {
 });
 
 
-describe( 'Testing MMR Phone', () => {
+describe('Testing MMR Phone', () => {
 	describe('Test for 8 digits mobile numbers ', () => {
 		const number = '+95 9 55 00000';
 		const result = ['+9595500000', 'MMR'];
@@ -1106,7 +1110,7 @@ describe( 'Testing MMR Phone', () => {
 		});
 	});
 	describe('Test land lines', () => {
-		const number = '+95 1 1234567'; //Landlines
+		const number = '+95 1 1234567'; // Landlines
 		const result = [];
 		test('returns ' + result, () => {
 			expect(phone(number)).toEqual(result);
@@ -1115,7 +1119,7 @@ describe( 'Testing MMR Phone', () => {
 });
 
 
-describe( 'Testing Canada Phone', () => {
+describe('Testing Canada Phone', () => {
 	describe('Should return result when it matches mobile_begin_with', () => {
 		const number = '+1 367 1234567';
 		const result = ['+13671234567', 'CAN'];
@@ -1133,7 +1137,7 @@ describe( 'Testing Canada Phone', () => {
 });
 
 
-describe( 'Testing Cameroon Phone', () => {
+describe('Testing Cameroon Phone', () => {
 	describe('Should return result when it matches mobile_begin_with', () => {
 		const number = '+237 612345678';
 		const result = ['+237612345678', 'CMR'];
@@ -1151,7 +1155,7 @@ describe( 'Testing Cameroon Phone', () => {
 });
 
 
-describe( 'Testing New Caledonia Phone', () => {
+describe('Testing New Caledonia Phone', () => {
 	describe('Should return result when it matches mobile_begin_with', () => {
 		const number = '+687 812345';
 		const result = ['+687812345', 'NCL'];
@@ -1169,7 +1173,7 @@ describe( 'Testing New Caledonia Phone', () => {
 });
 
 
-describe( 'Testing Ukraine Phone', () => {
+describe('Testing Ukraine Phone', () => {
 	describe('Should return result when it matches mobile_begin_with', () => {
 		const number = '+380 73 123 45 67';
 		const result = ['+380731234567', 'UKR'];

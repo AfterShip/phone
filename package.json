@@ -10,14 +10,17 @@
     "lib": "./lib"
   },
   "scripts": {
+    "postinstall": "yarn scripts:split",
     "test": "jest && codecov",
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot",
     "lint": "eslint .",
-    "build": "webpack --hide-modules --progress",
+    "build": "webpack --hide-modules --progress && yarn scripts:mv",
     "start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
     "prepublishOnly": "yarn build",
-    "fix:numbers": "ts-node -P scripts/add-new-rules/tsconfig.json scripts/add-new-rules"
+    "fix:numbers": "ts-node -P scripts/add-new-rules/tsconfig.json scripts/add-new-rules && yarn scripts:split",
+    "scripts:split": "node scripts/split",
+    "scripts:mv": "node scripts/mv"
   },
   "repository": {
     "type": "git",

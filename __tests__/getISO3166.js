@@ -1,6 +1,12 @@
 'use strict';
 
+
+const phone = require('../lib/index');
 const getISO3166 = require('../lib/getISO3166');
+const allData = require('../lib/allData');
+
+
+phone.setupData(allData);
 
 describe('getISO3166', () => {
 	it('should return the first data (USA) when country length equal to 0', () => {
