@@ -1,37 +1,66 @@
 'use strict';
 
-const phone = require('../lib/index');
+let allOutput = [
+	[
+		'input_phone',
+		'input_country',
+		'validate_prefix',
+		'output_phone',
+		'output_country_alpha2',
+		'output_country_alpha3',
+		'desc1',
+		'desc2',
+		'test_desc'
+	]
+];
+let outputLine = [];
+let description = [];
 
-/* suggest 10 test case for each country, except USA
+const countryPhoneData = require('../data/country_phone_data');
 
- Test Case, for non-USA
+function describe(desc, func) {
+	description.push(desc);
+	func();
+}
 
- valid +phone, null
- valid +phone, valid iso
- valid +phone, invalid iso
- valid +phone, valid name
- valid +phone, invalid name
+function test(desc, func) {
+	func();
+	if (description.length === 0) {
+		description = ['', ''].concat(description);
+	}
+	if (description.length === 1) {
+		description = [''].concat(description);
+	}
+	outputLine = outputLine.concat(description);
+	outputLine.push(desc);
+	allOutput.push(outputLine);
+	outputLine = [];
+	description = [];
+}
 
- invalid +phone, null
- invalid +phone, valid iso
- invalid +phone, invalid iso
- invalid +phone, valid name
- invalid +phone, invalid name
+function expect(output) {
+	return {
+		toEqual: function(result) {
+			if (!result || result.length === 0) {
+				outputLine.push('');
+				outputLine.push('');
+				outputLine.push('');
+			} else {
+				const countryIso3 = result[1];
+				const countryIso2 = countryPhoneData.find((d) => d.alpha3 === countryIso3).alpha2;
+				outputLine.push(result[0]);
+				outputLine.push(countryIso2);
+				outputLine.push(result[1]);
+			}
+		}
+	};
+}
 
- valid phone, null
- valid phone, valid iso
- valid phone, invalid iso
- valid phone, valid name
- valid phone, invalid name
-
- invalid phone, null
- invalid phone, valid iso
- invalid phone, invalid iso
- invalid phone, valid name
- invalid phone, invalid name
-
- */
-
+function phone(arg1, arg2, arg3) {
+	outputLine.push(arg1 || '');
+	outputLine.push(arg2 || '');
+	outputLine.push(arg3 || '');
+}
 
 describe('Testing input parameter Phone', () => {
 	describe('Test 1', () => {
@@ -1427,3 +1456,12 @@ describe('#190 phone number with plus sign BUT without country code (intentional
 		expect(phone(number)).toEqual(result);
 	});
 });
+
+const {unparse} = require('papaparse');
+const fs = require('fs');
+
+const outputCsv = unparse(allOutput, {
+	header: true
+});
+
+fs.writeFileSync(`${__dirname}/data.csv`, outputCsv);
