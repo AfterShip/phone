@@ -8,11 +8,21 @@ const testCases = (parse(fs.readFileSync(`${__dirname}/data.csv`).toString(), {
 
 for (const testCase of testCases) {
 	test(`${testCase.input_phone} / ${testCase.input_country} / ${testCase.validate_prefix}`, function() {
-		const {input_phone: phoneNumber, input_country: country, validate_prefix: validateMobilePrefix} = testCase;
+		const {input_phone: phoneNumber, input_country: country, not_validate_prefix: notValidatePrefix, strict_detection: strictDetectionString} = testCase;
+		const validateMobilePrefix = !notValidatePrefix;
+
+		let strictDetection = undefined;
+
+		if (strictDetectionString === 'true') {
+			strictDetection = true;
+		} else if (strictDetectionString === 'false') {
+			strictDetection = false;
+		}
 
 		const result = phone(phoneNumber, {
 			country,
-			validateMobilePrefix: (validateMobilePrefix !== 'true')
+			validateMobilePrefix,
+			strictDetection
 		});
 
 		expect(result).toEqual({

@@ -21,7 +21,7 @@ const {findCountryPhoneDataByCountry, findCountryPhoneDataByPhoneNumber, validat
  */
 
 module.exports = function (phoneNumber, {country = '', validateMobilePrefix = true, strictDetection = false} = {}) {
-	const result = {
+	const emptyResult = {
 		phoneNumber: null,
 		countryIso2: null,
 		countryIso3: null
@@ -37,7 +37,7 @@ module.exports = function (phoneNumber, {country = '', validateMobilePrefix = tr
 	let foundCountryPhoneData = findCountryPhoneDataByCountry(processedCountry);
 
 	if (!foundCountryPhoneData) {
-		return result;
+		return emptyResult;
 	}
 
 	let defaultCountry = false;
@@ -66,17 +66,16 @@ module.exports = function (phoneNumber, {country = '', validateMobilePrefix = tr
 
 		if (exactCountryPhoneData) {
 			foundCountryPhoneData = exactCountryPhoneData;
-		} else {
+		} else if (possibleCountryPhoneData && !strictDetection) {
 			// for some countries, the phone number usually includes one trunk prefix for local use
 			// The UK mobile phone number ‘07911 123456’ in international format is ‘+44 7911 123456’, so without the first zero.
 			// 8 (AAA) BBB-BB-BB, 0AA-BBBBBBB
 			// the numbers should be omitted in international calls
-			if (possibleCountryPhoneData) {
-				foundCountryPhoneData = possibleCountryPhoneData;
-				processedPhoneNumber = foundCountryPhoneData.country_code + processedPhoneNumber.replace(new RegExp(`^${foundCountryPhoneData.country_code}\\d`),'');
-			} else {
-				foundCountryPhoneData = {};
-			}
+
+			foundCountryPhoneData = possibleCountryPhoneData;
+			processedPhoneNumber = foundCountryPhoneData.country_code + processedPhoneNumber.replace(new RegExp(`^${foundCountryPhoneData.country_code}\\d`),'');
+		} else {
+			foundCountryPhoneData = {};
 		}
 	} else if (foundCountryPhoneData.phone_number_lengths.indexOf(processedPhoneNumber.length) !== -1) {
 		// B: no country, no plus sign --> treat it as USA
@@ -110,7 +109,7 @@ module.exports = function (phoneNumber, {country = '', validateMobilePrefix = tr
 		}
 	}
 
-	return result;
+	return emptyResult;
 };
 
 module.exports.countryPhoneData = countryPhoneData;
