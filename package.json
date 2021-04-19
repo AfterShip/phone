@@ -10,7 +10,7 @@
     "lib": "./lib"
   },
   "scripts": {
-    "test": "jest && codecov",
+    "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot",
     "lint": "eslint .",
@@ -33,7 +33,6 @@
     "babel-minify-webpack-plugin": "^0.3.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "codecov": "^3.8.1",
     "dotenv": "^8.2.0",
     "eslint": "^7.20.0",
     "eslint-config-aftership": "^7.0.0",
@@ -59,5 +58,6 @@
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
-  }
+  },
+  "dependencies": {}
 }
