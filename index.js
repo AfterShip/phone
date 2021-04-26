@@ -4,22 +4,12 @@ const countryPhoneData = require('./data/country_phone_data');
 const {findCountryPhoneDataByCountry, findCountryPhoneDataByPhoneNumber, validatePhoneISO3166} = require('./lib/utility');
 
 /**
- *
- * @param {string} phone - phone number
- * @param {string} country - country code in ISO3166 alpha 3
- * @param {Boolean=} allowLandline - allow detecting landline phone number
- * @returns {Object}
- */
-
-/**
- * If no "+" sign treat as USA or CAN phone number
  * @param {string} phoneNumber - phone number
  * @param {string=} countryIso3 - country code in ISO3166 alpha 2 or 3
  * @param {boolean=} validateMobilePrefix - true to validate phone number prefix
  * @param {boolean=} strictDetection - true to disable remove truck code and detection logic
  * @returns {{phoneNumber: string|null, countryIso2: string|null, countryIso3: string|null}}
  */
-
 module.exports = function (phoneNumber, {country = '', validateMobilePrefix = true, strictDetection = false} = {}) {
 	const emptyResult = {
 		phoneNumber: null,
