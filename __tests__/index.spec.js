@@ -1,4 +1,4 @@
-const phone = require('../index');
+const phone = require('../src/index');
 
 describe('Parameter types', () => {
 	test('using default parameter if not provided', () => {
