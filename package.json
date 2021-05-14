@@ -28,6 +28,7 @@
     "url": "https://github.com/aftership/phone/issues"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.23",
     "@types/node": "^14.14.28",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.2.2",
@@ -43,6 +44,7 @@
     "lodash": "^4.17.20",
     "papaparse": "^5.3.0",
     "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.6",
     "ts-node": "^9.1.1",
     "twilio": "^3.56.0",
     "typescript": "^4.2.4",
@@ -57,9 +59,5 @@
   ],
   "author": "AfterShip",
   "license": "MIT",
-  "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
-  },
   "dependencies": {}
 }
