@@ -1,7 +1,10 @@
-'use strict';
-
-const countryPhoneData = require('./data/country_phone_data');
-const {findCountryPhoneDataByCountry, findCountryPhoneDataByPhoneNumber, validatePhoneISO3166} = require('./lib/utility');
+import countryPhoneData from './data/country_phone_data';
+import {
+	findCountryPhoneDataByCountry,
+	findCountryPhoneDataByPhoneNumber,
+	validatePhoneISO3166,
+	CountryPhoneDataItem,
+} from './lib/utility';
 
 /**
  * @typedef {Object} Option
@@ -13,7 +16,19 @@ const {findCountryPhoneDataByCountry, findCountryPhoneDataByPhoneNumber, validat
  * @param {Option} option
  * @returns {{phoneNumber: string|null, countryIso2: string|null, countryIso3: string|null}}
  */
-module.exports = function (phoneNumber, {country = '', validateMobilePrefix = true, strictDetection = false} = {}) {
+ export default function (phoneNumber: string, {
+	country = '',
+	validateMobilePrefix = true,
+	strictDetection = false
+}: {
+	country?: string;
+	validateMobilePrefix?: boolean;
+	strictDetection?: boolean;
+} = {}): { 
+	phoneNumber: string | null;
+	countryIso2: string | null;
+	countryIso3: string | null; 
+} {
 	const emptyResult = {
 		phoneNumber: null,
 		countryIso2: null,
@@ -55,7 +70,7 @@ module.exports = function (phoneNumber, {country = '', validateMobilePrefix = tr
 	} else if (hasPlusSign) {
 		// if there is a plus sign but no country provided
 		// try to find the country phone data by the phone number
-		const {exactCountryPhoneData, possibleCountryPhoneData} = findCountryPhoneDataByPhoneNumber(processedPhoneNumber, validateMobilePrefix);
+		const { exactCountryPhoneData, possibleCountryPhoneData } = findCountryPhoneDataByPhoneNumber(processedPhoneNumber, validateMobilePrefix);
 
 		if (exactCountryPhoneData) {
 			foundCountryPhoneData = exactCountryPhoneData;
@@ -68,7 +83,7 @@ module.exports = function (phoneNumber, {country = '', validateMobilePrefix = tr
 			foundCountryPhoneData = possibleCountryPhoneData;
 			processedPhoneNumber = foundCountryPhoneData.country_code + processedPhoneNumber.replace(new RegExp(`^${foundCountryPhoneData.country_code}\\d`), '');
 		} else {
-			foundCountryPhoneData = {};
+			foundCountryPhoneData = null;
 		}
 	} else if (foundCountryPhoneData.phone_number_lengths.indexOf(processedPhoneNumber.length) !== -1) {
 		// B: no country, no plus sign --> treat it as USA
@@ -77,6 +92,10 @@ module.exports = function (phoneNumber, {country = '', validateMobilePrefix = tr
 		// iso3166 = iso3166_data[0]; already assign by the default value
 		processedPhoneNumber = `1${processedPhoneNumber}`;
 		defaultCountry = true;
+	}
+
+	if (!foundCountryPhoneData) {
+		return emptyResult;
 	}
 
 	let validateResult = validatePhoneISO3166(processedPhoneNumber, foundCountryPhoneData, validateMobilePrefix, hasPlusSign);
@@ -91,7 +110,7 @@ module.exports = function (phoneNumber, {country = '', validateMobilePrefix = tr
 
 	if (defaultCountry) {
 		// also try to validate against CAN for default country, as CAN is also start with +1
-		foundCountryPhoneData = findCountryPhoneDataByCountry('CAN');
+		foundCountryPhoneData = findCountryPhoneDataByCountry('CAN') as CountryPhoneDataItem;
 		validateResult = validatePhoneISO3166(processedPhoneNumber, foundCountryPhoneData, validateMobilePrefix, hasPlusSign);
 		if (validateResult) {
 			return {
@@ -105,4 +124,6 @@ module.exports = function (phoneNumber, {country = '', validateMobilePrefix = tr
 	return emptyResult;
 };
 
-module.exports.countryPhoneData = countryPhoneData;
+export {
+	countryPhoneData,
+};
