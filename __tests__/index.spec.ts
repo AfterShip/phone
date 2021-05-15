@@ -1,4 +1,4 @@
-const phone = require('../src/index');
+import phone from '../src/index';
 
 describe('Parameter types', () => {
 	test('using default parameter if not provided', () => {
@@ -22,7 +22,7 @@ describe('Parameter types', () => {
 	});
 
 	test('phone is not a string', () => {
-		const result = phone(18175698900);
+		const result = phone(18175698900 as unknown as string);
 
 		expect(result).toEqual({
 			phoneNumber: null,
@@ -33,7 +33,7 @@ describe('Parameter types', () => {
 
 	test('country is not a string', () => {
 		const result = phone('+18175698900', {
-			country: 123
+			country: 123 as unknown as string
 		});
 
 		expect(result).toEqual({

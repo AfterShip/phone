@@ -1,6 +1,6 @@
-const {parse} = require('papaparse');
-const fs = require('fs');
-const phone = require('../src/index');
+import fs from 'fs';
+import { parse } from 'papaparse';
+import phone from '../src/index';
 
 const testCases = (parse(fs.readFileSync(`${__dirname}/data.csv`).toString(), {
 	header: true
