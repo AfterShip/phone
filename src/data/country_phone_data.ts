@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = [
+export default [
 	{
 		alpha2: 'US',
 		alpha3: 'USA',
@@ -286,7 +284,7 @@ module.exports = [
 		alpha3: 'BRB',
 		country_code: '1',
 		country_name: 'Barbados',
-		mobile_begin_with: [246],
+		mobile_begin_with: ['246'],
 		phone_number_lengths: [10]
 	},
 	{
