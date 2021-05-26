@@ -4,10 +4,13 @@ const countryPhoneData = require('./data/country_phone_data');
 const {findCountryPhoneDataByCountry, findCountryPhoneDataByPhoneNumber, validatePhoneISO3166} = require('./lib/utility');
 
 /**
+ * @typedef {Object} Option
+ * @property {string=} country - country code in ISO3166 alpha 2 or 3
+ * @property {boolean=} validateMobilePrefix - true to validate phone number prefix
+ * @property {boolean=} strictDetection - true to disable remove truck code and detection logic
+ *
  * @param {string} phoneNumber - phone number
- * @param {string=} countryIso3 - country code in ISO3166 alpha 2 or 3
- * @param {boolean=} validateMobilePrefix - true to validate phone number prefix
- * @param {boolean=} strictDetection - true to disable remove truck code and detection logic
+ * @param {Option} option
  * @returns {{phoneNumber: string|null, countryIso2: string|null, countryIso3: string|null}}
  */
 module.exports = function (phoneNumber, {country = '', validateMobilePrefix = true, strictDetection = false} = {}) {
@@ -63,7 +66,7 @@ module.exports = function (phoneNumber, {country = '', validateMobilePrefix = tr
 			// the numbers should be omitted in international calls
 
 			foundCountryPhoneData = possibleCountryPhoneData;
-			processedPhoneNumber = foundCountryPhoneData.country_code + processedPhoneNumber.replace(new RegExp(`^${foundCountryPhoneData.country_code}\\d`),'');
+			processedPhoneNumber = foundCountryPhoneData.country_code + processedPhoneNumber.replace(new RegExp(`^${foundCountryPhoneData.country_code}\\d`), '');
 		} else {
 			foundCountryPhoneData = {};
 		}
