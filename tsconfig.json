@@ -2,7 +2,10 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "lib": ["es6"],
+    "lib": [
+      "es6",
+      "dom"
+    ],
     "esModuleInterop": true,
     "allowJs": true,
     "declaration": true,                         /* Generates corresponding '.d.ts' file. */
