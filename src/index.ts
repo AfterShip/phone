@@ -16,7 +16,7 @@ import {
  * @param {Option} option
  * @returns {{phoneNumber: string|null, countryIso2: string|null, countryIso3: string|null}}
  */
-export default function (phoneNumber: string, {
+export default function phone(phoneNumber: string, {
 	country = '',
 	validateMobilePrefix = true,
 	strictDetection = false
@@ -125,5 +125,6 @@ export default function (phoneNumber: string, {
 };
 
 export {
+	phone,
 	countryPhoneData,
 };
