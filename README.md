@@ -110,7 +110,7 @@ phone('+(852) 2356-4902', {validateMobilePrefix: false});
 // skipping mobile prefix checking
 ```
 
-With `validateMobilePrefix` set to `false, the initial digit checking logic will be disabled completely, even you enter a phone number start with a non-exist digit:
+With `validateMobilePrefix` set to `false`, the initial digit checking logic will be disabled completely, even you enter a phone number start with a non-exist digit:
 
 ```javascript
 phone('+(852) 0356-4902', {validateMobilePrefix: false});
@@ -119,9 +119,38 @@ phone('+(852) 0356-4902', {validateMobilePrefix: false});
 ```
 Note that the module does not have the capability to determine if the prefix is a valid `landline` prefix number.
 
-### Trunk Code Removal Logic
+### Trunk Code Detection Logic
 
+For some phone numbers, such as this sample UK phone number:
 
+```
++44 07911 123456
+```
+
+There is a trunk code `0` after the country code `+44` so that it is unable to match any correct country.
+
+Hence the module will try to remove 1 digit after the country code,
+
+and try to detect:
+
+```
++44 7911 123456
+```
+
+and it would become a valid UK phone number now.
+
+```javascript
+phone('+4407911 123456')
+// { phoneNumber: '+447911123456', countryIso2: 'GB', countryIso3: 'GBR' }
+```
+
+If you want to disable this behavior, 
+please set `strictDetection` to `true:
+
+```javascript
+phone('+4407911 123456', {strictDetection: true})
+// { phoneNumber: null, countryIso2: null, countryIso3: null }
+```
 
 ## API
 
@@ -148,7 +177,7 @@ Parameter | Type | Required | Default | Description
 phoneNumber | String | Yes | - | The phone number text you want to process
 country | String | No | null | Provided country code in iso-3166 alpha 2 or 3 format
 validateMobilePrefix | Boolean | No | true | Set to false if you want to skip phone number initial digit checking
-strictDetection | Boolean | No | false | Set to true if you want to disable trunk code removal logic. 
+strictDetection | Boolean | No | false | Set to true if you want to disable trunk code detection logic. 
 
 #### Returns
 
@@ -208,6 +237,31 @@ yarn build
 
 
 ## Migrate from v2
+
+The interface of v3 has been changed for better usability, maintainability and flexibility, this shows all the changes from v2:
+
+#### Function Interface
+
+Version | Interface
+--- | ---
+v2 | phone(phoneNumber, country, allowLandline) 
+v3 | phone(phoneNumber,{country: String, validateMobilePrefix: Boolean, strictDetection: Boolean})
+
+#### Function Response
+
+Version | Interface
+--- | ---
+v2 | [phoneNumber, country]
+v3 | {phoneNumber: string, countryIso2: string, countryIso3: string}
+
+#### allowLandline vs validateMobilePrefix
+
+`allowLandline` in v2 is essentially equals to `validateMobilePrefix` in v3, however, the value is opposite.
+
+Because `allowLandline = true` in v2 means "Skip the mobile phone number prefix validation", and there is NO capability to verify if the input phone number is a valid landline phone number.
+
+To avoid the misleading information, the parameter name has been changed to `validateMobilePrefix`, and the input value is opposite, while `validateMobilePrefix = false` means "Skip the mobile phone number prefix validation".
+
 
 ## Help
 
