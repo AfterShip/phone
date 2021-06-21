@@ -16,7 +16,7 @@
     "test:update": "jest --updateSnapshot",
     "lint": "eslint .",
     "build": "rimraf ./dist && tsc",
-    "start:example": "yarn build && webpack-dev-server --config ./example/webpack.config.js --progress",
+    "start:example": "yarn build && webpack serve --config ./example/webpack.config.js --progress",
     "prepublishOnly": "yarn build",
     "fix:numbers": "ts-node -P scripts/add-new-rules/tsconfig.json scripts/add-new-rules"
   },
@@ -28,6 +28,7 @@
     "url": "https://github.com/aftership/phone/issues"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.14.5",
     "@types/jest": "^26.0.23",
     "@types/node": "^14.14.28",
     "@types/papaparse": "^5.2.5",
@@ -49,10 +50,9 @@
     "ts-node": "^10.0.0",
     "twilio": "^3.63.0",
     "typescript": "^4.3.2",
-    "webpack": "^5.37.1",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-sources": "^2.2.0"
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "keywords": [
     "phone",
