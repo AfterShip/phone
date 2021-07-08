@@ -1,13 +1,13 @@
 import 'babel-polyfill';
-import Phone from '../../dist/';
+import { phone } from '../../dist/';
 
 const input = document.getElementById('phone');
 const code = document.getElementById('code');
 const help = document.querySelector('.help');
 
 const formatPhone = (e) => {
-	const [formattedPhone, alpha3] = Phone(e.target.value);
-	if (!formattedPhone) {
+	const { phoneNumber, countryIso3 } = phone(e.target.value);
+	if (!phoneNumber) {
 		[
 			help,
 			input,
@@ -31,8 +31,8 @@ const formatPhone = (e) => {
 	help.textContent = 'This phone number is valid';
 	code.classList.remove('is-hidden');
 	code.textContent = `
-  Formatted Phone number: ${formattedPhone}
-  Country code: ${alpha3}`;
+  Formatted Phone number: ${phoneNumber}
+  Country code: ${countryIso3}`;
 };
 
 input.addEventListener('input', formatPhone);

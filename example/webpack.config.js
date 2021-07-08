@@ -5,7 +5,7 @@ const webpack = require('webpack');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
-	devtool: 'source-map',
+	mode: 'production',
 	entry: './example/client/index.js',
 	output: {
 		path: path.resolve(__dirname),
@@ -26,21 +26,14 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js$/,
-				loader: 'babel-loader',
-				options: {
-					babelrc: false,
-					presets: [
-						['env', {
-							targets: {
-								browsers: '>1%'
-							},
-							useBuiltIns: true,
-							debug: true,
-							modules: false
-						}]
-					]
+				exclude: '/node_modules/',
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: [['@babel/preset-env']]
+					}
 				}
-			}
+			},
 		]
 	}
 };
