@@ -189,3 +189,5 @@ config.json
 scripts
 
 test.js
+test_generate.js
+.github
