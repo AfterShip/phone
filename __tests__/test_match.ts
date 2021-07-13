@@ -9,6 +9,7 @@ interface TestCaseItem {
 	output_phone: string;
 	output_country_alpha2: string;
 	output_country_alpha3: string;
+	output_country_code: string;
 	desc1: string;
 	desc2: string;
 	test_desc: string;
@@ -41,7 +42,8 @@ for (const testCase of testCases) {
 		expect(result).toEqual({
 			phoneNumber: testCase.output_phone || null,
 			countryIso2: testCase.output_country_alpha2 || null,
-			countryIso3: testCase.output_country_alpha3 || null
+			countryIso3: testCase.output_country_alpha3 || null,
+			countryCode: testCase.output_country_code || null
 		});
 	});
 }

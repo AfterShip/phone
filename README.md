@@ -37,17 +37,17 @@ const {phone} = require('phone');
 ### Simple usage
 
 ```javascript
-phone('+852 6569-8900'); // { phoneNumber: '+85265698900',  countryIso2: 'HK', countryIso3: 'HKG' }
+phone('+852 6569-8900'); // { phoneNumber: '+85265698900',  countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 ```
 
 ### With Country
 
 ```javascript
-phone('+1(817) 569-8900', {country: ''}); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA'}
-phone('(817) 569-8900', {country: 'USA'}); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA'}
-phone('(817) 569-8900', {country: 'HKG'}); // { phoneNumber: null, countryIso2: null, countryIso3: null }, not a valid HKG mobile phone number
-phone('+1(817) 569-8900', {country: 'HKG'}); // { phoneNumber: null, countryIso2: null, countryIso3: null }, not a valid HKG mobile phone number
-phone('6123-6123', {country: 'HKG'}); // { phoneNumber: '+85261236123', countryIso2: 'HK', countryIso3: 'HKG' }
+phone('+1(817) 569-8900', {country: ''}); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1'}
+phone('(817) 569-8900', {country: 'USA'}); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1'}
+phone('(817) 569-8900', {country: 'HKG'}); // { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }, not a valid HKG mobile phone number
+phone('+1(817) 569-8900', {country: 'HKG'}); // { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }, not a valid HKG mobile phone number
+phone('6123-6123', {country: 'HKG'}); // { phoneNumber: '+85261236123', countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 ```
 
 ### Without country code and no phone prefix
@@ -55,10 +55,10 @@ phone('6123-6123', {country: 'HKG'}); // { phoneNumber: '+85261236123', countryI
 If both country code and country phone prefix are not provided, the phone number will be treated as USA or Canada by default.
 
 ```javascript
-phone('(817) 569-8900'); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA' }
-phone('(817) 569-8900', {country: ''}); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA' }
-phone('780-569-8900', {country: null}); // { phoneNumber: '+17805698900', countryIso2: 'CA', countryIso3: 'CAN' }, 780 is a Canada phone prefix
-phone('6123-6123', {country: null}); // { phoneNumber: null, countryIso2: null, countryIso3: null }, as default country is USA / CAN and the phone number does not fit such countries' rules
+phone('(817) 569-8900'); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1' }
+phone('(817) 569-8900', {country: ''}); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1' }
+phone('780-569-8900', {country: null}); // { phoneNumber: '+17805698900', countryIso2: 'CA', countryIso3: 'CAN', countryCode: '+1' }, 780 is a Canada phone prefix
+phone('6123-6123', {country: null}); // { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }, as default country is USA / CAN and the phone number does not fit such countries' rules
 ```
 
 ### Without country code, with phone prefix, but no `+` sign
@@ -82,14 +82,14 @@ phone('+85291234567');
 // or
 phone('+85291234567', {country: null});
 
-// { phoneNumber: '+85291234567', countryIso2: 'HK', countryIso3: 'HKG' }
+// { phoneNumber: '+85291234567', countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 ```
 
 or, if you know the country, and only want to reformat the phone number to E.164 format:
 
 ```javascript
 phone('91234567',  {country: 'HKG'})
-// { phoneNumber: '+85291234567', countryIso2: 'HK', countryIso3: 'HKG' }
+// { phoneNumber: '+85291234567', countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 ```
 
 ### Skipping phone number initial digit checking
@@ -98,15 +98,15 @@ If you want to skip phone number initial digit checking, set `validateMobilePref
 
 ```javascript
 phone('+(852) 2356-4902');
-// { phoneNumber: null, countryIso2: null, countryIso3: null }
+// { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }
 // '2' is not a Hong Kong landline phone number prefix, but not mobile phone number
 
 phone('+(852) 2356-4902', {validateMobilePrefix: true});
-// { phoneNumber: null, countryIso2: null, countryIso3: null }
+// { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }
 // same as above, default value of validateMobilePrefix = true
 
 phone('+(852) 2356-4902', {validateMobilePrefix: false});
-// { phoneNumber: '+85223564902', countryIso2: 'HK', countryIso3: 'HKG' }
+// { phoneNumber: '+85223564902', countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 // skipping mobile prefix checking
 ```
 
@@ -114,7 +114,7 @@ With `validateMobilePrefix` set to `false`, the initial digit checking logic wil
 
 ```javascript
 phone('+(852) 0356-4902', {validateMobilePrefix: false});
-// { phoneNumber: '+85203564902', countryIso2: 'HK', countryIso3: 'HKG' }
+// { phoneNumber: '+85203564902', countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 // even the phone number start with `0` is not a valid landline phone number
 ```
 Note that the module does not have the capability to determine if the prefix is a valid `landline` prefix number.
@@ -141,7 +141,7 @@ and it would become a valid UK phone number now.
 
 ```javascript
 phone('+4407911 123456')
-// { phoneNumber: '+447911123456', countryIso2: 'GB', countryIso3: 'GBR' }
+// { phoneNumber: '+447911123456', countryIso2: 'GB', countryIso3: 'GBR', countryCode: '+44' }
 ```
 
 If you want to disable this behavior, 
@@ -149,7 +149,7 @@ please set `strictDetection` to `true:
 
 ```javascript
 phone('+4407911 123456', {strictDetection: true})
-// { phoneNumber: null, countryIso2: null, countryIso3: null }
+// { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }
 ```
 
 ## API
@@ -167,6 +167,7 @@ phone(phoneNumber: string, { country, validateMobilePrefix, strictDetection }?: 
     phoneNumber: string | null;
     countryIso2: string | null;
     countryIso3: string | null;
+    countryCode: string | null;
 }
 ```
 
@@ -186,6 +187,7 @@ strictDetection | Boolean | No | false | Set to true if you want to disable trun
   phoneNumber: string | null;
   countryIso2: string | null;
   countryIso3: string | null;
+  countryCode: string | null;
 }
 ```
 
@@ -194,6 +196,7 @@ Parameter | Type | Description
 phoneNumber | String or null | Normalized phone number in E.164 format
 countryIso2 | String or null | Detected phone number country code in iso-3166 alpha 3 format
 countryIso3 | String or null | Detected phone number country code in iso-3166 alpha 3 format
+countryCode | String or null | Detected phone number country calling code with `+` sign
 
 [comment]: <> (## Demo)
 
@@ -252,7 +255,7 @@ v3 | phone(phoneNumber,{country: String, validateMobilePrefix: Boolean, strictDe
 Version | Interface
 --- | ---
 v2 | [phoneNumber, country]
-v3 | {phoneNumber: string, countryIso2: string, countryIso3: string}
+v3 | {phoneNumber: string, countryIso2: string, countryIso3: string, countryCode: string}
 
 #### allowLandline vs validateMobilePrefix
 

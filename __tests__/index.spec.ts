@@ -7,7 +7,8 @@ describe('Parameter types', () => {
 		expect(result).toEqual({
 			phoneNumber: '+18175698900',
 			countryIso2: 'US',
-			countryIso3: 'USA'
+			countryIso3: 'USA',
+			countryCode: '+1'
 		});
 	});
 
@@ -17,7 +18,8 @@ describe('Parameter types', () => {
 		expect(result).toEqual({
 			phoneNumber: '+18175698900',
 			countryIso2: 'US',
-			countryIso3: 'USA'
+			countryIso3: 'USA',
+			countryCode: '+1'
 		});
 	});
 
@@ -27,7 +29,8 @@ describe('Parameter types', () => {
 		expect(result).toEqual({
 			phoneNumber: null,
 			countryIso2: null,
-			countryIso3: null
+			countryIso3: null,
+			countryCode: null
 		});
 	});
 
@@ -39,7 +42,8 @@ describe('Parameter types', () => {
 		expect(result).toEqual({
 			phoneNumber: '+18175698900',
 			countryIso2: 'US',
-			countryIso3: 'USA'
+			countryIso3: 'USA',
+			countryCode: '+1'
 		});
 	});
 });

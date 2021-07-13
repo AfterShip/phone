@@ -27,12 +27,14 @@ export default function phone(phoneNumber: string, {
 } = {}): { 
 	phoneNumber: string | null;
 	countryIso2: string | null;
-	countryIso3: string | null; 
+	countryIso3: string | null;
+	countryCode: string | null;
 } {
 	const emptyResult = {
 		phoneNumber: null,
 		countryIso2: null,
-		countryIso3: null
+		countryIso3: null,
+		countryCode: null
 	};
 
 	let processedPhoneNumber = (typeof phoneNumber !== 'string') ? '' : phoneNumber.trim();
@@ -104,7 +106,8 @@ export default function phone(phoneNumber: string, {
 		return {
 			phoneNumber: `+${processedPhoneNumber}`,
 			countryIso2: foundCountryPhoneData.alpha2,
-			countryIso3: foundCountryPhoneData.alpha3
+			countryIso3: foundCountryPhoneData.alpha3,
+			countryCode: `+${foundCountryPhoneData.country_code}`
 		};
 	}
 
@@ -116,7 +119,8 @@ export default function phone(phoneNumber: string, {
 			return {
 				phoneNumber: `+${processedPhoneNumber}`,
 				countryIso2: foundCountryPhoneData.alpha2,
-				countryIso3: foundCountryPhoneData.alpha3
+				countryIso3: foundCountryPhoneData.alpha3,
+				countryCode: `+${foundCountryPhoneData.country_code}`
 			};
 		}
 	}

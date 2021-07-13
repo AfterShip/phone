@@ -4,9 +4,24 @@ import { phone } from '../../dist/';
 const input = document.getElementById('phone');
 const code = document.getElementById('code');
 const help = document.querySelector('.help');
+const country = document.getElementById('country');
+const validateMobilePrefix = document.getElementById('validateMobilePrefix');
+const strictDetection = document.getElementById('strictDetection');
 
 const formatPhone = (e) => {
-	const { phoneNumber, countryIso3 } = phone(e.target.value);
+	const inputPhoneNumber = input.value;
+	const options = {
+		validateMobilePrefix: validateMobilePrefix.checked,
+		strictDetection: strictDetection.checked,
+	};
+
+	const countryValue = country.value.trim();
+	if (countryValue) {
+		options.country = countryValue;
+	}
+
+	const { phoneNumber, countryIso2, countryIso3 } = phone(inputPhoneNumber, options);
+
 	if (!phoneNumber) {
 		[
 			help,
@@ -32,8 +47,14 @@ const formatPhone = (e) => {
 	code.classList.remove('is-hidden');
 	code.textContent = `
   Formatted Phone number: ${phoneNumber}
-  Country code: ${countryIso3}`;
+  Country code alpha 2: ${countryIso2}
+  Country code alpha 3: ${countryIso3}`;
 };
 
 input.addEventListener('input', formatPhone);
+country.addEventListener('input', formatPhone);
+validateMobilePrefix.addEventListener('click', formatPhone);
+strictDetection.addEventListener('click', formatPhone);
+
+
 input.dispatchEvent(new Event('input'));

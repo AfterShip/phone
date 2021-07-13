@@ -5,23 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-  <title>AfterShip's Phone</title>
+  <title>AfterShip - phone</title>
 </head>
 <body>
   <div class="container">
-    <h1 class="title is-1">Phone browser example</h1>
+    <h1 class="title is-1">phone example</h1>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <input type="text" class="input" name="phone" id="phone" placeholder="enter a phone number to validate" value="+852 98765432" />
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="country" id="country" placeholder="Country ISO3166 alpha 2 or 3, e.g. HK or HKG" value="" />
+        </div>
+      </div>
+    </div>
     <div class="field">
-      <label for="phone" class="label"></label>
-      <input
-        type="text"
-        class="input"
-        name="phone"
-        id="phone"
-        placeholder="enter a phone number to validate"
-        value="+852 98765432"
-      >
       <p class="help">This username is available</p>
     </div>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="control">
+            <label class="checkbox">
+              <input id="validateMobilePrefix" type="checkbox" checked="checked">
+              validateMobilePrefix
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input id="strictDetection" type="checkbox">
+              strictDetection
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <h3 class="title is-3">Result</h3>
     <pre>
       <code id="code"></code>
     </pre>
