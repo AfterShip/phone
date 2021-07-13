@@ -37,7 +37,8 @@ const {phone} = require('phone');
 ### Simple usage
 
 ```javascript
-phone('+852 6569-8900'); // { phoneNumber: '+85265698900',  countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
+phone('+852 6569-8900');
+// { phoneNumber: '+85265698900',  countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 ```
 
 ### With Country
@@ -217,6 +218,12 @@ phoneNumber | String or null | Normalized phone number in E.164 format
 countryIso2 | String or null | Detected phone number country code in iso-3166 alpha 3 format
 countryIso3 | String or null | Detected phone number country code in iso-3166 alpha 3 format
 countryCode | String or null | Detected phone number country calling code with `+` sign
+
+Please do note that for the returned value, there would be only 2 cases: 
+1. All keys have a string value
+2. All keys are null
+
+The module will not return a result with mixed string and null keys.
 
 [comment]: <> (## Demo)
 
