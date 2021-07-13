@@ -20,7 +20,7 @@ const formatPhone = (e) => {
 		options.country = countryValue;
 	}
 
-	const { phoneNumber, countryIso2, countryIso3 } = phone(inputPhoneNumber, options);
+	const { phoneNumber, countryIso2, countryIso3, countryCode } = phone(inputPhoneNumber, options);
 
 	if (!phoneNumber) {
 		[
@@ -48,7 +48,8 @@ const formatPhone = (e) => {
 	code.textContent = `
   Formatted Phone number: ${phoneNumber}
   Country code alpha 2: ${countryIso2}
-  Country code alpha 3: ${countryIso3}`;
+  Country code alpha 3: ${countryIso3}
+  Country calling code: ${countryCode}`;
 };
 
 input.addEventListener('input', formatPhone);
