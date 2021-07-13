@@ -43,11 +43,22 @@ phone('+852 6569-8900'); // { phoneNumber: '+85265698900',  countryIso2: 'HK', c
 ### With Country
 
 ```javascript
-phone('+1(817) 569-8900', {country: ''}); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1'}
-phone('(817) 569-8900', {country: 'USA'}); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1'}
-phone('(817) 569-8900', {country: 'HKG'}); // { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }, not a valid HKG mobile phone number
-phone('+1(817) 569-8900', {country: 'HKG'}); // { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }, not a valid HKG mobile phone number
-phone('6123-6123', {country: 'HKG'}); // { phoneNumber: '+85261236123', countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
+phone('+1(817) 569-8900', {country: ''}); 
+// { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1'}
+
+phone('(817) 569-8900', {country: 'USA'});
+// { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1'}
+
+phone('(817) 569-8900', {country: 'HKG'});
+// { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }
+// not a valid HKG mobile phone number
+
+phone('+1(817) 569-8900', {country: 'HKG'});
+// { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }
+// not a valid HKG mobile phone number
+
+phone('6123-6123', {country: 'HKG'});
+// { phoneNumber: '+85261236123', countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 ```
 
 ### Without country code and no phone prefix
@@ -55,10 +66,19 @@ phone('6123-6123', {country: 'HKG'}); // { phoneNumber: '+85261236123', countryI
 If both country code and country phone prefix are not provided, the phone number will be treated as USA or Canada by default.
 
 ```javascript
-phone('(817) 569-8900'); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1' }
-phone('(817) 569-8900', {country: ''}); // { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1' }
-phone('780-569-8900', {country: null}); // { phoneNumber: '+17805698900', countryIso2: 'CA', countryIso3: 'CAN', countryCode: '+1' }, 780 is a Canada phone prefix
-phone('6123-6123', {country: null}); // { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }, as default country is USA / CAN and the phone number does not fit such countries' rules
+phone('(817) 569-8900');
+// { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1' }
+
+phone('(817) 569-8900', {country: ''});
+// { phoneNumber: '+18175698900', countryIso2: 'US', countryIso3: 'USA', countryCode: '+1' }
+
+phone('780-569-8900', {country: null});
+// { phoneNumber: '+17805698900', countryIso2: 'CA', countryIso3: 'CAN', countryCode: '+1' }
+// 780 is a Canada phone prefix
+
+phone('6123-6123', {country: null});
+// { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }
+// as default country is USA / CAN and the phone number does not fit such countries' rules
 ```
 
 ### Without country code, with phone prefix, but no `+` sign
@@ -99,7 +119,7 @@ If you want to skip phone number initial digit checking, set `validateMobilePref
 ```javascript
 phone('+(852) 2356-4902');
 // { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }
-// '2' is not a Hong Kong landline phone number prefix, but not mobile phone number
+// '2' is a Hong Kong landline phone number prefix, not a valid mobile phone number prefix
 
 phone('+(852) 2356-4902', {validateMobilePrefix: true});
 // { phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null }
