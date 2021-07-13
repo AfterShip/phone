@@ -209,6 +209,14 @@ countryCode | String or null | Detected phone number country calling code with `
 yarn test
 ```
 
+## Interactive Web Example 
+
+```
+yarn start:example
+```
+
+And then visit http://localhost:8080
+
 ## Build
 
 ```
