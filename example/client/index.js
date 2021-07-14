@@ -20,9 +20,9 @@ const formatPhone = (e) => {
 		options.country = countryValue;
 	}
 
-	const { phoneNumber, countryIso2, countryIso3, countryCode } = phone(inputPhoneNumber, options);
+	const { phoneNumber, countryIso2, countryIso3, countryCode, isValid } = phone(inputPhoneNumber, options);
 
-	if (!phoneNumber) {
+	if (!isValid) {
 		[
 			help,
 			input,
@@ -46,6 +46,7 @@ const formatPhone = (e) => {
 	help.textContent = 'This phone number is valid';
 	code.classList.remove('is-hidden');
 	code.textContent = `
+  isValid: ${isValid}
   Formatted Phone number: ${phoneNumber}
   Country code alpha 2: ${countryIso2}
   Country code alpha 3: ${countryIso3}
