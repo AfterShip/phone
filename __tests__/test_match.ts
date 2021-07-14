@@ -10,6 +10,7 @@ interface TestCaseItem {
 	output_country_alpha2: string;
 	output_country_alpha3: string;
 	output_country_code: string;
+	output_is_valid: string;
 	desc1: string;
 	desc2: string;
 	test_desc: string;
@@ -39,11 +40,18 @@ for (const testCase of testCases) {
 			strictDetection
 		});
 
-		expect(result).toEqual({
-			phoneNumber: testCase.output_phone || null,
-			countryIso2: testCase.output_country_alpha2 || null,
-			countryIso3: testCase.output_country_alpha3 || null,
-			countryCode: testCase.output_country_code || null
-		});
+		if (testCase.output_is_valid === 'true') {
+			expect(result).toEqual({
+				isValid: true,
+				phoneNumber: testCase.output_phone,
+				countryIso2: testCase.output_country_alpha2,
+				countryIso3: testCase.output_country_alpha3,
+				countryCode: testCase.output_country_code
+			});
+		} else {
+			expect(result).toEqual({
+				isValid: false
+			});
+		}
 	});
 }

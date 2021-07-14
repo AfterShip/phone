@@ -6,6 +6,20 @@ import {
 	CountryPhoneDataItem,
 } from './lib/utility';
 
+interface PhoneInvalidResult {
+	isValid: false;
+}
+  
+interface PhoneValidResult {
+	isValid: true;
+	phoneNumber: string;
+	countryIso2: string;
+	countryIso3: string;
+	countryCode: string;
+}
+  
+type PhoneResponse = PhoneInvalidResult | PhoneValidResult; 
+
 /**
  * @typedef {Object} Option
  * @property {string=} country - country code in ISO3166 alpha 2 or 3
@@ -24,17 +38,9 @@ export default function phone(phoneNumber: string, {
 	country?: string;
 	validateMobilePrefix?: boolean;
 	strictDetection?: boolean;
-} = {}): { 
-	phoneNumber: string | null;
-	countryIso2: string | null;
-	countryIso3: string | null;
-	countryCode: string | null;
-} {
-	const emptyResult = {
-		phoneNumber: null,
-		countryIso2: null,
-		countryIso3: null,
-		countryCode: null
+} = {}): PhoneResponse {
+	const invalidResult = {
+		isValid: false as const
 	};
 
 	let processedPhoneNumber = (typeof phoneNumber !== 'string') ? '' : phoneNumber.trim();
@@ -47,7 +53,7 @@ export default function phone(phoneNumber: string, {
 	let foundCountryPhoneData = findCountryPhoneDataByCountry(processedCountry);
 
 	if (!foundCountryPhoneData) {
-		return emptyResult;
+		return invalidResult;
 	}
 
 	let defaultCountry = false;
@@ -97,13 +103,14 @@ export default function phone(phoneNumber: string, {
 	}
 
 	if (!foundCountryPhoneData) {
-		return emptyResult;
+		return invalidResult;
 	}
 
 	let validateResult = validatePhoneISO3166(processedPhoneNumber, foundCountryPhoneData, validateMobilePrefix, hasPlusSign);
 
 	if (validateResult) {
 		return {
+			isValid: true as const,
 			phoneNumber: `+${processedPhoneNumber}`,
 			countryIso2: foundCountryPhoneData.alpha2,
 			countryIso3: foundCountryPhoneData.alpha3,
@@ -117,6 +124,7 @@ export default function phone(phoneNumber: string, {
 		validateResult = validatePhoneISO3166(processedPhoneNumber, foundCountryPhoneData, validateMobilePrefix, hasPlusSign);
 		if (validateResult) {
 			return {
+				isValid: true as const,
 				phoneNumber: `+${processedPhoneNumber}`,
 				countryIso2: foundCountryPhoneData.alpha2,
 				countryIso3: foundCountryPhoneData.alpha3,
@@ -125,7 +133,7 @@ export default function phone(phoneNumber: string, {
 		}
 	}
 
-	return emptyResult;
+	return invalidResult;
 };
 
 export {
