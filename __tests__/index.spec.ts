@@ -5,6 +5,7 @@ describe('Parameter types', () => {
 		const result = phone('+1 (817) 569-8900', {});
 
 		expect(result).toEqual({
+			isValid: true,
 			phoneNumber: '+18175698900',
 			countryIso2: 'US',
 			countryIso3: 'USA',
@@ -16,6 +17,7 @@ describe('Parameter types', () => {
 		const result = phone('+1 (817) 569-8900');
 
 		expect(result).toEqual({
+			isValid: true,
 			phoneNumber: '+18175698900',
 			countryIso2: 'US',
 			countryIso3: 'USA',
@@ -27,10 +29,7 @@ describe('Parameter types', () => {
 		const result = phone(18175698900 as unknown as string);
 
 		expect(result).toEqual({
-			phoneNumber: null,
-			countryIso2: null,
-			countryIso3: null,
-			countryCode: null
+			isValid: false
 		});
 	});
 
@@ -40,6 +39,7 @@ describe('Parameter types', () => {
 		});
 
 		expect(result).toEqual({
+			isValid: true,
 			phoneNumber: '+18175698900',
 			countryIso2: 'US',
 			countryIso3: 'USA',
