@@ -32,6 +32,10 @@ yarn add phone
 
 ```javascript
 const {phone} = require('phone');
+
+// or
+
+import {phone} from 'phone';
 ```
 
 ### Simple usage
@@ -90,6 +94,8 @@ Even you input a valid phone number with a valid prefix, if there is no plus sig
 phone('85291234567');
 // or
 phone('85291234567', {country: null});
+
+// { isValid: false }
 ```
 
 `852` is a valid Hong Kong phone prefix, and `91234567` is a valid Hong Kong mobile phone number.
