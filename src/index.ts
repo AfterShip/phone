@@ -18,7 +18,7 @@ interface PhoneValidResult {
 	countryCode: string;
 }
   
-type PhoneResponse = PhoneInvalidResult | PhoneValidResult; 
+type PhoneResult = PhoneInvalidResult | PhoneValidResult; 
 
 /**
  * @typedef {Object} Option
@@ -38,7 +38,7 @@ export default function phone(phoneNumber: string, {
 	country?: string;
 	validateMobilePrefix?: boolean;
 	strictDetection?: boolean;
-} = {}): PhoneResponse {
+} = {}): PhoneResult {
 	const invalidResult = {
 		isValid: false as const
 	};
