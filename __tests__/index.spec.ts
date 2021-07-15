@@ -29,7 +29,11 @@ describe('Parameter types', () => {
 		const result = phone(18175698900 as unknown as string);
 
 		expect(result).toEqual({
-			isValid: false
+			isValid: false,
+			phoneNumber: null,
+			countryIso2: null,
+			countryIso3: null,
+			countryCode: null
 		});
 	});
 

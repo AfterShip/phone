@@ -50,7 +50,11 @@ for (const testCase of testCases) {
 			});
 		} else {
 			expect(result).toEqual({
-				isValid: false
+				isValid: false,
+				phoneNumber: null,
+				countryIso2: null,
+				countryIso3: null,
+				countryCode: null
 			});
 		}
 	});
