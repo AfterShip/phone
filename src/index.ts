@@ -8,6 +8,10 @@ import {
 
 interface PhoneInvalidResult {
 	isValid: false;
+	phoneNumber: null;
+	countryIso2: null;
+	countryIso3: null;
+	countryCode: null;
 }
   
 interface PhoneValidResult {
@@ -40,7 +44,11 @@ export default function phone(phoneNumber: string, {
 	strictDetection?: boolean;
 } = {}): PhoneResult {
 	const invalidResult = {
-		isValid: false as const
+		isValid: false as const,
+		phoneNumber: null,
+		countryIso2: null,
+		countryIso3: null,
+		countryCode: null
 	};
 
 	let processedPhoneNumber = (typeof phoneNumber !== 'string') ? '' : phoneNumber.trim();
