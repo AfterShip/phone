@@ -181,34 +181,18 @@ phone('+4407911 123456', {strictDetection: true})
 
 ## API
 
-```javascript
+```typescript
 const {phone} = require('phone');
 
 // or
 
 import {phone} from 'phone';
-```
-
-```typescript
-interface PhoneInvalidResult {
-	isValid: false;
-}
-  
-interface PhoneValidResult {
-	isValid: true;
-	phoneNumber: string;
-	countryIso2: string;
-	countryIso3: string;
-	countryCode: string;
-}
-  
-type PhoneResult = PhoneInvalidResult | PhoneValidResult; 
 
 phone(phoneNumber: string, { country, validateMobilePrefix, strictDetection }?: {
     country?: string;
     validateMobilePrefix?: boolean;
     strictDetection?: boolean;
-}): PhoneResult
+})
 ```
 
 #### Input
@@ -222,14 +206,23 @@ strictDetection | Boolean | No | false | Set to true if you want to disable trun
 
 #### Returns
 
-#### Valid result
-```javascript
-{
+```typescript
+type PhoneResult = PhoneInvalidResult | PhoneValidResult;
+
+interface PhoneValidResult {
 	isValid: true;
 	phoneNumber: string;
 	countryIso2: string;
 	countryIso3: string;
 	countryCode: string;
+}
+
+interface PhoneInvalidResult {
+	isValid: false;
+	phoneNumber: null;
+	countryIso2: null;
+	countryIso3: null;
+	countryCode: null;
 }
 ```
 
@@ -241,23 +234,9 @@ countryIso2 | String or null | Detected phone number country code in iso-3166 al
 countryIso3 | String or null | Detected phone number country code in iso-3166 alpha 3 format
 countryCode | String or null | Detected phone number country calling code with `+` sign
 
-#### Invalid result
-```javascript
-{
-	isValid: false;
-}
-```
-
-Parameter | Type | Description
---- | --- | ---
-isValid | Boolean | To indicate if the result valid
-
-
-
 [comment]: <> (## Demo)
 
 [comment]: <> ([Try it on CodeSandbox]&#40;https://codesandbox.io/s/phone-browser-example-react-o5vt5?file=/src/App.js&#41;)
-
 
 ## Test
 
@@ -319,10 +298,11 @@ v3 | phone(phoneNumber,{country: String, validateMobilePrefix: Boolean, strictDe
 
 #### Function Response
 
-Version | Interface
---- | ---
-v2 | [phoneNumber, country]
-v3 | {isValid: false} or {isValid: true, phoneNumber: string, countryIso2: string, countryIso3: string, countryCode: string}
+Version | Result | Interface
+--- | --- | ---
+v2 | - | [phoneNumber, country]
+v3 | Valid | {isValid: true, phoneNumber: string, countryIso2: string, countryIso3: string, countryCode: string}
+v3 | Invalid | {isValid: false, phoneNumber: null, countryIso2: null, countryIso3: null, countryCode: null}
 
 #### allowLandline vs validateMobilePrefix
 
