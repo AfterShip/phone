@@ -1308,7 +1308,7 @@ export default [
 		alpha3: 'NZL',
 		country_code: '64',
 		country_name: 'New Zealand',
-		mobile_begin_with: ['2', '3', '6', '9'],
+		mobile_begin_with: ['2'],
 		phone_number_lengths: [8, 9, 10]
 	},
 	{
