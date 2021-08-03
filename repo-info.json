@@ -1,6 +1,6 @@
 {
   "is_in_production": false,
-  "is_scannable": false,
+  "is_scannable": true,
   "is_critical": false,
   "contact": "g-gsuite-sms@emarsys.com",
   "hosted": null
