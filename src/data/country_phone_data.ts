@@ -1341,8 +1341,8 @@ export default [
 		alpha3: 'PER',
 		country_code: '51',
 		country_name: 'Peru',
-		mobile_begin_with: ['9', '6'],
-		phone_number_lengths: [9, 8]
+		mobile_begin_with: ['9'],
+		phone_number_lengths: [9]
 	},
 	{
 		alpha2: 'PH',
