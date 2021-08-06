@@ -1063,7 +1063,7 @@ describe('Testing CHN Phone Quick Test', () => {
 describe('Testing ARG numbers', () => {
 	describe('Test for number without 9 prefix', () => {
 		const number = '+54 233 123 4567';
-		const result = ['+542331234567', 'ARG'];
+		const result = [];
 		test('returns ' + result, () => {
 			expect(phone(number)).toEqual(result);
 		});
@@ -1071,7 +1071,7 @@ describe('Testing ARG numbers', () => {
 
 	describe('Test for number with 9 prefix', () => {
 		const number = '+54 9 233 123 4567';
-		const result = ['+542331234567', 'ARG'];
+		const result = ['+5492331234567', 'ARG'];
 		test('returns ' + result, () => {
 			expect(phone(number)).toEqual(result);
 		});
