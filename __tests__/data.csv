@@ -127,7 +127,7 @@ input_phone,input_country,not_validate_prefix,output_phone,output_country_alpha2
 +691(0)1234567,,,+6911234567,FM,FSM,+691,true,,,Micronesia with trunk prefix (0),
 +298 212345,,,+298212345,FO,FRO,+298,true,,test phone with no mobile_begin_with,Test 1,
 +17215201993,,,+17215201993,SX,SXM,+1,true,,[CORE-1562] add new phone number rules for `+17215201993、+5164518135、+6062311120、+16782069397`,Test +17215201993,
-+5164518135,,,+5164518135,PE,PER,+51,true,,,Test +5164518135,
++5164518135,,,+5164518135,,,,false,,,Test +5164518135,
 +6062311120,,,+6062311120,MY,MYS,+60,true,,,Test +6062311120,
 +16782069397,,,+16782069397,US,USA,+1,true,,,Test +16782069397,
 +85293785433,,,+85293785433,HK,HKG,+852,true,,Landline phone number test,"Test mobile phone number, should success",
