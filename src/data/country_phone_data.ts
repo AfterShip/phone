@@ -100,7 +100,7 @@ export default [
 		country_code: '54',
 		country_name: 'Argentina',
 		mobile_begin_with: ['1', '2', '3'], // Same for mobile and landlines
-		phone_number_lengths: [10]
+		phone_number_lengths: [8, 9, 10, 11, 12]
 	},
 	{
 		alpha2: 'AM',
