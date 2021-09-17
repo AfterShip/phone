@@ -75,7 +75,7 @@ input_phone,input_country,not_validate_prefix,output_phone,output_country_alpha2
 762 100 9517,Mexico Invalid,,,,,,false,,Test 15,"returns ",
 6123-6123,HKG,,+85261236123,HK,HKG,+852,true,Testing HKG Phone Quick Test,Test 1,"returns +85261236123,HKG",
 +55 11 9 6123 1234,BRA,,+5511961231234,BR,BRA,+55,true,Testing BRA Phone Quick Test,Test 1,"returns +5511961231234,BRA",
-+55 69 8 6123 1234,BRA,,+5569861231234,BR,BRA,+55,true,,Test 4,"returns +5569861231234,BRA",
++55 69 8 6123 1234,BRA,,+5569861231234,BR,BRA,+55,false,,Test 4,"returns +5569861231234,BRA",
 +55 65 9 9123 4567,BRA,,+5565991234567,BR,BRA,+55,true,,Test 5,"returns +5565991234567,BRA",
 +5599988311895,BRA,,+5599988311895,BR,BRA,+55,true,,Test 6,"returns +5599988311895,BRA",
 +1-787-672-9999,PRI,,+17876729999,PR,PRI,+1,true,Testing PRI Phone Quick Test,Test 1,"returns +17876729999,PRI",
