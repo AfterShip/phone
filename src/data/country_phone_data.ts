@@ -1509,7 +1509,7 @@ export default [
 		alpha3: 'SJM',
 		country_code: '47',
 		country_name: 'Svalbard And Jan Mayen',
-		mobile_begin_with: [],
+		mobile_begin_with: [79],
 		phone_number_lengths: [8]
 	},
 	{

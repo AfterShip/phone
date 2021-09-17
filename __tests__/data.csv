@@ -166,3 +166,5 @@ input_phone,input_country,not_validate_prefix,output_phone,output_country_alpha2
 +44 079111 23456,,,+447911123456,GB,GBR,+44,true,,Test strict detect switch,"returns +447911123456,GBR",
 +44 079111 23456,,,,,,,false,,,returns empty result for strict detect,true
 +44 079111 23456,,,+447911123456,GB,GBR,+44,true,,"returns +447911123456,GBR for explicitly false",false,
++4710000000,,,,,,,false,Testing NO / SJ numbers,Should not be valid NO or SJ,returns,
++4779000000,,,+4779000000,SJ,SJM,+47,true,,Should be SJ (Svalbard / Jan Mayen),"returns +4779000000,SJM",
