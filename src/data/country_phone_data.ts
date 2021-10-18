@@ -257,7 +257,7 @@ export default [
 		alpha3: 'BOL',
 		country_code: '591',
 		country_name: 'Bolivia',
-		mobile_begin_with: ['7'],
+		mobile_begin_with: ['6', '7'],
 		phone_number_lengths: [8]
 	},
 	{
