@@ -6,7 +6,7 @@ import {
 	CountryPhoneDataItem,
 } from './lib/utility';
 
-interface PhoneInvalidResult {
+export interface PhoneInvalidResult {
 	isValid: false;
 	phoneNumber: null;
 	countryIso2: null;
@@ -14,7 +14,7 @@ interface PhoneInvalidResult {
 	countryCode: null;
 }
   
-interface PhoneValidResult {
+export interface PhoneValidResult {
 	isValid: true;
 	phoneNumber: string;
 	countryIso2: string;
@@ -22,7 +22,7 @@ interface PhoneValidResult {
 	countryCode: string;
 }
   
-type PhoneResult = PhoneInvalidResult | PhoneValidResult; 
+export type PhoneResult = PhoneInvalidResult | PhoneValidResult; 
 
 /**
  * @typedef {Object} Option
