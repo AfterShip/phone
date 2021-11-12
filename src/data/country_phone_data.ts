@@ -363,7 +363,7 @@ export default [
 		country_code: '225',
 		country_name: "Côte D'Ivoire",
 		mobile_begin_with: ['0', '4', '5', '6', '7', '8'],
-		phone_number_lengths: [8]
+		phone_number_lengths: [10]
 	},
 	{
 		alpha2: 'CM',

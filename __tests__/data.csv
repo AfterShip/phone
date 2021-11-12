@@ -4,7 +4,7 @@ input_phone,input_country,not_validate_prefix,output_phone,output_country_alpha2
 +852 6569-8900,,,+85265698900,HK,HKG,+852,true,,Test 3,"returns +85265698900,HKG",
 +852 6569-8900,HKG,,+85265698900,HK,HKG,+852,true,,Test 4,"returns +85265698900,HKG",
 ,HKG,,,,,,false,,Test 5,"returns ",
-+225 05345678,CIV,,+22505345678,CI,CIV,+225,true,,Test 6,should remove the leadings zero when country is CIV,
++225 0534567888,CIV,,+2250534567888,CI,CIV,+225,true,,Test 6,should remove the leadings zero when country is CIV,
 +242 012345678,COG,,+242012345678,CG,COG,+242,true,,,should remove the leadings zero when country is COG,
 (852) 569-8900,,,,,,,false,Testing USA Phone,Test 1,"returns ",
 +1 (817) 569-8900,,,+18175698900,US,USA,+1,true,,Test 2,"returns +18175698900,USA",
