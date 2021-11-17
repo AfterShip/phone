@@ -782,7 +782,7 @@ export default [
 		alpha3: 'HUN',
 		country_code: '36',
 		country_name: 'Hungary',
-		mobile_begin_with: ['20', '30', '31', '70'],
+		mobile_begin_with: ['20', '30', '31', '50', '70'],
 		phone_number_lengths: [9]
 	},
 	{
