@@ -1565,7 +1565,7 @@ export default [
 		alpha3: 'SPM',
 		country_code: '508',
 		country_name: 'Saint Pierre And Miquelon',
-		mobile_begin_with: ['55'],
+		mobile_begin_with: ['55', '41'],
 		phone_number_lengths: [6]
 	},
 	{
