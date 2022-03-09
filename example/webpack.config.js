@@ -12,11 +12,13 @@ module.exports = {
 		filename: 'app.js'
 	},
 	devServer: {
-		contentBase: path.join(__dirname),
-		stats: {
-			colors: true,
-			modules: false
+		static: {
+			directory: path.join(__dirname)
 		}
+	},
+	stats: {
+		colors: true,
+		modules: false
 	},
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin(),
@@ -35,5 +37,9 @@ module.exports = {
 				}
 			},
 		]
+	},
+	performance: {
+		maxAssetSize: 500000,
+		maxEntrypointSize: 500000
 	}
 };
