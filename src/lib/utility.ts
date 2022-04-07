@@ -7,7 +7,7 @@ export type CountryPhoneDataItem = GetArrayElementType<typeof countryPhoneData>;
  * @param {string=} country - country code alpha 2 or 3
  * @returns {{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with, phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string, string, string, string], phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string], phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string], phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string, string], phone_number_lengths: [number]}|null}
  */
-export function findCountryPhoneDataByCountry(country: string) {
+export function findCountryPhoneDataByCountry(country: CountryPhoneDataItem["alpha2"] | CountryPhoneDataItem["alpha3"]): CountryPhoneDataItem| null{
 	// if no country provided, assume it's USA
 	if (!country) {
 		return countryPhoneData.find(countryPhoneDatum => countryPhoneDatum.alpha3 === 'USA') || null;
@@ -24,7 +24,7 @@ export function findCountryPhoneDataByCountry(country: string) {
 	return countryPhoneData.find(countryPhoneDatum => country.toUpperCase() === countryPhoneDatum.country_name.toUpperCase()) || null;
 }
 
-export function findExactCountryPhoneData(phoneNumber: string, validateMobilePrefix: boolean, countryPhoneDatum: CountryPhoneDataItem) {
+export function findExactCountryPhoneData(phoneNumber: string, validateMobilePrefix: boolean, countryPhoneDatum: CountryPhoneDataItem): null | CountryPhoneDataItem {
 	// check if the phone number length match any one of the length config
 	const phoneNumberLengthMatched = countryPhoneDatum.phone_number_lengths.some(length => {
 		// as the phone number must include the country code,
@@ -53,7 +53,7 @@ export function findExactCountryPhoneData(phoneNumber: string, validateMobilePre
 	return null;
 }
 
-export function findPossibleCountryPhoneData(phoneNumber: string, validateMobilePrefix: boolean, countryPhoneDatum: CountryPhoneDataItem) {
+export function findPossibleCountryPhoneData(phoneNumber: string, validateMobilePrefix: boolean, countryPhoneDatum: CountryPhoneDataItem): null | CountryPhoneDataItem {
 	// check if the phone number length match any one of the length config
 	const phoneNumberLengthMatched = countryPhoneDatum.phone_number_lengths.some(length => {
 		// the phone number must include the country code
@@ -79,6 +79,7 @@ export function findPossibleCountryPhoneData(phoneNumber: string, validateMobile
 	})) {
 		return countryPhoneDatum;
 	}
+	return null;
 }
 
 /**
@@ -88,9 +89,9 @@ export function findPossibleCountryPhoneData(phoneNumber: string, validateMobile
  * @param validateMobilePrefix
  * @returns {{exactCountryPhoneData: (*), possibleCountryPhoneData: (*)}}
  */
-export function findCountryPhoneDataByPhoneNumber(phoneNumber: string, validateMobilePrefix: boolean) {
-	let exactCountryPhoneData;
-	let possibleCountryPhoneData;
+export function findCountryPhoneDataByPhoneNumber(phoneNumber: string, validateMobilePrefix: boolean): { exactCountryPhoneData: CountryPhoneDataItem | null, possibleCountryPhoneData: CountryPhoneDataItem | null } {
+	let exactCountryPhoneData: CountryPhoneDataItem | null = null;
+	let possibleCountryPhoneData: CountryPhoneDataItem | null = null;
 
 	for (const countryPhoneDatum of countryPhoneData) {
 		// if the country code is wrong, skip directly
@@ -126,7 +127,7 @@ export function findCountryPhoneDataByPhoneNumber(phoneNumber: string, validateM
  * @param {boolean} plusSign - true if the input contains a plus sign
  * @returns {*|boolean}
  */
-export function validatePhoneISO3166(phone: string, countryPhoneDatum: CountryPhoneDataItem, validateMobilePrefix: boolean, plusSign: boolean) {
+export function validatePhoneISO3166(phone: string, countryPhoneDatum: CountryPhoneDataItem, validateMobilePrefix: boolean, plusSign: boolean): boolean {
 	if (!countryPhoneDatum.phone_number_lengths) {
 		return false;
 	}
@@ -151,4 +152,9 @@ export function validatePhoneISO3166(phone: string, countryPhoneDatum: CountryPh
 		true;
 
 	return isLengthValid && (!validateMobilePrefix || isBeginWithValid);
+}
+
+// to allow use .includes on narrow types (as const) – better to use a separate method with better type definitions.
+export function includes<T extends U, U>(coll: ReadonlyArray<T>, el: U): el is T {
+	return coll.includes(el as T);
 }

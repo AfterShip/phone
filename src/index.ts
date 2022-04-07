@@ -4,6 +4,7 @@ import {
 	findCountryPhoneDataByPhoneNumber,
 	validatePhoneISO3166,
 	CountryPhoneDataItem,
+	includes,
 } from './lib/utility';
 
 export interface PhoneInvalidResult {
@@ -16,10 +17,10 @@ export interface PhoneInvalidResult {
   
 export interface PhoneValidResult {
 	isValid: true;
-	phoneNumber: string;
-	countryIso2: string;
-	countryIso3: string;
-	countryCode: string;
+	phoneNumber: `+${string}`;
+	countryIso2: CountryPhoneDataItem["alpha2"];
+	countryIso3: CountryPhoneDataItem["alpha3"];
+	countryCode: `+${CountryPhoneDataItem["country_code"]}`;
 }
   
 export type PhoneResult = PhoneInvalidResult | PhoneValidResult; 
@@ -39,7 +40,7 @@ export default function phone(phoneNumber: string, {
 	validateMobilePrefix = true,
 	strictDetection = false
 }: {
-	country?: string;
+	country?: CountryPhoneDataItem["alpha2"] | CountryPhoneDataItem["alpha3"] | '';
 	validateMobilePrefix?: boolean;
 	strictDetection?: boolean;
 } = {}): PhoneResult {
@@ -52,7 +53,7 @@ export default function phone(phoneNumber: string, {
 	};
 
 	let processedPhoneNumber = (typeof phoneNumber !== 'string') ? '' : phoneNumber.trim();
-	const processedCountry = (typeof country !== 'string') ? '' : country.trim();
+	const processedCountry = ((typeof country !== 'string') ? '' : country.trim()) as CountryPhoneDataItem["alpha2"] | CountryPhoneDataItem["alpha3"];
 	const hasPlusSign = Boolean(processedPhoneNumber.match(/^\+/));
 
 	// remove any non-digit character, included the +
@@ -80,7 +81,7 @@ export default function phone(phoneNumber: string, {
 
 		// if there's no plus sign and the phone number length is one of the valid length under country phone data
 		// then assume there's no country code, hence add back the country code
-		if (!hasPlusSign && foundCountryPhoneData.phone_number_lengths.includes(processedPhoneNumber.length)) {
+		if (!hasPlusSign && includes(foundCountryPhoneData.phone_number_lengths, processedPhoneNumber.length)) {
 			processedPhoneNumber = `${foundCountryPhoneData.country_code}${processedPhoneNumber}`;
 		}
 	} else if (hasPlusSign) {
@@ -101,7 +102,7 @@ export default function phone(phoneNumber: string, {
 		} else {
 			foundCountryPhoneData = null;
 		}
-	} else if (foundCountryPhoneData.phone_number_lengths.indexOf(processedPhoneNumber.length) !== -1) {
+	} else if (includes(foundCountryPhoneData.phone_number_lengths, processedPhoneNumber.length)) {
 		// B: no country, no plus sign --> treat it as USA
 		// 1. check length if == 11, or 10, if 10, add +1, then go go D
 		// no plus sign, no country is given. then it must be USA
@@ -128,7 +129,9 @@ export default function phone(phoneNumber: string, {
 
 	if (defaultCountry) {
 		// also try to validate against CAN for default country, as CAN is also start with +1
-		foundCountryPhoneData = findCountryPhoneDataByCountry('CAN') as CountryPhoneDataItem;
+		// We are sure that CAN alpha3 exists in data – explicitly ignore type checking.
+		foundCountryPhoneData = findCountryPhoneDataByCountry('CAN')!;
+
 		validateResult = validatePhoneISO3166(processedPhoneNumber, foundCountryPhoneData, validateMobilePrefix, hasPlusSign);
 		if (validateResult) {
 			return {

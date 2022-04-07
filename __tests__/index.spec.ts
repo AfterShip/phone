@@ -39,7 +39,7 @@ describe('Parameter types', () => {
 
 	test('country is not a string', () => {
 		const result = phone('+18175698900', {
-			country: 123 as unknown as string
+			country: 123 as any,
 		});
 
 		expect(result).toEqual({

@@ -35,7 +35,7 @@ for (const testCase of testCases) {
 		}
 
 		const result = phone(phoneNumber, {
-			country,
+			country: country as "USA",
 			validateMobilePrefix,
 			strictDetection
 		});

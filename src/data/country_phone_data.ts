@@ -1884,4 +1884,4 @@ export default [
 		mobile_begin_with: ['71', '73', '77'],
 		phone_number_lengths: [9]
 	}
-];
+] as const;
