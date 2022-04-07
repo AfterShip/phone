@@ -1,13 +1,16 @@
 import countryPhoneData from '../data/country_phone_data';
 
-type GetArrayElementType<T extends readonly any[]> = T extends readonly (infer U)[] ? U : never;
-export type CountryPhoneDataItem = GetArrayElementType<typeof countryPhoneData>;
+export type CountryPhoneDataItem = typeof countryPhoneData[number];
+export type TSupportedCountryIso2 = CountryPhoneDataItem['alpha2'];
+export type TSupportedCountryIso3 = CountryPhoneDataItem['alpha3'];
+export type TSupportedCountryCountryCode = CountryPhoneDataItem['country_code'];
+export type TSupportedCountryIso = TSupportedCountryIso2 | TSupportedCountryIso3;
 
 /**
  * @param {string=} country - country code alpha 2 or 3
  * @returns {{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with, phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string, string, string, string], phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string], phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string], phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string, string], phone_number_lengths: [number]}|null}
  */
-export function findCountryPhoneDataByCountry(country: CountryPhoneDataItem["alpha2"] | CountryPhoneDataItem["alpha3"]): CountryPhoneDataItem| null{
+export function findCountryPhoneDataByCountry(country: TSupportedCountryIso): CountryPhoneDataItem| null{
 	// if no country provided, assume it's USA
 	if (!country) {
 		return countryPhoneData.find(countryPhoneDatum => countryPhoneDatum.alpha3 === 'USA') || null;

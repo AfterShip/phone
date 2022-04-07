@@ -3,8 +3,11 @@ import {
 	findCountryPhoneDataByCountry,
 	findCountryPhoneDataByPhoneNumber,
 	validatePhoneISO3166,
-	CountryPhoneDataItem,
 	includes,
+	TSupportedCountryIso2,
+	TSupportedCountryIso3,
+	TSupportedCountryCountryCode,
+	TSupportedCountryIso,
 } from './lib/utility';
 
 export interface PhoneInvalidResult {
@@ -14,13 +17,13 @@ export interface PhoneInvalidResult {
 	countryIso3: null;
 	countryCode: null;
 }
-  
+
 export interface PhoneValidResult {
 	isValid: true;
 	phoneNumber: `+${string}`;
-	countryIso2: CountryPhoneDataItem["alpha2"];
-	countryIso3: CountryPhoneDataItem["alpha3"];
-	countryCode: `+${CountryPhoneDataItem["country_code"]}`;
+	countryIso2: TSupportedCountryIso2;
+	countryIso3: TSupportedCountryIso3;
+	countryCode: `+${TSupportedCountryCountryCode}`;
 }
   
 export type PhoneResult = PhoneInvalidResult | PhoneValidResult; 
@@ -40,7 +43,7 @@ export default function phone(phoneNumber: string, {
 	validateMobilePrefix = true,
 	strictDetection = false
 }: {
-	country?: CountryPhoneDataItem["alpha2"] | CountryPhoneDataItem["alpha3"] | '';
+	country?: TSupportedCountryIso | '';
 	validateMobilePrefix?: boolean;
 	strictDetection?: boolean;
 } = {}): PhoneResult {
@@ -53,7 +56,7 @@ export default function phone(phoneNumber: string, {
 	};
 
 	let processedPhoneNumber = (typeof phoneNumber !== 'string') ? '' : phoneNumber.trim();
-	const processedCountry = ((typeof country !== 'string') ? '' : country.trim()) as CountryPhoneDataItem["alpha2"] | CountryPhoneDataItem["alpha3"];
+	const processedCountry = ((typeof country !== 'string') ? '' : country.trim()) as TSupportedCountryIso;
 	const hasPlusSign = Boolean(processedPhoneNumber.match(/^\+/));
 
 	// remove any non-digit character, included the +
