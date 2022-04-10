@@ -1,6 +1,6 @@
 {
   "extends": "aftership",
-  env: {
+  "env": {
     "jest": true,
     "comma-dangle": "off"
   }
