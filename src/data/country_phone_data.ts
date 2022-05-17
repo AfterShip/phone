@@ -1444,7 +1444,7 @@ export default [
 		alpha3: 'RUS',
 		country_code: '7',
 		country_name: 'Russian Federation',
-		mobile_begin_with: ['9', '495'],
+		mobile_begin_with: ['9', '495', '498', '499'],
 		phone_number_lengths: [10]
 	},
 	{
