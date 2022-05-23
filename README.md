@@ -250,6 +250,12 @@ yarn test
 yarn start:example
 ```
 
+or 
+
+```
+yarn dev
+```
+
 And then visit http://localhost:8080
 
 ## Build
