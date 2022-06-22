@@ -230,7 +230,7 @@ Parameter | Type | Description
 --- | --- | ---
 isValid | Boolean | To indicate if the result valid
 phoneNumber | String or null | Normalized phone number in E.164 format
-countryIso2 | String or null | Detected phone number country code in iso-3166 alpha 3 format
+countryIso2 | String or null | Detected phone number country code in iso-3166 alpha 2 format
 countryIso3 | String or null | Detected phone number country code in iso-3166 alpha 3 format
 countryCode | String or null | Detected phone number country calling code with `+` sign
 
