@@ -86,7 +86,7 @@ phone('6123-6123', {country: null});
 // as default country is USA / CAN and the phone number does not fit such countries' rules
 ```
 
-### Without country code, with phone prefix, but no `+` sign
+### With country code / phone prefix, but no `+` sign
 
 Even you input a valid phone number with a valid prefix, if there is no plus sign, it will not work as expected:
 
