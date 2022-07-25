@@ -897,7 +897,7 @@ export default [
 		alpha3: 'KGZ',
 		country_code: '996',
 		country_name: 'Kyrgyzstan',
-		mobile_begin_with: ['5', '7'],
+		mobile_begin_with: ['5', '7', '8', '9'],
 		phone_number_lengths: [9]
 	},
 	{
