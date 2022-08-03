@@ -1873,7 +1873,7 @@ export default [
 		alpha3: 'ZMB',
 		country_code: '260',
 		country_name: 'Zambia',
-		mobile_begin_with: ['9'],
+		mobile_begin_with: ['9', '7'],
 		phone_number_lengths: [9]
 	},
 	{
