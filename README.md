@@ -38,14 +38,14 @@ const {phone} = require('phone');
 import {phone} from 'phone';
 ```
 
-### Simple usage
+### 1. Simple usage
 
 ```javascript
 phone('+852 6569-8900');
 // { isValid: true, phoneNumber: '+85265698900',  countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 ```
 
-### With Country
+### 2. With Country
 
 ```javascript
 phone('+1(817) 569-8900', {country: ''}); 
@@ -66,7 +66,7 @@ phone('6123-6123', {country: 'HKG'});
 // { isValid: true, phoneNumber: '+85261236123', countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 ```
 
-### Without country code and no phone prefix
+### 3. Without country code and no phone prefix
 
 If both country code and country phone prefix are not provided, the phone number will be treated as USA or Canada by default.
 
@@ -86,7 +86,7 @@ phone('6123-6123', {country: null});
 // as default country is USA / CAN and the phone number does not fit such countries' rules
 ```
 
-### With country code / phone prefix, but no `+` sign
+### 4. With country code / phone prefix, but no `+` sign
 
 Even you input a valid phone number with a valid prefix, if there is no plus sign, it will not work as expected:
 
@@ -119,7 +119,7 @@ phone('91234567',  {country: 'HKG'})
 // { isValid: true, phoneNumber: '+85291234567', countryIso2: 'HK', countryIso3: 'HKG', countryCode: '+852' }
 ```
 
-### Skipping phone number initial digit checking
+### 5. Skipping phone number initial digit checking
 
 If you want to skip phone number initial digit checking, set `validateMobilePrefix` to false:
 
@@ -146,7 +146,7 @@ phone('+(852) 0356-4902', {validateMobilePrefix: false});
 ```
 Note that the module does not have the capability to determine if the prefix is a valid `landline` prefix number.
 
-### Trunk Code Detection Logic
+### 6. Trunk Code Detection Logic
 
 For some phone numbers, such as this sample UK phone number:
 
@@ -172,7 +172,7 @@ phone('+4407911 123456')
 ```
 
 If you want to disable this behavior, 
-please set `strictDetection` to `true:
+please set `strictDetection` to `true`:
 
 ```javascript
 phone('+4407911 123456', {strictDetection: true})
