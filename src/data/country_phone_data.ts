@@ -1549,8 +1549,8 @@ export default [
 		alpha3: 'SOM',
 		country_code: '252',
 		country_name: 'Somalia',
-		mobile_begin_with: ['9'],
-		phone_number_lengths: [8]
+		mobile_begin_with: ['61', '62', '63', '65', '66', '68', '69', '71', '90'],
+		phone_number_lengths: [9]
 	},
 	{
 		alpha2: 'SX',
