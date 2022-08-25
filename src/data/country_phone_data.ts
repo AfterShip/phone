@@ -572,7 +572,7 @@ export default [
 		alpha3: 'FJI',
 		country_code: '679',
 		country_name: 'Fiji',
-		mobile_begin_with: ['7', '9'],
+		mobile_begin_with: ['7', '9', '8', '2'],
 		phone_number_lengths: [7]
 	},
 	{
