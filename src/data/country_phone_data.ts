@@ -953,7 +953,7 @@ export default [
 		alpha3: 'LBN',
 		country_code: '961',
 		country_name: 'Lebanon',
-		mobile_begin_with: ['3', '7'],
+		mobile_begin_with: ['3', '7', '8'],
 		phone_number_lengths: [7, 8]
 	},
 	{
