@@ -1750,7 +1750,7 @@ export default [
 		alpha2: 'TZ',
 		alpha3: 'TZA',
 		country_code: '255',
-		country_name: 'Tanzania, United Republic of',
+		country_name: 'Tanzania, United Republic of Tanzania',
 		mobile_begin_with: ['7', '6'],
 		phone_number_lengths: [9]
 	},
