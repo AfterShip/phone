@@ -406,6 +406,14 @@ export default [
 		phone_number_lengths: [10]
 	},
 	{
+		alpha2: 'CW',
+		alpha3: 'CUW',
+		country_code: '5999',
+		country_name: 'Curaçao',
+		mobile_begin_with: ['5', '6'],
+		phone_number_lengths: [7]
+	},
+	{
 		alpha2: 'KM',
 		alpha3: 'COM',
 		country_code: '269',
