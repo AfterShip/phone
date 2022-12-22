@@ -629,7 +629,7 @@ export default [
 		country_code: '44',
 		country_name: 'United Kingdom',
 		mobile_begin_with: ['7'],
-		phone_number_lengths: [10]
+		phone_number_lengths: [9, 10]
 	},
 	{
 		alpha2: 'GE',
