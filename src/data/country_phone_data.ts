@@ -1895,7 +1895,7 @@ export default [
 		alpha3: 'ZWE',
 		country_code: '263',
 		country_name: 'Zimbabwe',
-		mobile_begin_with: ['71', '73', '77'],
+		mobile_begin_with: ['71', '73', '77', '78'],
 		phone_number_lengths: [9]
 	}
 ];
