@@ -731,7 +731,7 @@ export default [
 		alpha3: 'GTM',
 		country_code: '502',
 		country_name: 'Guatemala',
-		mobile_begin_with: ['3', '4', '5'],
+		mobile_begin_with: ['2', '3', '4', '5'],
 		phone_number_lengths: [8]
 	},
 	{
