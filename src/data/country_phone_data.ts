@@ -440,7 +440,7 @@ export default [
 		alpha3: 'CRI',
 		country_code: '506',
 		country_name: 'Costa Rica',
-		mobile_begin_with: ['5', '6', '7', '8'],
+		mobile_begin_with: ['2', '5', '6', '7', '8'],
 		phone_number_lengths: [8]
 	},
 	{
