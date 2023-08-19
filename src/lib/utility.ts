@@ -7,21 +7,21 @@ export type CountryPhoneDataItem = GetArrayElementType<typeof countryPhoneData>;
  * @param {string=} country - country code alpha 2 or 3
  * @returns {{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with, phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string, string, string, string], phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string], phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string], phone_number_lengths: [number]}|{country_code: string, alpha2: string, country_name: string, alpha3: string, mobile_begin_with: [string, string], phone_number_lengths: [number]}|null}
  */
-export function findCountryPhoneDataByCountry(country: string) {
+export function findCountryPhoneDataByCountry(country: string, customCountryPhoneData?: CountryPhoneDataItem[]) {
 	// if no country provided, assume it's USA
 	if (!country) {
-		return countryPhoneData.find(countryPhoneDatum => countryPhoneDatum.alpha3 === 'USA') || null;
+		return (customCountryPhoneData ?? countryPhoneData).find(countryPhoneDatum => countryPhoneDatum.alpha3 === 'USA') || null;
 	}
 
 	if (country.length === 2) {
-		return countryPhoneData.find(countryPhoneDatum => country.toUpperCase() === countryPhoneDatum.alpha2) || null;
+		return (customCountryPhoneData ?? countryPhoneData).find(countryPhoneDatum => country.toUpperCase() === countryPhoneDatum.alpha2) || null;
 	}
 
 	if (country.length === 3) {
-		return countryPhoneData.find(countryPhoneDatum => country.toUpperCase() === countryPhoneDatum.alpha3) || null;
+		return (customCountryPhoneData ?? countryPhoneData).find(countryPhoneDatum => country.toUpperCase() === countryPhoneDatum.alpha3) || null;
 	}
 
-	return countryPhoneData.find(countryPhoneDatum => country.toUpperCase() === countryPhoneDatum.country_name.toUpperCase()) || null;
+	return (customCountryPhoneData ?? countryPhoneData).find(countryPhoneDatum => country.toUpperCase() === countryPhoneDatum.country_name.toUpperCase()) || null;
 }
 
 export function findExactCountryPhoneData(phoneNumber: string, validateMobilePrefix: boolean, countryPhoneDatum: CountryPhoneDataItem) {
@@ -88,11 +88,11 @@ export function findPossibleCountryPhoneData(phoneNumber: string, validateMobile
  * @param validateMobilePrefix
  * @returns {{exactCountryPhoneData: (*), possibleCountryPhoneData: (*)}}
  */
-export function findCountryPhoneDataByPhoneNumber(phoneNumber: string, validateMobilePrefix: boolean) {
+export function findCountryPhoneDataByPhoneNumber(phoneNumber: string, validateMobilePrefix: boolean, customCountryPhoneData?: CountryPhoneDataItem[]) {
 	let exactCountryPhoneData;
 	let possibleCountryPhoneData;
 
-	for (const countryPhoneDatum of countryPhoneData) {
+	for (const countryPhoneDatum of (customCountryPhoneData ?? countryPhoneData)) {
 		// if the country code is wrong, skip directly
 		if (!phoneNumber.match(new RegExp('^' + countryPhoneDatum.country_code))) {
 			continue;

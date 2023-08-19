@@ -37,11 +37,13 @@ export type PhoneResult = PhoneInvalidResult | PhoneValidResult;
 export default function phone(phoneNumber: string, {
 	country = '',
 	validateMobilePrefix = true,
-	strictDetection = false
+	strictDetection = false,
+	customCountryPhoneData = undefined,
 }: {
 	country?: string;
 	validateMobilePrefix?: boolean;
 	strictDetection?: boolean;
+	customCountryPhoneData?: CountryPhoneDataItem[];
 } = {}): PhoneResult {
 	const invalidResult = {
 		isValid: false as const,
@@ -58,7 +60,7 @@ export default function phone(phoneNumber: string, {
 	// remove any non-digit character, included the +
 	processedPhoneNumber = processedPhoneNumber.replace(/\D/g, '');
 
-	let foundCountryPhoneData = findCountryPhoneDataByCountry(processedCountry);
+	let foundCountryPhoneData = findCountryPhoneDataByCountry(processedCountry, customCountryPhoneData);
 
 	if (!foundCountryPhoneData) {
 		return invalidResult;
@@ -86,7 +88,7 @@ export default function phone(phoneNumber: string, {
 	} else if (hasPlusSign) {
 		// if there is a plus sign but no country provided
 		// try to find the country phone data by the phone number
-		const { exactCountryPhoneData, possibleCountryPhoneData } = findCountryPhoneDataByPhoneNumber(processedPhoneNumber, validateMobilePrefix);
+		const { exactCountryPhoneData, possibleCountryPhoneData } = findCountryPhoneDataByPhoneNumber(processedPhoneNumber, validateMobilePrefix, customCountryPhoneData);
 
 		if (exactCountryPhoneData) {
 			foundCountryPhoneData = exactCountryPhoneData;
@@ -128,7 +130,7 @@ export default function phone(phoneNumber: string, {
 
 	if (defaultCountry) {
 		// also try to validate against CAN for default country, as CAN is also start with +1
-		foundCountryPhoneData = findCountryPhoneDataByCountry('CAN') as CountryPhoneDataItem;
+		foundCountryPhoneData = findCountryPhoneDataByCountry('CAN', customCountryPhoneData) as CountryPhoneDataItem;
 		validateResult = validatePhoneISO3166(processedPhoneNumber, foundCountryPhoneData, validateMobilePrefix, hasPlusSign);
 		if (validateResult) {
 			return {
