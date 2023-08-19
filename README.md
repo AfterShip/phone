@@ -196,12 +196,13 @@ phone(phoneNumber: string, { country, validateMobilePrefix, strictDetection }?: 
 
 #### Input
 
-Parameter | Type | Required | Default | Description
---- | --- | --- | --- | ---
-phoneNumber | String | Yes | - | The phone number text you want to process
-country | String | No | null | Provided country code in iso-3166 alpha 2 or 3 format
-validateMobilePrefix | Boolean | No | true | Set to false if you want to skip phone number initial digit checking
-strictDetection | Boolean | No | false | Set to true if you want to disable trunk code detection logic. 
+Parameter | Type | Required | Default   | Description
+--- | --- | --- |-----------| ---
+phoneNumber | String | Yes | -         | The phone number text you want to process
+country | String | No | null      | Provided country code in iso-3166 alpha 2 or 3 format
+validateMobilePrefix | Boolean | No | true      | Set to false if you want to skip phone number initial digit checking
+strictDetection | Boolean | No | false     | Set to true if you want to disable trunk code detection logic. 
+customCountryPhoneData | CountryPhoneDataItem[] | No | undefined | Allow define your custom rules for specific country. 
 
 #### Returns
 
