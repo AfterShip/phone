@@ -309,7 +309,7 @@ export default [
 		alpha3: 'BWA',
 		country_code: '267',
 		country_name: 'Botswana',
-		mobile_begin_with: ['71', '72', '73', '74', '75', '76'],
+		mobile_begin_with: ['71', '72', '73', '74', '75', '76', '77', '78', '79'],
 		phone_number_lengths: [8]
 	},
 	{
@@ -1630,7 +1630,14 @@ export default [
 		mobile_begin_with: ['7'],
 		phone_number_lengths: [9]
 	},
-	// {alpha2: "SZ", alpha3: "SWZ", country_code: "268", country_name: "Swaziland", mobile_begin_with: [], phone_number_lengths: []},
+	{
+		alpha2: 'SZ',
+		alpha3: 'SWZ',
+		country_code: '268',
+		country_name: 'Swaziland',
+		mobile_begin_with: ['76', '77', '78', '79'],
+		phone_number_lengths: [8]
+	},
 	{
 		alpha2: 'SC',
 		alpha3: 'SYC',
