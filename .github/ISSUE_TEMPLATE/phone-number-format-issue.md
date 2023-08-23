@@ -1,13 +1,14 @@
 ---
 name: Phone number format issue
-about: Any issues with phone number detecgion
+about: For any phone number format related issues (such as cannot detect a certain
+  phone number)
 title: ''
 labels: ''
-assignees: ''
+assignees: Bossa573
 
 ---
 
-**For any phone number format-related issues (such as cannot detect a certain phone number) these items must be provided are required**
+**These items must be provided are required**
 
 1. Real sample input (dummy phone number is fine, don't leave personal info)
 2. Expected output
