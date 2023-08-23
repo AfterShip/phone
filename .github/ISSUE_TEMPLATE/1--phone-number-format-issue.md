@@ -1,5 +1,5 @@
 ---
-name: Phone number format issue
+name: 1. Phone number format issue
 about: For any phone number format related issues (such as cannot detect a certain
   phone number)
 title: ''
