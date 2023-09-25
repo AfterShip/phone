@@ -4,7 +4,7 @@ about: For any phone number format related issues (such as cannot detect a certa
   phone number)
 title: "[Phone number format]"
 labels: ''
-assignees: Bossa573
+assignees: ''
 
 ---
 
