@@ -1694,7 +1694,7 @@ export default [
 		country_code: '66',
 		country_name: 'Thailand',
 		mobile_begin_with: ['6', '8', '9'],
-		phone_number_lengths: [9]
+		phone_number_lengths: [8, 9]
 	},
 	{
 		alpha2: 'TJ',
