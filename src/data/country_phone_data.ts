@@ -563,7 +563,7 @@ export default [
 		alpha3: 'ESP',
 		country_code: '34',
 		country_name: 'Spain',
-		mobile_begin_with: ['6', '7'],
+		mobile_begin_with: ['6', '7', '9'],
 		phone_number_lengths: [9]
 	},
 	{
