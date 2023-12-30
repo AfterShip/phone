@@ -153,7 +153,7 @@ export default [
 		alpha3: 'AZE',
 		country_code: '994',
 		country_name: 'Azerbaijan',
-		mobile_begin_with: ['4', '5', '6', '7'],
+		mobile_begin_with: ['10', '50', '51', '55', '60', '70', '77', '99'],
 		phone_number_lengths: [9]
 	},
 	{
