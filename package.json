@@ -1,6 +1,6 @@
 {
   "name": "phone",
-  "version": "3.1.43",
+  "version": "3.1.44",
   "description": "With a given country and phone number, validate and format the phone number to E.164 standard",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.24.5",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.12.12",
     "@types/papaparse": "^5.3.14",
     "babel-cli": "^6.26.0",
     "babel-loader": "^9.1.3",
@@ -39,21 +39,21 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "dotenv": "^16.4.5",
-    "eslint": "^9.2.0",
+    "eslint": "^9.3.0",
     "eslint-config-aftership": "^7.0.0",
     "eslint-plugin-import": "^2.29.1",
     "idempotent-babel-polyfill": "^7.4.4",
     "jest": "^29.7.0",
     "lodash": "^4.17.21",
     "papaparse": "^5.4.1",
-    "rimraf": "^5.0.5",
-    "ts-jest": "^29.1.2",
+    "rimraf": "^5.0.7",
+    "ts-jest": "^29.1.3",
     "ts-node": "^10.9.2",
     "twilio": "^5.0.4",
     "typescript": "^5.4.5",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.2"
+    "webpack-dev-server": "^5.0.4"
   },
   "keywords": [
     "phone",

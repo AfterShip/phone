@@ -1281,7 +1281,7 @@ export default [
 		alpha3: 'NIC',
 		country_code: '505',
 		country_name: 'Nicaragua',
-		mobile_begin_with: ['8'],
+		mobile_begin_with: ['7', '8'],
 		phone_number_lengths: [8]
 	},
 	{
