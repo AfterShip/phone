@@ -955,6 +955,16 @@ export default [
 		mobile_begin_with: ['1'],
 		phone_number_lengths: [9, 10]
 	},
+	// https://www.howtocallabroad.com/kosovo/
+	// https://en.wikipedia.org/wiki/Telephone_numbers_in_Kosovo
+	{
+		alpha2: "XK",
+		alpha3: "XKX",
+		country_code: "383",
+		country_name: "Kosovo, Republic of",
+		mobile_begin_with: ["43", "44", "45", "46", "47", "48", "49"],
+		phone_number_lengths: [8],
+	},
 	{
 		alpha2: 'KW',
 		alpha3: 'KWT',
