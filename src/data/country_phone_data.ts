@@ -956,6 +956,14 @@ export default [
 		phone_number_lengths: [9, 10]
 	},
 	{
+		alpha2: "XK",
+		alpha3: "XKX",
+		country_code: "383",
+		country_name: "Kosovo, Republic of",
+		mobile_begin_with: ["44", "45", "46", "49", "43", "48"],
+		phone_number_lengths: [8],
+	},
+	{
 		alpha2: 'KW',
 		alpha3: 'KWT',
 		country_code: '965',
