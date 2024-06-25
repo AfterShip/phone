@@ -1,4 +1,4 @@
-name: Phone number format issue
+name: 1. Phone number format issue
 description: For any issues related to phone number format (such as not detecting a certain phone number).
 title: "[phone number format] "
 labels: ["phone-number-format"]
