@@ -178,3 +178,5 @@ input_phone,input_country,not_validate_prefix,output_phone,output_country_alpha2
 +996 912973123,,,+996912973123,KG,KGZ,+996,true,,,Kyrgyzstan test 6,
 +996 312573123,,,,,,,false,,,Kyrgyzstan test 7,
 048 999 999,XK,,+38348999999,XK,XKX,+383,true,Testing Kosovo number,,,
++1 3292021234,,,+13292021234,US,USA,+1,true,,#389 (1),"returns +13292021234,USA",
++1 4722021234,,,+14722021234,US,USA,+1,true,,#389 (2),"returns +14722021234,USA",
