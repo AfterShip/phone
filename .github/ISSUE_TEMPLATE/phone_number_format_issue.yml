@@ -1,0 +1,44 @@
+name: Phone number format issue
+description: For any issues related to phone number format (such as not detecting a certain phone number).
+title: "[phone number format] "
+labels: ["phone-number-format"]
+assignees:
+  - bossa573
+body:
+  - type: markdown
+    attributes:
+      value: "## Creating a PR directly is much appreciated, thank you very much."
+  - type: input
+    id: country_region
+    attributes:
+      label: Country/Region
+      description: in ISO 3166 alpha-3
+      placeholder: e.g. USA, GBR, FRA, etc
+    validations:
+      required: true
+  - type: input
+    id: sample_phone_number
+    attributes:
+      label: Sample input with real phone format
+      description: A dummy phone number is fine, do not leave personal info.
+      placeholder: e.g. +13805553750, separated with comma for multiple phone numbers
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference docs/website
+      description: Reference docs/website showing that the phone number format should be valid, government websites, 3rd party websites, or even Wikipedia pages are fine.
+      placeholder: 
+    validations:
+      required: true
+  - type: checkboxes
+    id: mobile_phone_number
+    attributes:
+      label: Mobile phone number
+      description: Make sure your reported phone number is a mobile phone number. Landline, VoIP, or any other phone number formats are not supported and will not be accepted.
+      options:
+      - label: I confirmed that the provided sample is a mobile phone number.
+    validations:
+      required: true
+  
