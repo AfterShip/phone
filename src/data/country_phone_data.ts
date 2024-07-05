@@ -31,12 +31,13 @@ export default [
 		],
 		phone_number_lengths: [10]
 	},
+	// https://en.wikipedia.org/wiki/Telephone_numbers_in_Aruba
 	{
 		alpha2: 'AW',
 		alpha3: 'ABW',
 		country_code: '297',
 		country_name: 'Aruba',
-		mobile_begin_with: ['5', '6', '7', '9'],
+		mobile_begin_with: ['56', '59', '64', '73', '74', '99'],
 		phone_number_lengths: [7]
 	},
 	{
