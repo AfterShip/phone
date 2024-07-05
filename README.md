@@ -288,11 +288,11 @@ yarn build
 
 3. Why is `phone` returning an object with `isValid = false` instead of returning a null directly?
 
-    It reserves the flexibility to extend the response interface for invalid result in future.
+    It reserves the flexibility to extend the response interface for invalid results in the future.
 
 ## Migrate from v2
 
-The interface of v3 has been changed for better usability, maintainability and flexibility, this shows all the changes from v2:
+The interface of v3 has been changed for better usability, maintainability, and flexibility, this shows all the changes from v2:
 
 #### Function Interface
 
@@ -311,18 +311,18 @@ v3 | Invalid | {isValid: false, phoneNumber: null, countryIso2: null, countryIso
 
 #### allowLandline vs validateMobilePrefix
 
-`allowLandline` in v2 is essentially equals to `validateMobilePrefix` in v3, however, the value is opposite.
+`allowLandline` in v2 is essentially equal to `validateMobilePrefix` in v3, however, the value is the opposite.
 
 Because `allowLandline = true` in v2 means "Skip the mobile phone number prefix validation", and there is NO capability to verify if the input phone number is a valid landline phone number.
 
-To avoid the misleading information, the parameter name has been changed to `validateMobilePrefix`, and the input value is opposite, while `validateMobilePrefix = false` means "Skip the mobile phone number prefix validation".
+To avoid misleading information, the parameter name has been changed to `validateMobilePrefix`, and the input value is the opposite, while `validateMobilePrefix = false` means "Skip the mobile phone number prefix validation".
 
 
-## Help
+## Phone Number Format Improvement
 
-We've tried to make sure that this package works for as many cases as possible, if you notice that we have an incorrect rule for a country or other case, please open an issue to let us know.
+We strive to ensure this package functions well across diverse scenarios. However, please note that the phone number formats may not be updated proactively or regularly, as this is a manual task and we lack a dedicated incentive for continuous updates. If you find any incorrect rules for a country or other specific case, please create a pull request to inform us.
 
-For creating new pull requests regarding add or modify phone number formats, please include the reference information such as PDFs, websites, etc. Thank you very much. 
+When submitting pull requests to add or modify phone number formats, it is essential to include reference information such as PDFs, websites, etc. **PRs submitted without references will not be accepted.** Thank you for your understanding and cooperation.
 
 **The library supports mobile phone number format only.** We are unable to provide landline phone number support as we do not have landline phone number format data, hence we do not accept PRs for landline phone numbers.
 
