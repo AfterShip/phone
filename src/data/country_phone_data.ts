@@ -89,12 +89,12 @@ export default [
 	},	
 	// https://en.wikipedia.org/wiki/Telephone_numbers_in_Cura%C3%A7ao_and_the_Caribbean_Netherlands
 	{
-		alpha2: "AN", 
-		alpha3: "ANT", 
+		alpha2: "BQ", 
+		alpha3: "BES", 
 		country_code: "599", 
-		country_name: "Netherlands Antilles", 
-		mobile_begin_with: ['3', '416', '700', '701','795', '95', '96'], 
-		phone_number_lengths: [7, 8]
+		country_name: "Caribbean Netherlands", 
+		mobile_begin_with: ['3', '416', '700', '701','795'], 
+		phone_number_lengths: [7]
 	},
 	{
 		alpha2: 'AE',
@@ -422,10 +422,10 @@ export default [
 	{
 		alpha2: 'CW',
 		alpha3: 'CUW',
-		country_code: '5999',
+		country_code: '599',
 		country_name: 'Curaçao',
-		mobile_begin_with: ['5', '6'],
-		phone_number_lengths: [7]
+		mobile_begin_with: ['95', '96'],
+		phone_number_lengths: [8]
 	},
 	{
 		alpha2: 'KM',
