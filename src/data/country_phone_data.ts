@@ -93,7 +93,7 @@ export default [
 		alpha3: "ANT", 
 		country_code: "599", 
 		country_name: "Netherlands Antilles", 
-		mobile_begin_with: ['1', '3', '416', '5', '6', '7', '94', '95', '96', '97', '98'], 
+		mobile_begin_with: ['3', '416', '700', '701','795', '95', '96'], 
 		phone_number_lengths: [7, 8]
 	},
 	{
