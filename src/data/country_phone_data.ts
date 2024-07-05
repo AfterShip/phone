@@ -86,8 +86,16 @@ export default [
 		country_name: 'Andorra',
 		mobile_begin_with: ['3', '4', '6'],
 		phone_number_lengths: [6]
+	},	
+	// https://en.wikipedia.org/wiki/Telephone_numbers_in_Cura%C3%A7ao_and_the_Caribbean_Netherlands
+	{
+		alpha2: "AN", 
+		alpha3: "ANT", 
+		country_code: "599", 
+		country_name: "Netherlands Antilles", 
+		mobile_begin_with: ['3', '416', '700', '701','795', '95', '96'], 
+		phone_number_lengths: [7, 8]
 	},
-	// {alpha2: "AN", alpha3: "ANT", country_code: "599", country_name: "Netherlands Antilles", mobile_begin_with: [], phone_number_lengths: []},
 	{
 		alpha2: 'AE',
 		alpha3: 'ARE',
