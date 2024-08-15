@@ -184,3 +184,4 @@ input_phone,input_country,not_validate_prefix,output_phone,output_country_alpha2
 +599 9583 1517,,,+59995831517,CW,CUW,+599,true,,,"returns ANT 1",
 +599 9683 1517,,,+59996831517,CW,CUW,+599,true,,,"returns ANT 2",
 +1 (353) 555-8900,,,+13535558900,US,USA,+1,true,,353 area code,"returns +13535558900,USA",
++1 (645) 555-1234,,,+16455551234,US,USA,+1,true,,645 area code,"returns +16455551234,USA",
