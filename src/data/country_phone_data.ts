@@ -457,7 +457,7 @@ export default [
 		alpha3: 'CUB',
 		country_code: '53',
 		country_name: 'Cuba',
-		mobile_begin_with: ['5'],
+		mobile_begin_with: ['5', '6'],
 		phone_number_lengths: [8]
 	},
 	// {alpha2: "CX", alpha3: "CXR", country_code: "61", country_name: "Christmas Island", mobile_begin_with: [], phone_number_lengths: []},
