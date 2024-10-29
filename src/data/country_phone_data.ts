@@ -1816,7 +1816,7 @@ export default [
 		alpha3: 'UKR',
 		country_code: '380',
 		country_name: 'Ukraine',
-		mobile_begin_with: ['39', '50', '63', '66', '67', '68', '73', '75', '9'],
+		mobile_begin_with: ['39', '50', '63', '66', '67', '68', '73', '75', '77', '9'],
 		phone_number_lengths: [9]
 	},
 	// {alpha2: "UM", alpha3: "UMI", country_code: "", country_name: "United States Minor Outlying Islands", mobile_begin_with: [], phone_number_lengths: []},
