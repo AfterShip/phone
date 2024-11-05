@@ -1,6 +1,6 @@
 {
-  "name": "phone",
-  "version": "3.1.53",
+  "name": "@exode-team/phone",
+  "version": "3.1.54",
   "description": "With a given country and phone number, validate and format the phone number to E.164 standard",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -19,7 +19,8 @@
     "start:example": "yarn build && webpack serve --config ./example/webpack.config.js --progress",
     "dev": "yarn start:example",
     "prepublishOnly": "yarn build",
-    "fix:numbers": "ts-node -P scripts/add-new-rules/tsconfig.json scripts/add-new-rules"
+    "fix:numbers": "ts-node -P scripts/add-new-rules/tsconfig.json scripts/add-new-rules",
+    "npm:publish": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
