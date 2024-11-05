@@ -8,7 +8,6 @@
 .npmrc
 .vscode/
 .tern-project
-lib/
 src/
 script/
 example/
