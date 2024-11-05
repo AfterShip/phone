@@ -1833,7 +1833,7 @@ export default [
 		alpha3: 'UZB',
 		country_code: '998',
 		country_name: 'Uzbekistan',
-		mobile_begin_with: ['9', '88', '33'],
+		mobile_begin_with: ['9', '88', '33', '50', '55', '77'],
 		phone_number_lengths: [9]
 	},
 	// {alpha2: "VA", alpha3: "VAT", country_code: "39", country_name: "Holy See (Vatican City State)", mobile_begin_with: [], phone_number_lengths: []},
