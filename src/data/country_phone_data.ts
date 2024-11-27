@@ -597,7 +597,7 @@ export default [
 		country_code: '358',
 		country_name: 'Finland',
 		mobile_begin_with: ['4', '5'],
-		phone_number_lengths: [9, 10]
+		phone_number_lengths: [6, 7, 9, 10]
 	},
 	{
 		alpha2: 'FJ',
