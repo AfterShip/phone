@@ -588,7 +588,7 @@ export default [
 		alpha3: 'ETH',
 		country_code: '251',
 		country_name: 'Ethiopia',
-		mobile_begin_with: ['9'],
+		mobile_begin_with: ['7','9'],
 		phone_number_lengths: [9]
 	},
 	{
