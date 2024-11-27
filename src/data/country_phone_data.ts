@@ -1575,7 +1575,7 @@ export default [
 		alpha3: 'SLV',
 		country_code: '503',
 		country_name: 'El Salvador',
-		mobile_begin_with: ['7'],
+		mobile_begin_with: ['6', '7'],
 		phone_number_lengths: [8]
 	},
 	{
