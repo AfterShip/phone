@@ -170,7 +170,7 @@ export default [
 		alpha3: 'BDI',
 		country_code: '257',
 		country_name: 'Burundi',
-		mobile_begin_with: ['7', '29'],
+		mobile_begin_with: ['71', '72', '75', '76', '77', '79', '29', '61', '68', '69'],
 		phone_number_lengths: [8]
 	},
 	{
