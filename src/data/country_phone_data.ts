@@ -1316,8 +1316,8 @@ export default [
 		alpha3: 'NLD',
 		country_code: '31',
 		country_name: 'Netherlands',
-		mobile_begin_with: ['6'],
-		phone_number_lengths: [9]
+		mobile_begin_with: ['6', '97'],
+		phone_number_lengths: [9, 11]
 	},
 	{
 		alpha2: 'NO',
