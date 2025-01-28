@@ -185,3 +185,5 @@ input_phone,input_country,not_validate_prefix,output_phone,output_country_alpha2
 +599 9683 1517,,,+59996831517,CW,CUW,+599,true,,,"returns ANT 2",
 +1 (353) 555-8900,,,+13535558900,US,USA,+1,true,,353 area code,"returns +13535558900,USA",
 +1 (645) 555-1234,,,+16455551234,US,USA,+1,true,,645 area code,"returns +16455551234,USA",
++387 620 12345,,,+38762012345,BA,BIH,+387,true,,Bosnia and Herzegovina 8 digit number,"returns +38762012345,BIH",
++387 6031 12345,,,+387603112345,BA,BIH,+387,true,,Bosnia and Herzegovina 9 digit number,"returns +387603112345,BIH",

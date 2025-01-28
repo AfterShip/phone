@@ -235,7 +235,7 @@ export default [
 		country_code: '387',
 		country_name: 'Bosnia and Herzegovina',
 		mobile_begin_with: ['6'],
-		phone_number_lengths: [8]
+		phone_number_lengths: [8, 9]
 	},
 	// {alpha2: "BL", alpha3: "BLM", country_code: "590", country_name: "Saint Barthélemy", mobile_begin_with: [], phone_number_lengths: []},
 	{
