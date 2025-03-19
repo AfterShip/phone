@@ -127,6 +127,7 @@ input_phone,input_country,not_validate_prefix,output_phone,output_country_alpha2
 +380 73 123 45 67,,,+380731234567,UA,UKR,+380,true,Testing Ukraine Phone,Should return result when it matches mobile_begin_with,"returns +380731234567,UKR",
 +380 11 123 45 67,,,,,,,false,,Should not return result when it does not match mobile_begin_with,"returns ",
 +61(0)488888888,,,+61488888888,AU,AUS,+61,true,,test phone with trunk prefix,Austrilia phone with trunk prefix (0),
++61131373,,true,+61131373,AU,AUS,+61,true,,,test special Austrilia phone numbers 13 xx xx,
 +7(8)9234567890,,,+79234567890,RU,RUS,+7,true,,,Russian Federation phone with trunk prefix (8),
 +691(0)1234567,,,+6911234567,FM,FSM,+691,true,,,Micronesia with trunk prefix (0),
 +298 212345,,,+298212345,FO,FRO,+298,true,,test phone with no mobile_begin_with,Test 1,

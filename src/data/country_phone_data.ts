@@ -147,7 +147,7 @@ export default [
 		country_code: '61',
 		country_name: 'Australia',
 		mobile_begin_with: ['4'],
-		phone_number_lengths: [9]
+		phone_number_lengths: [6, 9]
 	},
 	{
 		alpha2: 'AT',
