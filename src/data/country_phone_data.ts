@@ -1268,7 +1268,7 @@ export default [
 		alpha3: 'NCL',
 		country_code: '687',
 		country_name: 'New Caledonia',
-		mobile_begin_with: ['7', '8', '9'],
+		mobile_begin_with: ['5', '7', '8', '9'],
 		phone_number_lengths: [6]
 	},
 	{

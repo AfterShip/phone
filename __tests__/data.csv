@@ -123,6 +123,7 @@ input_phone,input_country,not_validate_prefix,output_phone,output_country_alpha2
 +237 612345678,,,+237612345678,CM,CMR,+237,true,Testing Cameroon Phone,Should return result when it matches mobile_begin_with,"returns +237612345678,CMR",
 +237 112345678,,,,,,,false,,Should not return result when it does not match mobile_begin_with,"returns ",
 +687 812345,,,+687812345,NC,NCL,+687,true,Testing New Caledonia Phone,Should return result when it matches mobile_begin_with,"returns +687812345,NCL",
++687 512345,,,+687512345,NC,NCL,+687,true,Testing New Caledonia Phone,Should return result when NCL number starts with 5,"returns +687512345,NCL",
 +687 112345,,,,,,,false,,Should not return result when it does not match mobile_begin_with,"returns ",
 +380 73 123 45 67,,,+380731234567,UA,UKR,+380,true,Testing Ukraine Phone,Should return result when it matches mobile_begin_with,"returns +380731234567,UKR",
 +380 11 123 45 67,,,,,,,false,,Should not return result when it does not match mobile_begin_with,"returns ",
