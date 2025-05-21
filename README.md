@@ -332,3 +332,24 @@ This project is licensed under the [MIT license](https://github.com/AfterShip/ph
 
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAfterShip%2Fphone.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAfterShip%2Fphone?ref=badge_large)
+
+## Bugs Fixed
+
+This section summarizes recent bug fixes implemented in the library.
+
+1.  **Russian Phone Number Formatting:**
+    *   **Bug:** The logic for handling Russian phone numbers (starting with '8' and having 11 digits) was overly specific, only removing the leading '8' if it was followed by a '9'.
+    *   **Fix:** The logic was generalized to remove the leading '8' for any 11-digit Russian phone number that starts with '8'. This makes the formatting more robust for Russian numbers.
+
+2.  **Validation for Numbers with Plus Sign:**
+    *   **Bug:** The `validatePhoneISO3166` function had a flawed check for phone numbers that originally included a `+` sign. It could incorrectly invalidate numbers if the already-processed phone string (digits only) was compared in a way that didn't account for the country code already being part of it.
+    *   **Fix:** The validation logic was corrected. If the input number had a `+` sign and a country was identified, the function now correctly ensures that the processed phone number (digits only, passed to `validatePhoneISO3166`) starts with the expected country code. If not, it's deemed invalid. This prevents false negatives for valid international numbers.
+
+3.  **Test Coverage:**
+    *   **Observation:** The existing test suite was minimal and primarily focused on parameter types.
+    *   **Improvement:** Added a comprehensive set of new test cases to cover:
+        *   Specific scenarios for Russian phone numbers.
+        *   Validation of numbers with and without the `+` sign for various countries.
+        *   Handling of leading zeros for national numbers when a country is specified.
+        *   The behavior of the `strictDetection` option.
+        *   Invalid inputs like `null` or `undefined`.
