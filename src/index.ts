@@ -74,8 +74,8 @@ export default function phone(phoneNumber: string, {
 		}
 
 		// if input 89234567890, RUS, remove the 8
-		if (foundCountryPhoneData.alpha3 === 'RUS' && processedPhoneNumber.length === 11 && processedPhoneNumber.match(/^89/) !== null) {
-			processedPhoneNumber = processedPhoneNumber.replace(/^8+/, '');
+		if (foundCountryPhoneData.alpha3 === 'RUS' && processedPhoneNumber.length === 11 && processedPhoneNumber.startsWith('8')) {
+			processedPhoneNumber = processedPhoneNumber.substring(1);
 		}
 
 		// if there's no plus sign and the phone number length is one of the valid length under country phone data

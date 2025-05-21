@@ -137,7 +137,10 @@ export function validatePhoneISO3166(phone: string, countryPhoneDatum: CountryPh
 	// if the phone number have +, countryPhoneDatum detected,
 	// but the phone number does not have country calling code
 	// then should consider the phone number as invalid
-	if (plusSign && countryPhoneDatum && phoneWithoutCountry.length === phone.length) {
+	if (plusSign && countryPhoneDatum && !phone.startsWith(countryPhoneDatum.country_code)) {
+    // If plusSign was present, and we have a country,
+    // the phone number (which should be digits only at this point)
+    // must start with the country_code. If not, it's invalid.
 		return false;
 	}
 
