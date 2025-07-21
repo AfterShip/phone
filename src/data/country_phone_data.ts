@@ -1356,7 +1356,7 @@ export default [
 		alpha3: 'OMN',
 		country_code: '968',
 		country_name: 'Oman',
-		mobile_begin_with: ['9'],
+		mobile_begin_with: ['7', '9'],
 		phone_number_lengths: [8]
 	},
 	{
