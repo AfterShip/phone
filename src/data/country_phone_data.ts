@@ -693,7 +693,7 @@ export default [
 		alpha3: 'GLP',
 		country_code: '590',
 		country_name: 'Guadeloupe',
-		mobile_begin_with: ['690'],
+		mobile_begin_with: ['690', '691'],
 		phone_number_lengths: [9]
 	},
 	{
@@ -1220,7 +1220,7 @@ export default [
 		alpha3: 'MTQ',
 		country_code: '596',
 		country_name: 'Martinique',
-		mobile_begin_with: ['696'],
+		mobile_begin_with: ['696', '697'],
 		phone_number_lengths: [9]
 	},
 	{
