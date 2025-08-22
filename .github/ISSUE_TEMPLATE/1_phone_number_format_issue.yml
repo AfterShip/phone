@@ -36,7 +36,7 @@ body:
     id: mobile_phone_number
     attributes:
       label: Mobile phone number
-      description: Make sure your reported phone number is a mobile phone number. Landline, VoIP, or any other phone number formats are not supported and will not be accepted.
+      description: Make sure your reported phone number is a mobile phone number. Landline, VoIP, or any other phone number formats are not supported and will not be accepted. If this checkbox is unchecked, the PR would be closed without merging.
       options:
       - label: I confirmed that the provided sample is a mobile phone number.
     validations:
