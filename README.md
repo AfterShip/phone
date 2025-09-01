@@ -276,19 +276,19 @@ yarn build
 
 1. Does `phone` do any logical validation?
 
-	Yes. If you provide `country`, and the phone number does not start with `+` sign,
-
-	the module will validate `phone_number_lengths` and `mobile_begin_with`
+	Yes. If you provide `country`, and the phone number does not start with a `+` sign, the module will validate both `phone_number_lengths` and `mobile_begin_with`
 
 2. Why is `phone` returning an invalid result for a valid phone number?
 
-	By default, the function will validate a mobile phone number only, to validate a landline phone number, please set `validateMobilePrefix` to `false`.
+    By default, the function validates **mobile phone numbers only**. It checks the phone number prefix and length to determine validity. If you want to skip the mobile prefix validation (for example, when checking landline numbers), you can set `validateMobilePrefix` to `false`. 
 
-	If you find the result is still incorrect, please submit a ticket to improve our validation rules.
+    > **Note:** Disabling this check does **not** enable "landline mode". The library does **not** support landline number validation, as it only contains validation rules for mobile numbers. If a landline number has a different length or format than a mobile number, the library may not process it correctly.
+
+	If you believe the result is incorrect, please submit a ticket to improve our validation rules.
 
 3. Why is `phone` returning an object with `isValid = false` instead of returning a null directly?
 
-    It reserves the flexibility to extend the response interface for invalid results in the future.
+    Returning an object (with `isValid = false`) allows us to extend the response format in the future, making it more flexible for adding additional information about invalid results.
 
 ## Migrate from v2
 
