@@ -888,7 +888,7 @@ export default [
 		alpha3: 'JAM',
 		country_code: '1',
 		country_name: 'Jamaica',
-		mobile_begin_with: ['876'],
+		mobile_begin_with: ['876', '658'],
 		phone_number_lengths: [10]
 	},
 	// {alpha2: "JE", alpha3: "JEY", country_code: "44", country_name: "Jersey", mobile_begin_with: [], phone_number_lengths: []},
