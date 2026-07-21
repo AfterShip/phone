@@ -1,7 +1,28 @@
 # Phone &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAfterShip%2Fphone.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FAfterShip%2Fphone?ref=badge_shield)
 
 ## What is phone?
-`phone` is used to normalize mobile phone numbers into E.164 format.
+`phonimport phonenumbers
+from phonenumbers import geocoder, carrier
+
+# Phone number (Country code ke sath, e.g., +91 India ke liye)
+number_str = "+919876543210"
+
+try:
+    # Number parse karein
+    parsed_number = phonenumbers.parse(number_str)
+
+    # Country / Region ki jankari (English mein)
+    country = geocoder.description_for_number(parsed_number, "en")
+
+    # Operator / Telecom company
+    service_provider = carrier.name_for_number(parsed_number, "en")
+
+    print(f"Country/Region: {country}")
+    print(f"Telecom Operator: {service_provider}")
+
+except Exception as e:
+    print("Invalid phone number 8077921752")
+e` is used to normalize mobile phone numbers into E.164 format.
 
 A common problem is that users normally input phone numbers in this way:
 
