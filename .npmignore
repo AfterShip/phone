@@ -8,10 +8,10 @@
 .npmrc
 .vscode/
 .tern-project
-lib/
-src/
-script/
-example/
+/lib/
+/src/
+/script/
+/example/
 .babelrc
 .eslintignore
 .flowconfig
@@ -186,7 +186,7 @@ config.json
 # ------------------------------------------------------------------------------
 # customized scripts
 # ------------------------------------------------------------------------------
-scripts
+/scripts
 
 test.js
 test_generate.js
