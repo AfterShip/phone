@@ -68,8 +68,8 @@ export default function phone(phoneNumber: string, {
 
 	// if country provided, only reformat the phone number
 	if (processedCountry) {
-		// remove leading 0s for all countries except 'CIV', 'COG'
-		if (!['CIV', 'COG'].includes(foundCountryPhoneData.alpha3)) {
+		// remove leading 0s for all countries except 'CIV', 'COG', 'BEN'
+		if (!['CIV', 'COG', 'BEN'].includes(foundCountryPhoneData.alpha3)) {
 			processedPhoneNumber = processedPhoneNumber.replace(/^0+/, '');
 		}
 
