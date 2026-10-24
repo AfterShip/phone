@@ -1,6 +1,0 @@
-{
-  "extends": "aftership/frontend",
-  "rules": {
-    "max-lines": 0
-  }
-}

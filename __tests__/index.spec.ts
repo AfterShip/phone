@@ -1,10 +1,12 @@
+import { describe, test } from 'node:test';
+import assert from 'node:assert';
 import phone from '../src/index';
 
 describe('Parameter types', () => {
 	test('using default parameter if not provided', () => {
 		const result = phone('+1 (817) 569-8900', {});
 
-		expect(result).toEqual({
+		assert.deepStrictEqual(result, {
 			isValid: true,
 			phoneNumber: '+18175698900',
 			countryIso2: 'US',
@@ -16,7 +18,7 @@ describe('Parameter types', () => {
 	test('2nd parameter is undefined', () => {
 		const result = phone('+1 (817) 569-8900');
 
-		expect(result).toEqual({
+		assert.deepStrictEqual(result, {
 			isValid: true,
 			phoneNumber: '+18175698900',
 			countryIso2: 'US',
@@ -28,7 +30,7 @@ describe('Parameter types', () => {
 	test('phone is not a string', () => {
 		const result = phone(18175698900 as unknown as string);
 
-		expect(result).toEqual({
+		assert.deepStrictEqual(result, {
 			isValid: false,
 			phoneNumber: null,
 			countryIso2: null,
@@ -42,7 +44,7 @@ describe('Parameter types', () => {
 			country: 123 as unknown as string
 		});
 
-		expect(result).toEqual({
+		assert.deepStrictEqual(result, {
 			isValid: true,
 			phoneNumber: '+18175698900',
 			countryIso2: 'US',

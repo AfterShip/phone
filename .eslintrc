@@ -1,7 +1,0 @@
-{
-  "extends": "aftership",
-  "rules": {
-    "max-lines": 0,
-    "comma-dangle": "off"
-  }
-}
