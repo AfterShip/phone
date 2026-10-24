@@ -187,8 +187,8 @@ export default [
 		alpha3: 'BEN',
 		country_code: '229',
 		country_name: 'Benin',
-		mobile_begin_with: ['4', '6', '9'],
-		phone_number_lengths: [8]
+		mobile_begin_with: ['0125', '0126', '0127', '0128', '0129', '014', '015', '016', '019'],
+		phone_number_lengths: [10]
 	},
 	{
 		alpha2: 'BF',
