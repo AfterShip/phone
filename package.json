@@ -10,9 +10,6 @@
   "engines": {
     "node": ">=12"
   },
-  "directories": {
-    "lib": "./src/lib"
-  },
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
