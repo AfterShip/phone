@@ -1,3 +1,5 @@
+import { test } from 'node:test';
+import assert from 'node:assert';
 import fs from 'fs';
 import { parse } from 'papaparse';
 import phone from '../src/index';
@@ -26,7 +28,7 @@ for (const testCase of testCases) {
 		const {input_phone: phoneNumber, input_country: country, not_validate_prefix: notValidatePrefix, strict_detection: strictDetectionString} = testCase;
 		const validateMobilePrefix = !notValidatePrefix;
 
-		let strictDetection = undefined;
+		let strictDetection: boolean | undefined;
 
 		if (strictDetectionString === 'true') {
 			strictDetection = true;
@@ -41,7 +43,7 @@ for (const testCase of testCases) {
 		});
 
 		if (testCase.output_is_valid === 'true') {
-			expect(result).toEqual({
+			assert.deepStrictEqual(result, {
 				isValid: true,
 				phoneNumber: testCase.output_phone,
 				countryIso2: testCase.output_country_alpha2,
@@ -49,7 +51,7 @@ for (const testCase of testCases) {
 				countryCode: testCase.output_country_code
 			});
 		} else {
-			expect(result).toEqual({
+			assert.deepStrictEqual(result, {
 				isValid: false,
 				phoneNumber: null,
 				countryIso2: null,

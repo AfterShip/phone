@@ -1,7 +1,0 @@
-{
-  "extends": "aftership",
-  "env": {
-    "jest": true,
-    "comma-dangle": "off"
-  }
-}

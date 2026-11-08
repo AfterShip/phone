@@ -79,6 +79,8 @@ export function findPossibleCountryPhoneData(phoneNumber: string, validateMobile
 	})) {
 		return countryPhoneDatum;
 	}
+
+	return null;
 }
 
 /**
@@ -141,8 +143,7 @@ export function validatePhoneISO3166(phone: string, countryPhoneDatum: CountryPh
 		return false;
 	}
 
-	const phone_number_lengths = countryPhoneDatum.phone_number_lengths;
-	const mobile_begin_with = countryPhoneDatum.mobile_begin_with;
+	const { phone_number_lengths, mobile_begin_with } = countryPhoneDatum;
 
 	const isLengthValid = phone_number_lengths.some(length => phoneWithoutCountry.length === length);
 	// some country doesn't have mobile_begin_with

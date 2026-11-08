@@ -3,12 +3,13 @@
     "target": "es6",
     "module": "commonjs",
     "lib": [
-      "es6",
+      "es2016",
       "dom"
     ],
     "esModuleInterop": true,
     "allowJs": true,
     "declaration": true,                         /* Generates corresponding '.d.ts' file. */
+    "rootDir": "./src",                          /* Keep dist/ layout flat (dist/index.js), required since TS 6. */
     "outDir": "./dist",                              /* Redirect output structure to the directory. */
     "strict": true,                                 /* Enable all strict type-checking options. */
     "noUnusedLocals": true,                      /* Report errors on unused locals. */

@@ -2,7 +2,6 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
 	mode: 'production',
@@ -21,8 +20,7 @@ module.exports = {
 		modules: false
 	},
 	plugins: [
-		new webpack.optimize.ModuleConcatenationPlugin(),
-		new MinifyPlugin()
+		new webpack.optimize.ModuleConcatenationPlugin()
 	],
 	module: {
 		rules: [
