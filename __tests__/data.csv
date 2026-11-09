@@ -215,3 +215,5 @@ input_phone,input_country,not_validate_prefix,output_phone,output_country_alpha2
 +229 01 21 30 78 98,BEN,,,,,,false,,Benin fixed-line number is not a mobile number,returns invalid,
 +229 01 30 12 34 56,,,,,,,false,,Benin 0130 range is not a mobile range,returns invalid,
 +229 01 97 12 34 5,BEN,,,,,,false,,Benin number too short,returns invalid,
++1 257 5551234,,,+12575551234,CA,CAN,+1,true,Testing Canada Phone,Should return result when it matches mobile_begin_with,"returns +12575551234,CAN",
++1 879 5551234,,,+18795551234,CA,CAN,+1,true,Testing Canada Phone,Should return result when it matches mobile_begin_with,"returns +18795551234,CAN",
