@@ -150,13 +150,15 @@ export default [
 		mobile_begin_with: ['4'],
 		phone_number_lengths: [9]
 	},
+	// https://www2.rtr.at/en/tk/E129/Austrian_Numbering_Plan_2011-03-30.pdf
 	{
 		alpha2: 'AT',
 		alpha3: 'AUT',
 		country_code: '43',
 		country_name: 'Austria',
-		mobile_begin_with: ['6'],
-		phone_number_lengths: [10, 11, 12, 13, 14]
+		mobile_begin_with: ['650', '651', '652', '653', '655', '657', '659', '660', '661', '663', '664', '665', '666',
+			'667', '668', '669', '67', '68', '69'],
+		phone_number_lengths: [7, 8, 9, 10, 11, 12, 13]
 	},
 	{
 		alpha2: 'AZ',
@@ -640,13 +642,14 @@ export default [
 		mobile_begin_with: [],
 		phone_number_lengths: [7]
 	},
+	// https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200004E0005PDFE.pdf
 	{
 		alpha2: 'GA',
 		alpha3: 'GAB',
 		country_code: '241',
 		country_name: 'Gabon',
-		mobile_begin_with: ['2', '3', '4', '5', '6', '7'],
-		phone_number_lengths: [7]
+		mobile_begin_with: ['62', '65', '66', '74', '77'],
+		phone_number_lengths: [8]
 	},
 	{
 		alpha2: 'GB',
@@ -697,21 +700,23 @@ export default [
 		mobile_begin_with: ['690', '691'],
 		phone_number_lengths: [9]
 	},
+	// https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200004F0008PDFE.pdf
 	{
 		alpha2: 'GM',
 		alpha3: 'GMB',
 		country_code: '220',
 		country_name: 'Gambia',
-		mobile_begin_with: ['7', '9'],
-		phone_number_lengths: [7]
+		mobile_begin_with: ['83', '86', '87', '9'],
+		phone_number_lengths: [7, 9]
 	},
+	// https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200005C0004PDFE.pdf
 	{
 		alpha2: 'GW',
 		alpha3: 'GNB',
 		country_code: '245',
 		country_name: 'Guinea-Bissau',
-		mobile_begin_with: ['5', '6', '7'],
-		phone_number_lengths: [7]
+		mobile_begin_with: ['95', '96', '97'],
+		phone_number_lengths: [9]
 	},
 	{
 		alpha2: 'GQ',
@@ -941,13 +946,14 @@ export default [
 		mobile_begin_with: ['1', '6', '7', '8', '9'],
 		phone_number_lengths: [8, 9]
 	},
+	// https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000710005PDFE.pdf
 	{
 		alpha2: 'KI',
 		alpha3: 'KIR',
 		country_code: '686',
 		country_name: 'Kiribati',
-		mobile_begin_with: ['9', '30'],
-		phone_number_lengths: [5]
+		mobile_begin_with: ['62', '63', '72', '730', '7314'],
+		phone_number_lengths: [8]
 	},
 	{
 		alpha2: 'KN',
@@ -999,13 +1005,14 @@ export default [
 		mobile_begin_with: ['3', '7', '8'],
 		phone_number_lengths: [7, 8]
 	},
+	// https://ltalr.org/wp-content/uploads/2024/01/NATIONAL-NUMBERING-PLAN.pdf
 	{
 		alpha2: 'LR',
 		alpha3: 'LBR',
 		country_code: '231',
 		country_name: 'Liberia',
-		mobile_begin_with: ['4', '5', '6', '7'],
-		phone_number_lengths: [7, 8]
+		mobile_begin_with: ['20', '55', '70', '72', '75', '76', '77', '78', '79', '80', '81', '86', '87', '88'],
+		phone_number_lengths: [9]
 	},
 	{
 		alpha2: 'LY',
@@ -1023,13 +1030,14 @@ export default [
 		mobile_begin_with: ['758'],
 		phone_number_lengths: [10]
 	},
+	// https://en.wikipedia.org/wiki/Telephone_numbers_in_Liechtenstein
 	{
 		alpha2: 'LI',
 		alpha3: 'LIE',
 		country_code: '423',
 		country_name: 'Liechtenstein',
-		mobile_begin_with: ['7'],
-		phone_number_lengths: [7]
+		mobile_begin_with: ['60', '61', '62', '63', '64', '65', '66', '67', '68', '7'],
+		phone_number_lengths: [7, 9]
 	},
 	{
 		alpha2: 'LK',
@@ -1280,13 +1288,15 @@ export default [
 		mobile_begin_with: ['9'],
 		phone_number_lengths: [8]
 	},
+	// https://en.wikipedia.org/wiki/Telephone_numbers_in_Norfolk_Island
+	// https://www.itu.int/itudoc/itu-t/number/a/aet/83628_ww9.doc
 	{
 		alpha2: 'NF',
 		alpha3: 'NFK',
 		country_code: '672',
 		country_name: 'Norfolk Island',
-		mobile_begin_with: ['5', '8'],
-		phone_number_lengths: [5]
+		mobile_begin_with: ['35', '38'],
+		phone_number_lengths: [6]
 	},
 	{
 		alpha2: 'NG',
@@ -1304,13 +1314,14 @@ export default [
 		mobile_begin_with: ['7', '8'],
 		phone_number_lengths: [8]
 	},
+	// https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000EC0003PDFE.pdf
 	{
 		alpha2: 'NU',
 		alpha3: 'NIU',
 		country_code: '683',
 		country_name: 'Niue',
-		mobile_begin_with: [],
-		phone_number_lengths: [4]
+		mobile_begin_with: ['5', '6', '888'],
+		phone_number_lengths: [4, 7]
 	},
 	{
 		alpha2: 'NL',
@@ -1539,13 +1550,14 @@ export default [
 		phone_number_lengths: [8]
 	},
 	// {alpha2: "GS", alpha3: "SGS", country_code: "500", country_name: "South Georgia and the South Sandwich Islands", mobile_begin_with: [], phone_number_lengths: []},
+	// https://en.wikipedia.org/wiki/Telephone_numbers_in_Saint_Helena_and_Tristan_da_Cunha
 	{
 		alpha2: 'SH',
 		alpha3: 'SHN',
 		country_code: '290',
 		country_name: 'Saint Helena',
-		mobile_begin_with: [],
-		phone_number_lengths: [4]
+		mobile_begin_with: ['5', '6'],
+		phone_number_lengths: [5]
 	},
 	{
 		alpha2: 'SJ',
@@ -1579,13 +1591,14 @@ export default [
 		mobile_begin_with: ['6', '7'],
 		phone_number_lengths: [8]
 	},
+	// https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000B50001PDFE.pdf
 	{
 		alpha2: 'SM',
 		alpha3: 'SMR',
 		country_code: '378',
 		country_name: 'San Marino',
-		mobile_begin_with: ['3', '6'],
-		phone_number_lengths: [10]
+		mobile_begin_with: ['61', '66'],
+		phone_number_lengths: [8]
 	},
 	{
 		alpha2: 'SO',
@@ -1748,13 +1761,14 @@ export default [
 		mobile_begin_with: ['7'],
 		phone_number_lengths: [8]
 	},
+	// https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000D30005PDFE.pdf
 	{
 		alpha2: 'TO',
 		alpha3: 'TON',
 		country_code: '676',
 		country_name: 'Tonga',
-		mobile_begin_with: [],
-		phone_number_lengths: [5]
+		mobile_begin_with: ['554', '555', '556', '72', '73', '74', '75', '76', '77', '78', '84', '86', '87', '88', '89'],
+		phone_number_lengths: [7]
 	},
 	{
 		alpha2: 'TT',
@@ -1780,13 +1794,14 @@ export default [
 		mobile_begin_with: ['5'],
 		phone_number_lengths: [10]
 	},
+	// https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000D90003PDFF.pdf
 	{
 		alpha2: 'TV',
 		alpha3: 'TUV',
 		country_code: '688',
 		country_name: 'Tuvalu',
-		mobile_begin_with: [],
-		phone_number_lengths: [5]
+		mobile_begin_with: ['70', '71', '90'],
+		phone_number_lengths: [6, 7]
 	},
 	{
 		alpha2: 'TW',
