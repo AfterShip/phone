@@ -968,8 +968,8 @@ export default [
 		alpha3: 'KOR',
 		country_code: '82',
 		country_name: 'Korea, Republic of',
-		mobile_begin_with: ['1'],
-		phone_number_lengths: [9, 10]
+		mobile_begin_with: ['10'],
+		phone_number_lengths: [10]
 	},
 	// https://www.howtocallabroad.com/kosovo/
 	// https://en.wikipedia.org/wiki/Telephone_numbers_in_Kosovo
